@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Models.Empresa
+namespace Models.Pessoa
 {
-    public class Empresa
+    public class Cliente
     {
     }
 }

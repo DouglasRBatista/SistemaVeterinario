@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
-public class Class1
+namespace Models.Pessoa
 {
-	public Class1()
-	{
-	}
+    public class Pessoa
+    {
+    }
 }
