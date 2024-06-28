@@ -1,3 +1,5 @@
+using Models.Empresa;
+
 namespace VetSysControl
 {
     public partial class Form1 : Form
@@ -5,6 +7,8 @@ namespace VetSysControl
         public Form1()
         {
             InitializeComponent();
+
+            Empresa empresa = new Empresa();
         }
     }
 }

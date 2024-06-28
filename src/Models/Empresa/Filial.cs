@@ -12,16 +12,8 @@
         private decimal Faturamento {  get; set; }
         private decimal Custo {  get; set; }
 
-        public Filial() 
+        public Filial() : base()
         {
-            idEmpresa = 0;
-            CodEmpresa = string.Empty;
-            RazaoSocial = string.Empty;
-            Enderco = string.Empty;
-            CNPJ = string.Empty;
-            Telefone = string.Empty;
-            Unidade = string.Empty;
-            Logo = string.Empty;
             FlgDayCare = false;
             CsvDayCare = 0;
             FlgUnidadeHospitalar = false;
