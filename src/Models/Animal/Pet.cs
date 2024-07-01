@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Models.Clinica;
 
 namespace Models.Animal
 {
     public class Pet
     {
-        private int IdPet { get; set; }
-        private string CodPet { get; set; }
-        private string Nome { get; set; }
-        private int IdEspecie { get; set; }
-        private int IdRaca  { get; set; }
-        private DateOnly DataNasc {  get; set; }
-        private int IdCliente { get; set; }
-        private char Sexo { get; set; }
-        private List<string> Cor { get; set; }
-        //private List<Alergia> Alergias { get; set; }
-        private bool Exotico { get; set; }
-        private int NumChip { get; set; }
-        private string Foto { get; set; }
+        private int IdPet;
+        private string CodPet;
+        private string Nome;
+        private int IdEspecie;
+        private int IdRaca;
+        private DateOnly DataNasc;
+        private int IdCliente;
+        private char Sexo;
+        private List<string> Cor;
+        private List<Alergia> Alergias { get; set; }
+        private bool Exotico;
+        private int NumChip;
+        private string Foto;
 
         public Pet() {
             IdPet = 0;
@@ -31,15 +32,75 @@ namespace Models.Animal
             DataNasc = DateOnly.MinValue;
             IdCliente = 0;
             Sexo = char.MinValue;
-            //Cor = ;
-            //Alergias = ;
+            Cor = null;
+            Alergias = null;
             Exotico = false;
             NumChip = 0;
             Foto = string.Empty;
         }
 
+        public int GetIdPet() {
+            return IdPet;
+        }
 
+        public void SetIdPet(int id) {
+            IdPet = id;
+        }
 
+        public string GetCodPet() {
+            return CodPet;
+        }
 
+        public void SetCodPet(string codPet) {
+            CodPet = codPet;
+        }
+
+        public string GetNome() {
+            return Nome;
+        }
+
+        public void SetNome(string nome) {
+            Nome = nome;
+        }
+
+        public int GetIdEspecie() {
+            return IdEspecie;
+        }
+
+        public void SetIdEspecie(int id) {
+            IdEspecie = id;
+        }
+
+        public int GetIdRaca() {
+            return IdRaca;
+        }
+
+        public void SetIdRaca(int id) {
+            IdRaca = id;
+        }
+
+        public char GetSexo() {
+            return Sexo;
+        }
+
+        public void SetIdRaca(char sexo) {
+            Sexo = sexo;
+        }
+
+        public bool GetExotico() {
+            return Exotico;
+        }
+
+        public void SetExotico(bool exotico) {
+            Exotico = exotico;
+        }
+
+        public int GetNumChip() {
+            return NumChip;
+        }
+
+        public void SetNumChip(int numChip) {
+            NumChip = numChip;
+        }
     }
 }
