@@ -48,7 +48,7 @@ namespace Models.Empresa
 
         public decimal GetCsvFinal() 
         {
-            return CsvFinal;
+            return this.CsvFinal;
         }
 
         public void SetCsvFinal(decimal csv) 

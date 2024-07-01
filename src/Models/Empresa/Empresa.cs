@@ -25,7 +25,7 @@
 
         public int GetIdEmpresa()
         {
-            return IdEmpresa;
+            return this.IdEmpresa;
         }
 
         public void SetIdEmpresa(int idEmpresa) 
@@ -35,7 +35,7 @@
 
         public string GetCodEmpresa()
         {
-            return CodEmpresa;
+            return this.CodEmpresa;
         }
 
         public void SetCodEmpresa(string codEmpresa)
@@ -45,7 +45,7 @@
 
         public string GetRazaoSocial()
         {
-            return RazaoSocial;
+            return this.RazaoSocial;
         }
 
         public void SetRazaoSocial(string razaoSocial)
@@ -55,7 +55,7 @@
 
         public string GetEndereco()
         {
-            return Endereco;
+            return this.Endereco;
         }
 
         public void SetEndereco(string endereco)
@@ -65,7 +65,7 @@
 
         public string GetCNPJ()
         {
-            return CNPJ;
+            return this.CNPJ;
         }
 
         public void SetCNPJ(string cnpj)
@@ -75,7 +75,7 @@
 
         public string GetTelefone()
         {
-            return Telefone;
+            return this.Telefone;
         }
 
         public void SetTelefone(string telefone)
@@ -85,7 +85,7 @@
 
         public string GetUnidade()
         {
-            return Unidade;
+            return this.Unidade;
         }
 
         public void SetUnidade(string unidade)
@@ -95,7 +95,7 @@
 
         public string GetLogo()
         {
-            return Logo;
+            return this.Logo;
         }
 
         public void SetLogo(string logo)

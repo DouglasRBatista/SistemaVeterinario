@@ -1,12 +1,139 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Models.Pessoa
+﻿namespace Models.Pessoa
 {
-    public class Funcionario
+    public class Funcionario : Pessoa
     {
+        protected string Cargo { get; set; }
+        protected string Departamento { get; set; }
+        protected bool FlgSalario { get; set; }
+        protected decimal Salario { get; set; }
+        protected bool FlgComissao { get; set; }
+        protected decimal Comissao { get; set; }
+        protected bool FlgTerceirizado { get; set; }
+        protected bool FlgInativo { get; set; }
+        protected int IdEmpresa { get; set; }
+
+        public Funcionario() : base()
+        {
+            Cargo = string.Empty;
+            Departamento = string.Empty;
+            FlgSalario = false;
+            Salario = 0;
+            FlgComissao = false;
+            Comissao = 0;
+            FlgTerceirizado = false;
+            FlgInativo = false;
+            IdEmpresa = 0;
+        }
+
+        public Funcionario(Pessoa pessoa)
+        {
+            IdPessoa = pessoa.GetIdPessoa();
+            IdUsuarui = pessoa.GetIdUsuarui();
+            Nome = pessoa.GetNome();
+            CPF = pessoa.GetCPF();
+            DtNacimento = pessoa.GetDtNacimento();
+            Endereco = pessoa.GetEndereco();
+
+            Cargo = string.Empty;
+            Departamento = string.Empty;
+            FlgSalario = false;
+            Salario = 0;
+            FlgComissao = false;
+            Comissao = 0;
+            FlgTerceirizado = false;
+            FlgInativo = false;
+            IdEmpresa = 0;
+        }
+
+        public string GetCargo()
+        {
+            return this.Cargo;
+        }
+
+        public void SetCargo(string cargo)
+        {
+            this.Cargo = cargo;
+        }
+
+        public string GetDepartamento()
+        {
+            return this.Departamento;
+        }
+
+        public void SetDepartamento(string departamento)
+        {
+            this.Departamento = departamento;
+        }
+
+        public bool GetFlgSalario()
+        {
+            return this.FlgSalario;
+        }
+
+        public void SetFlgSalario(bool flgSalario)
+        {
+            this.FlgSalario = flgSalario;
+        }
+
+        public decimal GetSalario()
+        {
+            return this.Salario;
+        }
+
+        public void SetSalario(decimal salario)
+        {
+            this.Salario = salario;
+        }
+
+        public bool GetFlgComissao()
+        {
+            return this.FlgComissao;
+        }
+
+        public void SetFlgComissao(bool flgComissao)
+        {
+            this.FlgComissao = flgComissao;
+        }
+
+        public decimal GetComissao()
+        {
+            return this.Comissao;
+        }
+
+        public void SetComissao(decimal comissao)
+        {
+            this.Comissao = comissao;
+        }
+
+        public bool GetFlgTerceirizado()
+        {
+            return this.FlgTerceirizado;
+        }
+
+        public void SetFlgTerceirizado(bool flgTerceirizado)
+        {
+            this.FlgTerceirizado = flgTerceirizado;
+        }
+
+        public bool GetFlgInativo()
+        {
+            return this.FlgInativo;
+        }
+
+        public void SetFlgInativo(bool flgInativo)
+        {
+            this.FlgInativo = flgInativo;
+        }
+
+        public int GetIdEmpresa()
+        {
+            return this.IdEmpresa;
+        }
+
+        public void SetIdEmpresa(int idEmpresa)
+        {
+            this.IdEmpresa = idEmpresa;
+        }
+
     }
 }
