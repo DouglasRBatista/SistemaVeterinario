@@ -49,7 +49,7 @@
             // 
             // Btn_Excluir
             // 
-            Btn_Excluir.Location = new Point(621, 396);
+            Btn_Excluir.Location = new Point(621, 402);
             Btn_Excluir.Name = "Btn_Excluir";
             Btn_Excluir.Size = new Size(75, 23);
             Btn_Excluir.TabIndex = 0;
@@ -108,7 +108,7 @@
             // 
             // Txt_Desc
             // 
-            Txt_Desc.Location = new Point(105, 236);
+            Txt_Desc.Location = new Point(105, 233);
             Txt_Desc.Name = "Txt_Desc";
             Txt_Desc.Size = new Size(421, 23);
             Txt_Desc.TabIndex = 8;
@@ -116,7 +116,7 @@
             // Lbl_Tipo
             // 
             Lbl_Tipo.AutoSize = true;
-            Lbl_Tipo.Location = new Point(37, 165);
+            Lbl_Tipo.Location = new Point(38, 165);
             Lbl_Tipo.Name = "Lbl_Tipo";
             Lbl_Tipo.Size = new Size(33, 15);
             Lbl_Tipo.TabIndex = 11;
@@ -164,7 +164,7 @@
             // Lbl_Validade
             // 
             Lbl_Validade.AutoSize = true;
-            Lbl_Validade.Location = new Point(37, 198);
+            Lbl_Validade.Location = new Point(38, 198);
             Lbl_Validade.Name = "Lbl_Validade";
             Lbl_Validade.Size = new Size(54, 15);
             Lbl_Validade.TabIndex = 16;
@@ -206,7 +206,7 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(537, 396);
+            Btn_Editar.Location = new Point(537, 402);
             Btn_Editar.Name = "Btn_Editar";
             Btn_Editar.Size = new Size(75, 23);
             Btn_Editar.TabIndex = 22;
@@ -215,7 +215,7 @@
             // 
             // Btn_Salvar
             // 
-            Btn_Salvar.Location = new Point(451, 396);
+            Btn_Salvar.Location = new Point(451, 402);
             Btn_Salvar.Name = "Btn_Salvar";
             Btn_Salvar.Size = new Size(75, 23);
             Btn_Salvar.TabIndex = 23;
@@ -224,7 +224,7 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 396);
+            Btn_Sair.Location = new Point(706, 402);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 24;
@@ -260,6 +260,7 @@
             Controls.Add(Btn_Excluir);
             Name = "Vacina";
             Text = "Vacina";
+            Load += Vacina_Load;
             ResumeLayout(false);
             PerformLayout();
         }

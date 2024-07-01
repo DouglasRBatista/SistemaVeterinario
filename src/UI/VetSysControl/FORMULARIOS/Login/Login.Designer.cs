@@ -86,7 +86,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(769, 450);
             Controls.Add(Lbl_VetSysControl);
             Controls.Add(Txt_Senha);
             Controls.Add(Txt_Login);
@@ -95,6 +95,7 @@
             Controls.Add(Lbl_Login);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

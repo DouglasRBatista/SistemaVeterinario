@@ -14,4 +14,10 @@
     <ProjectReference Include="..\..\Models\Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="FORMULARIOS\Cadastro\MedicamentoFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
