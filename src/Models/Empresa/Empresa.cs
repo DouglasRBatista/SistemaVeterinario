@@ -5,7 +5,7 @@
         protected int IdEmpresa { get; set; }
         protected string CodEmpresa { get; set; }
         protected string RazaoSocial { get; set; }
-        protected string Enderco { get; set; }
+        protected string Endereco { get; set; }
         protected string CNPJ { get; set; }
         protected string Telefone { get; set; }
         protected string Unidade { get; set; }
@@ -16,7 +16,7 @@
             IdEmpresa = 0;
             CodEmpresa = string.Empty;
             RazaoSocial = string.Empty;
-            Enderco = string.Empty;
+            Endereco = string.Empty;
             CNPJ = string.Empty;
             Telefone = string.Empty;
             Unidade = string.Empty;
@@ -53,14 +53,14 @@
             this.RazaoSocial = razaoSocial;
         }
 
-        public string GetEnderco()
+        public string GetEndereco()
         {
-            return Enderco;
+            return Endereco;
         }
 
-        public void SetEnderco(string endereco)
+        public void SetEndereco(string endereco)
         {
-            this.Enderco = endereco;
+            this.Endereco = endereco;
         }
 
         public string GetCNPJ()

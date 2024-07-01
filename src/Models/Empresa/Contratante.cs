@@ -24,7 +24,7 @@ namespace Models.Empresa
             IdEmpresa = empresa.GetIdEmpresa();
             CodEmpresa = empresa.GetCodEmpresa();
             RazaoSocial = empresa.GetRazaoSocial();
-            Enderco = empresa.GetEnderco();
+            Endereco = empresa.GetEndereco();
             CNPJ = empresa.GetCNPJ();
             Telefone = empresa.GetTelefone();
             Unidade = empresa.GetUnidade();

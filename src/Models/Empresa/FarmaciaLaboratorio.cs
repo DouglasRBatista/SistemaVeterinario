@@ -4,8 +4,8 @@
     {
         public bool FlgIntegrada {  get; set; }
         private int IdFilial { get; set; }
-        public bool FlgTercerizada { get; set; }
-        private int IdTercerizada { get; set; }
+        public bool FlgTerceirizada { get; set; }
+        private int IdTerceirizada { get; set; }
         public bool FlgFornecedor { get; set; }
         public string DescFarmLab {  get; set; }
         public string ObsFarmLab {  get; set; }
@@ -14,8 +14,8 @@
         {
             FlgIntegrada = false;
             IdFilial = 0;
-            FlgTercerizada = false;
-            IdTercerizada = 0;
+            FlgTerceirizada = false;
+            IdTerceirizada = 0;
             FlgFornecedor = false;
             DescFarmLab = string.Empty;
             ObsFarmLab = string.Empty;
@@ -26,15 +26,15 @@
             IdEmpresa = empresa.GetIdEmpresa();
             CodEmpresa = empresa.GetCodEmpresa();
             RazaoSocial = empresa.GetRazaoSocial();
-            Enderco = empresa.GetEnderco();
+            Endereco = empresa.GetEndereco();
             CNPJ = empresa.GetCNPJ();
             Telefone = empresa.GetTelefone();
             Unidade = empresa.GetUnidade();
             Logo = empresa.GetLogo();
             FlgIntegrada = false;
             IdFilial = 0;
-            FlgTercerizada = false;
-            IdTercerizada = 0;
+            FlgTerceirizada = false;
+            IdTerceirizada = 0;
             FlgFornecedor = false;
             DescFarmLab = string.Empty;
             ObsFarmLab = string.Empty;
@@ -50,14 +50,14 @@
             this.IdFilial = id;
         }
 
-        public int GetIdTercerizada()
+        public int GetIdTerceirizada()
         {
-            return IdTercerizada;
+            return IdTerceirizada;
         }
 
-        public void SetIdTercerizada(int id)
+        public void SetIdTerceirizada(int id)
         {
-            this.IdTercerizada = id;
+            this.IdTerceirizada = id;
         }
 
     }
