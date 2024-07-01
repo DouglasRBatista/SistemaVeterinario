@@ -2,14 +2,13 @@
 {
     public class Filial : Empresa
     {
-        private bool FlgDayCare {  get; set; }
-        private decimal CsvDayCare { get; set; }
-        private bool FlgUnidadeHospitalar {  get; set; }
-        private decimal CsvHospital { get; set; }
-        private bool FlgProntoAtendimento { get; set; }
-        private decimal CsvProntoAtendimento {  set; get; }
-        private bool FlgFarmacia { get; set; }
-        private decimal Faturamento {  get; set; }
+        public bool FlgDayCare {  get; set; }
+        public decimal CsvDayCare { get; set; }
+        public bool FlgUnidadeHospitalar {  get; set; }
+        public decimal CsvHospital { get; set; }
+        public bool FlgProntoAtendimento { get; set; }
+        public decimal CsvProntoAtendimento {  set; get; }
+        public bool FlgFarmacia { get; set; }
         private decimal Custo {  get; set; }
 
         public Filial() : base()
@@ -21,8 +20,44 @@
             FlgProntoAtendimento = false;
             CsvProntoAtendimento = 0;
             FlgFarmacia = false;
-            Faturamento = 0;
-            Custo = 0;
+            Custo = CSV();
+        }
+
+        public Filial(Empresa empresa)
+        {
+            IdEmpresa = empresa.GetIdEmpresa();
+            CodEmpresa = empresa.GetCodEmpresa();
+            RazaoSocial = empresa.GetRazaoSocial();
+            Enderco = empresa.GetEnderco();
+            CNPJ = empresa.GetCNPJ();
+            Telefone = empresa.GetTelefone();
+            Unidade = empresa.GetUnidade();
+            Logo = empresa.GetLogo();
+            FlgDayCare = false;
+            CsvDayCare = 0;
+            FlgUnidadeHospitalar = false;
+            CsvHospital = 0;
+            FlgProntoAtendimento = false;
+            CsvProntoAtendimento = 0;
+            FlgFarmacia = false;
+            Custo = CSV();
+        }
+
+        public decimal GetFaturamento()
+        {
+            // Criar Função
+            return 0;
+        }
+
+        public decimal GetCusto() 
+        {
+            return this.Custo;
+        }
+
+        private decimal CSV()
+        {
+            // Criar Função
+            return 0;
         }
     }
 }

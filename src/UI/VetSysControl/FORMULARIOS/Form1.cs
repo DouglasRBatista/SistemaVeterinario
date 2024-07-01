@@ -7,8 +7,6 @@ namespace VetSysControl
         public Form1()
         {
             InitializeComponent();
-
-            Empresa empresa = new Empresa();
         }
     }
 }

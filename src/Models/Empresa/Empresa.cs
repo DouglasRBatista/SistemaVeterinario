@@ -2,7 +2,7 @@
 {
     public class Empresa
     {
-        protected int idEmpresa { get; set; }
+        protected int IdEmpresa { get; set; }
         protected string CodEmpresa { get; set; }
         protected string RazaoSocial { get; set; }
         protected string Enderco { get; set; }
@@ -13,7 +13,7 @@
 
         public Empresa() 
         {
-            idEmpresa = 0;
+            IdEmpresa = 0;
             CodEmpresa = string.Empty;
             RazaoSocial = string.Empty;
             Enderco = string.Empty;
@@ -22,5 +22,86 @@
             Unidade = string.Empty;
             Logo = string.Empty;
         }
+
+        public int GetIdEmpresa()
+        {
+            return IdEmpresa;
+        }
+
+        public void SetIdEmpresa(int idEmpresa) 
+        {
+            this.IdEmpresa = idEmpresa;
+        }
+
+        public string GetCodEmpresa()
+        {
+            return CodEmpresa;
+        }
+
+        public void SetCodEmpresa(string codEmpresa)
+        {
+            this.CodEmpresa = codEmpresa;
+        }
+
+        public string GetRazaoSocial()
+        {
+            return RazaoSocial;
+        }
+
+        public void SetRazaoSocial(string razaoSocial)
+        {
+            this.RazaoSocial = razaoSocial;
+        }
+
+        public string GetEnderco()
+        {
+            return Enderco;
+        }
+
+        public void SetEnderco(string endereco)
+        {
+            this.Enderco = endereco;
+        }
+
+        public string GetCNPJ()
+        {
+            return CNPJ;
+        }
+
+        public void SetCNPJ(string cnpj)
+        {
+            this.CNPJ = cnpj;
+        }
+
+        public string GetTelefone()
+        {
+            return Telefone;
+        }
+
+        public void SetTelefone(string telefone)
+        {
+            this.Telefone = telefone;
+        }
+
+        public string GetUnidade()
+        {
+            return Unidade;
+        }
+
+        public void SetUnidade(string unidade)
+        {
+            this.Unidade = unidade;
+        }
+
+        public string GetLogo()
+        {
+            return Logo;
+        }
+
+        public void SetLogo(string logo)
+        {
+            this.Logo = logo;
+        }
+
     }
 }

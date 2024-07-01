@@ -1,26 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Models.Clinica;
 
 namespace Models.Empresa
 {
     public class Contratante : Empresa
     {
-        private DateTime InicioContrato { get; set; }
-        private DateTime FimContrato { get; set; }
-        //private List<Servico> Servicos { get; set; }
+        public DateTime InicioContrato { get; private set; }
+        public DateTime FimContrato { get; private set; }
+        public List<Servico> Servicos { get; set; }
         private Decimal CsvFinal { get; set; }
-        private bool UnidadeIntegrada { get; set; }
+        public bool UnidadeIntegrada { get; set; }
 
         public Contratante() : base()
         {
             InicioContrato = DateTime.MinValue;
             FimContrato = DateTime.MinValue;
-            //Servicos = null;
+            Servicos = null;
             CsvFinal = 0;
             UnidadeIntegrada = false;
         }
+
+        public Contratante(Empresa empresa)
+        {
+            IdEmpresa = empresa.GetIdEmpresa();
+            CodEmpresa = empresa.GetCodEmpresa();
+            RazaoSocial = empresa.GetRazaoSocial();
+            Enderco = empresa.GetEnderco();
+            CNPJ = empresa.GetCNPJ();
+            Telefone = empresa.GetTelefone();
+            Unidade = empresa.GetUnidade();
+            Logo = empresa.GetLogo();
+            InicioContrato = DateTime.MinValue;
+            FimContrato = DateTime.MinValue;
+            Servicos = null;
+            CsvFinal = 0;
+            UnidadeIntegrada = false;
+        }
+
+        public void SetInicioContrato(DateTime data) 
+        { 
+            this.InicioContrato = data;
+        }
+
+        public void SetFimContrato(DateTime data) 
+        { 
+            this.FimContrato = data;
+        }
+
+        public decimal GetCsvFinal() 
+        {
+            return CsvFinal;
+        }
+
+        public void SetCsvFinal(decimal csv) 
+        {  
+            this.CsvFinal = csv; 
+        }
+
     }
 }
