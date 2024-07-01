@@ -42,7 +42,7 @@
 
         public int GetIdFilial() 
         { 
-            return IdFilial;
+            return this.IdFilial;
         }
 
         public void SetIdFilial(int id) 
@@ -52,7 +52,7 @@
 
         public int GetIdTerceirizada()
         {
-            return IdTerceirizada;
+            return this.IdTerceirizada;
         }
 
         public void SetIdTerceirizada(int id)
