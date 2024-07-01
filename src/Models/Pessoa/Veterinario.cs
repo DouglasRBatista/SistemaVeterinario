@@ -38,10 +38,10 @@ namespace Models.Pessoa
         public Veterinario(Funcionario funcionario)
         {
             IdPessoa = funcionario.GetIdPessoa();
-            IdUsuarui = funcionario.GetIdUsuarui();
+            IdUsuario = funcionario.GetIdUsuario();
             Nome = funcionario.GetNome();
             CPF = funcionario.GetCPF();
-            DtNacimento = funcionario.GetDtNacimento();
+            DtNascimento = funcionario.GetDtNascimento();
             Endereco = funcionario.GetEndereco();
 
             Cargo = funcionario.GetCargo();

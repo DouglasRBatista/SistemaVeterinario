@@ -17,8 +17,8 @@ namespace Models.Clinica
         private decimal ValorAtendimento;
         private int IdVeterinario;
         private int IdCliente;
-        public List<Servico> Servico { get; set; }
-        public List<String> Foto { get; set; }
+        public List<Servico> Servico;
+        public List<String> Foto;
 
         public Atendimento() {
             IdAtendimento = 0;
@@ -29,10 +29,10 @@ namespace Models.Clinica
             ValorAtendimento = 0;
             IdVeterinario = 0;
             IdCliente = 0;
-            Servico = null;
-            Foto = null;
+            Servico = GetServico();
+            Foto = GetFoto();
         }
-
+        
         public int GetIdAtendimento() {
             return IdAtendimento;
         }
@@ -95,6 +95,14 @@ namespace Models.Clinica
 
         public void SetIdCliente(int id) {
             IdCliente = id;
+        }
+
+        public List<Servico> GetServico() {
+            return Servico;
+        }
+
+        public List<string> GetFoto() {
+            return Foto;
         }
 
     }

@@ -8,7 +8,7 @@ namespace Models.Clinica {
     public class MedicamentoFornecedor {
         public int IdMedicamentoFornecedor {  get; set; }
         public int IdMedicamento { get; set; }
-        public Decimal Valor { get; set; }
+        public decimal Valor { get; set; }
         public int IdFornecedor { get; set; }
 
         public MedicamentoFornecedor() {

@@ -28,9 +28,17 @@ namespace Models.Clinica
             Quantidade = 0;
             Lote = string.Empty;
             Validade = DateOnly.MinValue;
-            //Valor = ;
+            Valor = GetValor();
             Fabricante = string.Empty;
-            //Fornecedor = ;
+            Fornecedor = GetFornecedor();
+        }
+
+        public List<MedicamentoFornecedor> GetValor() {
+            return Valor;
+        }
+
+        public List<FarmaciaLaboratorio> GetFornecedor() {
+            return Fornecedor;
         }
     }
 }

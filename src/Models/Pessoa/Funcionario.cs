@@ -28,10 +28,10 @@
         public Funcionario(Pessoa pessoa)
         {
             IdPessoa = pessoa.GetIdPessoa();
-            IdUsuarui = pessoa.GetIdUsuarui();
+            IdUsuario = pessoa.GetIdUsuario();
             Nome = pessoa.GetNome();
             CPF = pessoa.GetCPF();
-            DtNacimento = pessoa.GetDtNacimento();
+            DtNascimento = pessoa.GetDtNascimento();
             Endereco = pessoa.GetEndereco();
 
             Cargo = string.Empty;

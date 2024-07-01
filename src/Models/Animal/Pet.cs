@@ -18,7 +18,7 @@ namespace Models.Animal
         private int IdCliente;
         private char Sexo;
         private List<string> Cor;
-        private List<Alergia> Alergias { get; set; }
+        private List<Alergia> Alergias;
         private bool Exotico;
         private int NumChip;
         private string Foto;
@@ -32,8 +32,8 @@ namespace Models.Animal
             DataNasc = DateOnly.MinValue;
             IdCliente = 0;
             Sexo = char.MinValue;
-            Cor = null;
-            Alergias = null;
+            Cor = GetCor();
+            Alergias = GetAlergias();
             Exotico = false;
             NumChip = 0;
             Foto = string.Empty;
@@ -101,6 +101,13 @@ namespace Models.Animal
 
         public void SetNumChip(int numChip) {
             NumChip = numChip;
+        }
+
+        public List<string> GetCor() {
+            return Cor;
+        }
+        public List<Alergia> GetAlergias() {
+            return Alergias;
         }
     }
 }

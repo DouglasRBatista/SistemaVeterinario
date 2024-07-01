@@ -3,19 +3,19 @@
     public class Pessoa
     {
         protected int IdPessoa { get; set; }
-        protected int IdUsuarui { get; set; }
+        protected int IdUsuario { get; set; }
         protected string Nome { get; set; }
         protected string CPF { get; set; }
-        protected DateOnly DtNacimento { get; set; }
+        protected DateOnly DtNascimento { get; set; }
         protected string Endereco { get; set; }
 
         public Pessoa()
         {
             IdPessoa = 0;
-            IdUsuarui = 0;
+            IdUsuario = 0;
             Nome = string.Empty;
             CPF = string.Empty;
-            DtNacimento = new DateOnly();
+            DtNascimento = new DateOnly();
             Endereco = string.Empty;
         }
 
@@ -29,14 +29,14 @@
             this.IdPessoa = id;
         }
 
-        public int GetIdUsuarui()
+        public int GetIdUsuario()
         {
-            return this.IdUsuarui;
+            return this.IdUsuario;
         }
 
-        public void SetIdUsuarui(int id)
+        public void SetIdUsuario(int id)
         {
-            this.IdUsuarui = id;
+            this.IdUsuario = id;
         }
 
         public string GetNome()
@@ -59,14 +59,14 @@
             this.CPF = cpf;
         }
 
-        public DateOnly GetDtNacimento()
+        public DateOnly GetDtNascimento()
         {
-            return this.DtNacimento;
+            return this.DtNascimento;
         }
 
-        public void SetDtNacimento(DateOnly data)
+        public void SetDtNascimento(DateOnly data)
         {
-            this.DtNacimento = data;
+            this.DtNascimento = data;
         }
 
         public string GetEndereco()

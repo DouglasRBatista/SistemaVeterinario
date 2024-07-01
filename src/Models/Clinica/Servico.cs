@@ -14,16 +14,28 @@ namespace Models.Clinica
         public List<Veterinario> Responsavel{ get; set; }
         public List<Medicamento> Insumos { get; set; }
         public List<Vacina> Vacinas { get; set; }
-        public Decimal ValorServico { get; set; }
+        public decimal ValorServico { get; set; }
 
        public Servico() {
             IdServico = 0;
             CodServico = string.Empty;
             DescServico = string.Empty;
-            //Responsavel = ;
-            //Insumos = ;
-            //Vacinas = ;
+            Responsavel = GetResponsavel();
+            Insumos = GetInsumos();
+            Vacinas = GetVacinas();
             ValorServico = 0;
+        }
+
+        public List<Veterinario> GetResponsavel() {
+            return Responsavel;
+        }
+
+        public List<Medicamento> GetInsumos() {
+            return Insumos;
+        }
+
+        public List<Vacina> GetVacinas() {
+            return Vacinas;
         }
     }
 }

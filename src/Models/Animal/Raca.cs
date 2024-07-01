@@ -13,7 +13,7 @@ namespace Models.Animal
         public string DescRaca { get; set; }
         public double TempCorpMin { get; set; }
         public double TempCorpMax { get; set; }
-        //public List<PesoIdade> PesoPorIdade { get; set; }
+        public List<PesoIdade> PesoPorIdade { get; set; }
         public int EspectativaDeVidaMin { get; set; }
         public int EspectativaDeVidaMax { get; set; }
         public string ObsRaca { get; set; }
@@ -25,10 +25,14 @@ namespace Models.Animal
             DescRaca = String.Empty;
             TempCorpMin = 0;
             TempCorpMax = 0;
+            PesoPorIdade = GetPesoPorIdade();
             EspectativaDeVidaMin = 0;
             EspectativaDeVidaMax = 0;
             ObsRaca = String.Empty;
         }
         
+        public List<PesoIdade> GetPesoPorIdade() {
+            return PesoPorIdade;
+        }
     }
 }

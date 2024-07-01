@@ -7,7 +7,7 @@ namespace Models.Empresa
         public DateTime InicioContrato { get; private set; }
         public DateTime FimContrato { get; private set; }
         public List<Servico> Servicos { get; set; }
-        private Decimal CsvFinal { get; set; }
+        private decimal CsvFinal { get; set; }
         public bool UnidadeIntegrada { get; set; }
 
         public Contratante() : base()
