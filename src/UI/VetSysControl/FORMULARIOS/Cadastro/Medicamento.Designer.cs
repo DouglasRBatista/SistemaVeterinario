@@ -54,12 +54,12 @@
             Lbl_Dosagem = new Label();
             Txt_Dosagem = new TextBox();
             GrpBox_Quimicos = new GroupBox();
+            DtGridView_Quimicos = new DataGridView();
+            Btn_ExcluirComp = new Button();
+            Btn_EditarComp = new Button();
+            Btn_AddComp = new Button();
             Lbl_Compostos = new Label();
             Txt_Compostos = new TextBox();
-            Btn_AddComp = new Button();
-            Btn_EditarComp = new Button();
-            Btn_ExcluirComp = new Button();
-            DtGridView_Quimicos = new DataGridView();
             GrpBox_Quimicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Quimicos).BeginInit();
             SuspendLayout();
@@ -279,7 +279,7 @@
             CmbBox_Fornecedor.FormattingEnabled = true;
             CmbBox_Fornecedor.Location = new Point(521, 84);
             CmbBox_Fornecedor.Name = "CmbBox_Fornecedor";
-            CmbBox_Fornecedor.Size = new Size(163, 23);
+            CmbBox_Fornecedor.Size = new Size(258, 23);
             CmbBox_Fornecedor.TabIndex = 47;
             // 
             // Lbl_UnidMed
@@ -333,6 +333,41 @@
             GrpBox_Quimicos.TabStop = false;
             GrpBox_Quimicos.Text = "Quimicos";
             // 
+            // DtGridView_Quimicos
+            // 
+            DtGridView_Quimicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtGridView_Quimicos.Location = new Point(6, 21);
+            DtGridView_Quimicos.Name = "DtGridView_Quimicos";
+            DtGridView_Quimicos.Size = new Size(325, 94);
+            DtGridView_Quimicos.TabIndex = 54;
+            // 
+            // Btn_ExcluirComp
+            // 
+            Btn_ExcluirComp.Location = new Point(255, 180);
+            Btn_ExcluirComp.Name = "Btn_ExcluirComp";
+            Btn_ExcluirComp.Size = new Size(75, 23);
+            Btn_ExcluirComp.TabIndex = 54;
+            Btn_ExcluirComp.Text = "Excluir";
+            Btn_ExcluirComp.UseVisualStyleBackColor = true;
+            // 
+            // Btn_EditarComp
+            // 
+            Btn_EditarComp.Location = new Point(175, 180);
+            Btn_EditarComp.Name = "Btn_EditarComp";
+            Btn_EditarComp.Size = new Size(75, 23);
+            Btn_EditarComp.TabIndex = 54;
+            Btn_EditarComp.Text = "Editar";
+            Btn_EditarComp.UseVisualStyleBackColor = true;
+            // 
+            // Btn_AddComp
+            // 
+            Btn_AddComp.Location = new Point(94, 180);
+            Btn_AddComp.Name = "Btn_AddComp";
+            Btn_AddComp.Size = new Size(75, 23);
+            Btn_AddComp.TabIndex = 54;
+            Btn_AddComp.Text = "Adicionar";
+            Btn_AddComp.UseVisualStyleBackColor = true;
+            // 
             // Lbl_Compostos
             // 
             Lbl_Compostos.AutoSize = true;
@@ -348,41 +383,6 @@
             Txt_Compostos.Name = "Txt_Compostos";
             Txt_Compostos.Size = new Size(237, 23);
             Txt_Compostos.TabIndex = 53;
-            // 
-            // Btn_AddComp
-            // 
-            Btn_AddComp.Location = new Point(94, 180);
-            Btn_AddComp.Name = "Btn_AddComp";
-            Btn_AddComp.Size = new Size(75, 23);
-            Btn_AddComp.TabIndex = 54;
-            Btn_AddComp.Text = "Adicionar";
-            Btn_AddComp.UseVisualStyleBackColor = true;
-            // 
-            // Btn_EditarComp
-            // 
-            Btn_EditarComp.Location = new Point(175, 180);
-            Btn_EditarComp.Name = "Btn_EditarComp";
-            Btn_EditarComp.Size = new Size(75, 23);
-            Btn_EditarComp.TabIndex = 54;
-            Btn_EditarComp.Text = "Editar";
-            Btn_EditarComp.UseVisualStyleBackColor = true;
-            // 
-            // Btn_ExcluirComp
-            // 
-            Btn_ExcluirComp.Location = new Point(255, 180);
-            Btn_ExcluirComp.Name = "Btn_ExcluirComp";
-            Btn_ExcluirComp.Size = new Size(75, 23);
-            Btn_ExcluirComp.TabIndex = 54;
-            Btn_ExcluirComp.Text = "Excluir";
-            Btn_ExcluirComp.UseVisualStyleBackColor = true;
-            // 
-            // DtGridView_Quimicos
-            // 
-            DtGridView_Quimicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_Quimicos.Location = new Point(6, 21);
-            DtGridView_Quimicos.Name = "DtGridView_Quimicos";
-            DtGridView_Quimicos.Size = new Size(325, 94);
-            DtGridView_Quimicos.TabIndex = 54;
             // 
             // Medicamento
             // 

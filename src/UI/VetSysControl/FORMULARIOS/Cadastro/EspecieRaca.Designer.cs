@@ -36,8 +36,8 @@
             Txt_CodRaca = new TextBox();
             GrpBox_Temperatura = new GroupBox();
             Txt_TempCorpMax = new TextBox();
-            Lbl_TempCorpMax = new Label();
             Lbl_TempCorpMin = new Label();
+            Lbl_TempCorpMax = new Label();
             Txt_TempCorpMin = new TextBox();
             GrpBox_ExpecVida = new GroupBox();
             Txt_ExpecVidaMax = new TextBox();
@@ -53,6 +53,8 @@
             Btn_Salvar = new Button();
             Btn_Editar = new Button();
             Btn_Excluir = new Button();
+            Btn_BuscarRaca = new Button();
+            Btn_BuscarEspecie = new Button();
             GrpBox_Temperatura.SuspendLayout();
             GrpBox_ExpecVida.SuspendLayout();
             GrpBox_OBS.SuspendLayout();
@@ -97,7 +99,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(303, 97);
+            label2.Location = new Point(335, 97);
             label2.Name = "label2";
             label2.Size = new Size(61, 15);
             label2.TabIndex = 28;
@@ -105,7 +107,7 @@
             // 
             // Txt_DescEspecie
             // 
-            Txt_DescEspecie.Location = new Point(370, 94);
+            Txt_DescEspecie.Location = new Point(402, 94);
             Txt_DescEspecie.Name = "Txt_DescEspecie";
             Txt_DescEspecie.Size = new Size(135, 23);
             Txt_DescEspecie.TabIndex = 29;
@@ -113,7 +115,7 @@
             // Lbl_TipoEspecie
             // 
             Lbl_TipoEspecie.AutoSize = true;
-            Lbl_TipoEspecie.Location = new Point(528, 97);
+            Lbl_TipoEspecie.Location = new Point(560, 97);
             Lbl_TipoEspecie.Name = "Lbl_TipoEspecie";
             Lbl_TipoEspecie.Size = new Size(33, 15);
             Lbl_TipoEspecie.TabIndex = 30;
@@ -140,15 +142,15 @@
             Lbl_CodRaca.AutoSize = true;
             Lbl_CodRaca.Location = new Point(42, 175);
             Lbl_CodRaca.Name = "Lbl_CodRaca";
-            Lbl_CodRaca.Size = new Size(107, 15);
+            Lbl_CodRaca.Size = new Size(93, 15);
             Lbl_CodRaca.TabIndex = 33;
-            Lbl_CodRaca.Text = "Codigo da Especie:";
+            Lbl_CodRaca.Text = "Codigo da Raca:";
             // 
             // Txt_CodRaca
             // 
             Txt_CodRaca.Location = new Point(155, 172);
             Txt_CodRaca.Name = "Txt_CodRaca";
-            Txt_CodRaca.Size = new Size(135, 23);
+            Txt_CodRaca.Size = new Size(108, 23);
             Txt_CodRaca.TabIndex = 32;
             // 
             // GrpBox_Temperatura
@@ -157,7 +159,7 @@
             GrpBox_Temperatura.Controls.Add(Lbl_TempCorpMin);
             GrpBox_Temperatura.Controls.Add(Lbl_TempCorpMax);
             GrpBox_Temperatura.Controls.Add(Txt_TempCorpMin);
-            GrpBox_Temperatura.Location = new Point(302, 158);
+            GrpBox_Temperatura.Location = new Point(307, 158);
             GrpBox_Temperatura.Name = "GrpBox_Temperatura";
             GrpBox_Temperatura.Size = new Size(243, 100);
             GrpBox_Temperatura.TabIndex = 36;
@@ -171,15 +173,6 @@
             Txt_TempCorpMax.Size = new Size(72, 23);
             Txt_TempCorpMax.TabIndex = 40;
             // 
-            // Lbl_TempCorpMax
-            // 
-            Lbl_TempCorpMax.AutoSize = true;
-            Lbl_TempCorpMax.Location = new Point(6, 64);
-            Lbl_TempCorpMax.Name = "Lbl_TempCorpMax";
-            Lbl_TempCorpMax.Size = new Size(146, 15);
-            Lbl_TempCorpMax.TabIndex = 39;
-            Lbl_TempCorpMax.Text = "Temperatura Máxima (ºC):";
-            // 
             // Lbl_TempCorpMin
             // 
             Lbl_TempCorpMin.AutoSize = true;
@@ -188,6 +181,15 @@
             Lbl_TempCorpMin.Size = new Size(144, 15);
             Lbl_TempCorpMin.TabIndex = 38;
             Lbl_TempCorpMin.Text = "Temperatura Mínima (ºC):";
+            // 
+            // Lbl_TempCorpMax
+            // 
+            Lbl_TempCorpMax.AutoSize = true;
+            Lbl_TempCorpMax.Location = new Point(6, 64);
+            Lbl_TempCorpMax.Name = "Lbl_TempCorpMax";
+            Lbl_TempCorpMax.Size = new Size(146, 15);
+            Lbl_TempCorpMax.TabIndex = 39;
+            Lbl_TempCorpMax.Text = "Temperatura Máxima (ºC):";
             // 
             // Txt_TempCorpMin
             // 
@@ -202,7 +204,7 @@
             GrpBox_ExpecVida.Controls.Add(Lbl_ExpecVidaMin);
             GrpBox_ExpecVida.Controls.Add(Lbl_ExpecVidaMax);
             GrpBox_ExpecVida.Controls.Add(Txt_ExpecVidaMin);
-            GrpBox_ExpecVida.Location = new Point(551, 158);
+            GrpBox_ExpecVida.Location = new Point(556, 158);
             GrpBox_ExpecVida.Name = "GrpBox_ExpecVida";
             GrpBox_ExpecVida.Size = new Size(238, 100);
             GrpBox_ExpecVida.TabIndex = 41;
@@ -252,7 +254,7 @@
             // CmbBox_TipoEspecie
             // 
             CmbBox_TipoEspecie.FormattingEnabled = true;
-            CmbBox_TipoEspecie.Location = new Point(567, 94);
+            CmbBox_TipoEspecie.Location = new Point(599, 94);
             CmbBox_TipoEspecie.Name = "CmbBox_TipoEspecie";
             CmbBox_TipoEspecie.Size = new Size(135, 23);
             CmbBox_TipoEspecie.TabIndex = 44;
@@ -321,11 +323,29 @@
             Btn_Excluir.Text = "Excluir";
             Btn_Excluir.UseVisualStyleBackColor = true;
             // 
+            // Btn_BuscarRaca
+            // 
+            Btn_BuscarRaca.Location = new Point(266, 172);
+            Btn_BuscarRaca.Name = "Btn_BuscarRaca";
+            Btn_BuscarRaca.Size = new Size(36, 23);
+            Btn_BuscarRaca.TabIndex = 50;
+            Btn_BuscarRaca.UseVisualStyleBackColor = true;
+            // 
+            // Btn_BuscarEspecie
+            // 
+            Btn_BuscarEspecie.Location = new Point(289, 94);
+            Btn_BuscarEspecie.Name = "Btn_BuscarEspecie";
+            Btn_BuscarEspecie.Size = new Size(36, 23);
+            Btn_BuscarEspecie.TabIndex = 51;
+            Btn_BuscarEspecie.UseVisualStyleBackColor = true;
+            // 
             // EspecieRaca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Btn_BuscarEspecie);
+            Controls.Add(Btn_BuscarRaca);
             Controls.Add(Btn_Sair);
             Controls.Add(Btn_Salvar);
             Controls.Add(Btn_Editar);
@@ -392,5 +412,7 @@
         private Button Btn_Salvar;
         private Button Btn_Editar;
         private Button Btn_Excluir;
+        private Button Btn_BuscarRaca;
+        private Button Btn_BuscarEspecie;
     }
 }
