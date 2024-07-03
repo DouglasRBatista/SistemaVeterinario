@@ -50,46 +50,57 @@ namespace VetSysControl.Formularios
                 case "FrmAtendimento":
                     FrmAtendimento Form1 = new FrmAtendimento();
                     Childform = Form1;
+                    Childform.Text = "Atendimentos";
                     break;
                 case "FrmEspecieRaca":
                     FrmEspecieRaca Form2 = new FrmEspecieRaca();
                     Childform = Form2;
+                    Childform.Text = "Raças";
                     break;
                 case "FrmMedicamento":
                     FrmMedicamento Form3 = new FrmMedicamento();
                     Childform = Form3;
+                    Childform.Text = "Medicamento";
                     break;
                 case "FrmMedicamentoFornecedor":
                     FrmMedicamentoFornecedor Form4 = new FrmMedicamentoFornecedor();
                     Childform = Form4;
+                    Childform.Text = "Fornecedores";
                     break;
                 case "FrmPet":
                     FrmPet Form5 = new FrmPet();
                     Childform = Form5;
+                    Childform.Text = "Animais / Pets";
                     break;
                 case "FrmServico":
                     FrmServico Form6 = new FrmServico();
                     Childform = Form6;
+                    Childform.Text = "Serviços";
                     break;
                 case "FrmVacina":
                     FrmVacina Form7 = new FrmVacina();
                     Childform = Form7;
+                    Childform.Text = "Vacinas";
                     break;
                 case "FrmConsultaCliente":
                     FrmConsultaCli Form8 = new FrmConsultaCli();
                     Childform = Form8;
+                    Childform.Text = "Clientes";
                     break;
                 case "FrmConsultaFun":
                     FrmConsultaFun Form9 = new FrmConsultaFun();
                     Childform = Form9;
+                    Childform.Text = "Funcionarios";
                     break;
                 case "FrmConsultaPet":
                     FrmConsultaPet Form10 = new FrmConsultaPet();
                     Childform = Form10;
+                    Childform.Text = "Animais / Pets";
                     break;
                 default:
                     Form Form = new Form();
                     Childform = Form;
+                    Childform.Text = "Janela";
                     break;
 
             }
@@ -100,6 +111,7 @@ namespace VetSysControl.Formularios
             Childform.WindowState = FormWindowState.Maximized;
             Childform.Text = "Janela ";
             Childform.Show();
+            Childform.Refresh();
 
         }
 
