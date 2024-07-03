@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VetSysControl.FORMULARIOS.Cadastro {
-    public partial class MedicamentoFornecedor : Form {
-        public MedicamentoFornecedor() {
+    public partial class FrmVacina : Form {
+        public FrmVacina() {
             InitializeComponent();
         }
+        private void Vacina_Load(object sender, EventArgs e) {
+
+        }
+
     }
 }

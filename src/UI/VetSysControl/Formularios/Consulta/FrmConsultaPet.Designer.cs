@@ -1,5 +1,5 @@
 ﻿namespace VetSysControl.FORMULARIOS.Consulta {
-    partial class ConsultaPet {
+    partial class FrmConsultaPet {
         /// <summary>
         /// Required designer variable.
         /// </summary>

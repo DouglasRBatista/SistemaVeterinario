@@ -1,5 +1,5 @@
 ﻿namespace VetSysControl.FORMULARIOS.Cadastro {
-    partial class EspecieRaca {
+    partial class FrmEspecieRaca {
         /// <summary>
         /// Required designer variable.
         /// </summary>

@@ -1,5 +1,5 @@
 ﻿namespace VetSysControl.FORMULARIOS.Cadastro {
-    partial class Atendimento {
+    partial class FrmAtendimento {
         /// <summary>
         /// Required designer variable.
         /// </summary>

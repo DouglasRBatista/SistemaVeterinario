@@ -1,5 +1,5 @@
 ﻿namespace VetSysControl.FORMULARIOS.Cadastro {
-    partial class Vacina {
+    partial class FrmVacina {
         /// <summary>
         /// Required designer variable.
         /// </summary>

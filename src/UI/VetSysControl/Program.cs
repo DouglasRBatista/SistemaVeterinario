@@ -1,4 +1,4 @@
-using VetSysControl.Formularios.Configuracao;
+using VetSysControl.Configuracao;
 
 namespace VetSysControl
 {

@@ -1,5 +1,5 @@
 ﻿namespace VetSysControl.FORMULARIOS.Consulta {
-    partial class ConsultaCliente {
+    partial class FrmConsultaCli {
         /// <summary>
         /// Required designer variable.
         /// </summary>

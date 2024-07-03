@@ -1,5 +1,5 @@
 ﻿namespace VetSysControl.FORMULARIOS.Cadastro {
-    partial class Pet {
+    partial class FrmPet {
         /// <summary>
         /// Required designer variable.
         /// </summary>

@@ -8,13 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VetSysControl.FORMULARIOS.Cadastro {
-    public partial class Vacina : Form {
-        public Vacina() {
+namespace VetSysControl.FORMULARIOS.Consulta {
+    public partial class FrmConsultaFun : Form {
+        public FrmConsultaFun() {
             InitializeComponent();
-        }
-        private void Vacina_Load(object sender, EventArgs e) {
-
         }
 
     }

@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VetSysControl.FORMULARIOS.Consulta {
-    public partial class ConsultaPet : Form {
-        public ConsultaPet() {
+namespace VetSysControl.FORMULARIOS.Cadastro {
+    public partial class FrmServico : Form {
+        public FrmServico() {
             InitializeComponent();
         }
+
     }
 }

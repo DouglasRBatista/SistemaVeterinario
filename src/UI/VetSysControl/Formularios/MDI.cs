@@ -1,10 +1,18 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
-using VetSysControl.Formularios.Configuracao;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq.Expressions;
+using System.Security.Cryptography;
+using System.Windows.Forms;
+using VetSysControl.Configuracao;
+using VetSysControl.FORMULARIOS.Cadastro;
+using VetSysControl.FORMULARIOS.Consulta;
 
 namespace VetSysControl.Formularios
 {
     public partial class MDI : Form
     {
+        ConfigSystemDrawing configSystemDrawing = new ConfigSystemDrawing();
 
         protected override void WndProc(ref Message m)
         {
@@ -19,22 +27,83 @@ namespace VetSysControl.Formularios
         public MDI()
         {
             InitializeComponent();
+            DrawMdi();
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
+        public void DrawMdi()
         {
-            if(ActiveMdiChild != null)
+            BtnAtendimentos.Invalidate();
+            BtnAgendamentos.Invalidate();
+            BtnClientes.Invalidate();
+            BtnExames.Invalidate();
+        }
+
+        public void LoadNewForm(string froms) 
+        {
+            if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.TopLevel = false;
-            childForm.ControlBox = false;
-            childForm.WindowState = FormWindowState.Maximized;
-            childForm.Text = "Janela ";
-            childForm.Show();
+            var Childform = new Form();
+
+            switch (froms)
+            {
+                case "FrmAtendimento":
+                    FrmAtendimento Form1 = new FrmAtendimento();
+                    Childform = Form1;
+                    break;
+                case "FrmEspecieRaca":
+                    FrmEspecieRaca Form2 = new FrmEspecieRaca();
+                    Childform = Form2;
+                    break;
+                case "FrmMedicamento":
+                    FrmMedicamento Form3 = new FrmMedicamento();
+                    Childform = Form3;
+                    break;
+                case "FrmMedicamentoFornecedor":
+                    FrmMedicamentoFornecedor Form4 = new FrmMedicamentoFornecedor();
+                    Childform = Form4;
+                    break;
+                case "FrmPet":
+                    FrmPet Form5 = new FrmPet();
+                    Childform = Form5;
+                    break;
+                case "FrmServico":
+                    FrmServico Form6 = new FrmServico();
+                    Childform = Form6;
+                    break;
+                case "FrmVacina":
+                    FrmVacina Form7 = new FrmVacina();
+                    Childform = Form7;
+                    break;
+                case "FrmConsultaCliente":
+                    FrmConsultaCli Form8 = new FrmConsultaCli();
+                    Childform = Form8;
+                    break;
+                case "FrmConsultaFun":
+                    FrmConsultaFun Form9 = new FrmConsultaFun();
+                    Childform = Form9;
+                    break;
+                case "FrmConsultaPet":
+                    FrmConsultaPet Form10 = new FrmConsultaPet();
+                    Childform = Form10;
+                    break;
+                default:
+                    Form Form = new Form();
+                    Childform = Form;
+                    break;
+
+            }
+
+            Childform.MdiParent = this;
+            Childform.TopLevel = false;
+            Childform.ControlBox = false;
+            Childform.WindowState = FormWindowState.Maximized;
+            Childform.Text = "Janela ";
+            Childform.Show();
+
         }
 
+        #region Eventos Acao
         private void OpenFile(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -111,6 +180,123 @@ namespace VetSysControl.Formularios
                 childForm.Close();
             }
         }
+
+        // Eventos de click
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmConsultaCliente");
+        }
+        private void BtnFuncionarios_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmConsultaFun");
+        }
+
+        private void BtnPets_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmConsultaPet");
+        }
+
+        private void BtnAtendimentos_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmAtendimento");
+        }
+
+        private void BtnAgendamentos_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("");
+        }
+
+        private void BtnExames_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("");
+        }
+
+        private void BtnEspecieRaca_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmEspecieRaca");
+        }
+
+        private void BtnMedicamento_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmMedicamento");
+        }
+
+        private void BtnFornecedor_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmMedicamentoFornecedor");
+        }
+
+        private void BtnServico_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmServico");
+        }
+
+        private void BtnVacinas_Click(object sender, EventArgs e)
+        {
+            LoadNewForm("FrmVacina");
+        }
+
+        #endregion Eventos Acao
+
+
+        #region Eventos Design
+        private void BtnClientes_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnClientes);
+            configSystemDrawing.SetToolStripButtonFont(BtnClientes);
+        }
+        private void BtnFuncionarios_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnFuncionarios);
+            configSystemDrawing.SetToolStripButtonFont(BtnFuncionarios);
+        }
+        private void BtnPets_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnPets);
+            configSystemDrawing.SetToolStripButtonFont(BtnPets);
+        }
+        private void BtnAtendimentos_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnAtendimentos);
+            configSystemDrawing.SetToolStripButtonFont(BtnAtendimentos);
+        }
+        private void BtnAgendamentos_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnAgendamentos);
+            configSystemDrawing.SetToolStripButtonFont(BtnAgendamentos);
+        }
+        private void BtnExames_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnExames);
+            configSystemDrawing.SetToolStripButtonFont(BtnExames);
+        }
+        private void BtnEspecieRaca_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnEspecieRaca);
+            configSystemDrawing.SetToolStripButtonFont(BtnEspecieRaca);
+        }
+        private void BtnMedicamento_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnMedicamento);
+            configSystemDrawing.SetToolStripButtonFont(BtnMedicamento);
+        }
+        private void BtnFornecedor_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnFornecedor);
+            configSystemDrawing.SetToolStripButtonFont(BtnFornecedor);
+        }
+        private void BtnServico_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnServico);
+            configSystemDrawing.SetToolStripButtonFont(BtnServico);
+        }
+        private void BtnVacinas_Paint(object sender, PaintEventArgs e)
+        {
+            configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnVacinas);
+            configSystemDrawing.SetToolStripButtonFont(BtnVacinas);
+        }
+        #endregion Eventos Design
+
 
     }
 }

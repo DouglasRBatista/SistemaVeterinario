@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VetSysControl.FORMULARIOS.Consulta {
-    public partial class ConsultaCliente : Form {
-        public ConsultaCliente() {
+    public partial class FrmConsultaPet : Form {
+        public FrmConsultaPet() {
             InitializeComponent();
         }
-
     }
 }

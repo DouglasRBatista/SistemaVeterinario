@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VetSysControl.FORMULARIOS.Consulta {
-    public partial class ConsultaFunc : Form {
-        public ConsultaFunc() {
+    public partial class FrmConsultaCli : Form {
+        public FrmConsultaCli() {
             InitializeComponent();
         }
 

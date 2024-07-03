@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VetSysControl.FORMULARIOS.Cadastro {
-    public partial class Medicamento : Form {
-        public Medicamento() {
+    public partial class FrmMedicamento : Form {
+        public FrmMedicamento() {
             InitializeComponent();
         }
     }
