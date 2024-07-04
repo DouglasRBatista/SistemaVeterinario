@@ -1,6 +1,6 @@
 ﻿namespace Models.Pessoa
 {
-    public class Pessoa
+    public class Cls_Pessoa
     {
         protected int IdPessoa { get; set; }
         protected int IdUsuario { get; set; }
@@ -9,7 +9,7 @@
         protected DateOnly DtNascimento { get; set; }
         protected string Endereco { get; set; }
 
-        public Pessoa()
+        public Cls_Pessoa()
         {
             IdPessoa = 0;
             IdUsuario = 0;

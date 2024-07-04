@@ -7,7 +7,7 @@ using Models.Clinica;
 
 namespace Models.Animal
 {
-    public class Pet
+    public class Cls_Pet
     {
         private int IdPet;
         private string CodPet;
@@ -18,12 +18,12 @@ namespace Models.Animal
         private int IdCliente;
         private char Sexo;
         private List<string> Cor;
-        private List<Alergia> Alergias;
+        private List<Cls_Alergia> Alergias;
         private bool Exotico;
         private int NumChip;
         private string Foto;
 
-        public Pet() {
+        public Cls_Pet() {
             IdPet = 0;
             CodPet = string.Empty;
             Nome = string.Empty;
@@ -106,7 +106,7 @@ namespace Models.Animal
         public List<string> GetCor() {
             return Cor;
         }
-        public List<Alergia> GetAlergias() {
+        public List<Cls_Alergia> GetAlergias() {
             return Alergias;
         }
     }

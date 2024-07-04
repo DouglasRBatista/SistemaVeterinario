@@ -5,12 +5,12 @@ namespace VetSysControl.Configuracao
 {
     public class ConfigSettings
     {
-        public string GetConfiguration(string KeyField)
+        public string GetAppSettingsConfig(string KeyField)
         {
             return ConfigurationManager.AppSettings[KeyField];
         }
 
-        public void SetConfigurarion(string KeyField, string KeyValue) 
+        public void SetAppSettingsConfig(string KeyField, string KeyValue) 
         {
             Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
             config.AppSettings.Settings.Add(KeyField, KeyValue);

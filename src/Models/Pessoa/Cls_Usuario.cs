@@ -1,13 +1,13 @@
 ﻿namespace Models.Pessoa
 {
-    public class Usuario
+    public class Cls_Usuario
     {
         public int IdUsuario { get; set; }
         public string Login { get; set; }
         private string Senha { get; set; }
         public bool Ativo { get; set; }
 
-        public Usuario() {
+        public Cls_Usuario() {
             IdUsuario = 0;
             Login = string.Empty;
             Senha = string.Empty;

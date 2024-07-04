@@ -1,6 +1,6 @@
 ﻿namespace Models.Empresa
 {
-    public class Filial : Empresa
+    public class Cls_Filial : Cls_Empresa
     {
         public bool FlgDayCare {  get; set; }
         public decimal CsvDayCare { get; set; }
@@ -11,7 +11,7 @@
         public bool FlgFarmacia { get; set; }
         private decimal Custo {  get; set; }
 
-        public Filial() : base()
+        public Cls_Filial() : base()
         {
             FlgDayCare = false;
             CsvDayCare = 0;
@@ -23,7 +23,7 @@
             Custo = CSV();
         }
 
-        public Filial(Empresa empresa)
+        public Cls_Filial(Cls_Empresa empresa)
         {
             IdEmpresa = empresa.GetIdEmpresa();
             CodEmpresa = empresa.GetCodEmpresa();

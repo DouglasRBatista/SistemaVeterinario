@@ -4,32 +4,29 @@ using System.Data.SqlClient;
 
 namespace DAL.DALCONN
 {
-    public class DALCONN
+    public class DALCONN : IDisposable
     {
         private string connectionString;
         private SqlConnection connection;
         private SqlTransaction transaction;
+        private bool disposed = false;
 
-        public DALCONN() 
+        public DALCONN(string conn) 
         {
-            
+            NewConnection(conn);
+            OpenConnection();
         }
 
-        //public DatabaseConnection(string server, string database, string username, string password)
-        //{
-        //    connectionString = GetConnectionString(server, database, username, password);
-        //    connection = new SqlConnection(connectionString);
-        //}
-
-        private string GetConnectionString(string server, string database, string username, string password)
+        private void NewConnection(string conn)
         {
-            return $"Server={server};Database={database};User Id={username};Password={password};";
+            connection = new SqlConnection(conn);
         }
 
         public void OpenConnection()
         {
             try
             {
+
                 if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open();
@@ -104,7 +101,7 @@ namespace DAL.DALCONN
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error starting transaction: " + ex.Message);
+
             }
         }
 
@@ -131,7 +128,6 @@ namespace DAL.DALCONN
                 if (transaction != null)
                 {
                     transaction.Rollback();
-                    Console.WriteLine("Transaction rolled back successfully.");
                     transaction = null;
                 }
             }
@@ -139,6 +135,33 @@ namespace DAL.DALCONN
             {
 
             }
+        }
+
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    if (connection != null)
+                    {
+                        connection.Dispose();
+                    }
+                }
+                disposed = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        ~DALCONN()
+        {
+            Dispose(false);
         }
     }
 }

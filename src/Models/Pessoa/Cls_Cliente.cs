@@ -1,16 +1,16 @@
 ﻿namespace Models.Pessoa
 {
-    public class Cliente : Pessoa
+    public class Cls_Cliente : Cls_Pessoa
     {
         private string Telefone {  get; set; }
         private string Email { get; set; }
 
-        public Cliente() : base() {
+        public Cls_Cliente() : base() {
             Telefone = string.Empty;
             Email = string.Empty;
         }
 
-        public Cliente(Pessoa pessoa) {
+        public Cls_Cliente(Cls_Pessoa pessoa) {
             IdPessoa = pessoa.GetIdPessoa();
             IdUsuario = pessoa.GetIdUsuario();
             Nome = pessoa.GetNome();

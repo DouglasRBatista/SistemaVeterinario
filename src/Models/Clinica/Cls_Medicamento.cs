@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models.Clinica
 {
-    public class Medicamento
+    public class Cls_Medicamento
     {
         public int IdMedicamento { get; set; }
         public string CodMedicamento { get; set; }
@@ -16,11 +16,11 @@ namespace Models.Clinica
         public int Quantidade { get; set; }
         public string Lote { get; set; }
         public DateOnly Validade { get; set; }
-        public List<MedicamentoFornecedor> Valor { get; set; }
+        public List<Cls_MedicamentoFornecedor> Valor { get; set; }
         public string Fabricante { get; set; }
-        public List<FarmaciaLaboratorio> Fornecedor { get; set; }
+        public List<Cls_FarmaciaLaboratorio> Fornecedor { get; set; }
 
-        public Medicamento() {
+        public Cls_Medicamento() {
             IdMedicamento = 0;
             CodMedicamento = string.Empty;
             Descricao = string.Empty;
@@ -33,11 +33,11 @@ namespace Models.Clinica
             Fornecedor = GetFornecedor();
         }
 
-        public List<MedicamentoFornecedor> GetValor() {
+        public List<Cls_MedicamentoFornecedor> GetValor() {
             return Valor;
         }
 
-        public List<FarmaciaLaboratorio> GetFornecedor() {
+        public List<Cls_FarmaciaLaboratorio> GetFornecedor() {
             return Fornecedor;
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Models.Empresa
 {
-    public class Empresa
+    public class Cls_Empresa
     {
         protected int IdEmpresa { get; set; }
         protected string CodEmpresa { get; set; }
@@ -11,7 +11,7 @@
         protected string Unidade { get; set; }
         protected string Logo { get; set; }
 
-        public Empresa() 
+        public Cls_Empresa() 
         {
             IdEmpresa = 0;
             CodEmpresa = string.Empty;

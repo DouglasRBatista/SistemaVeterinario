@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Clinica
 {
-    public class Vacina {
+    public class Cls_Vacina {
         private int IdVacina { get; set; }
         private string CodVacina{ get; set; }
         private string NomeVacina { get; set; }

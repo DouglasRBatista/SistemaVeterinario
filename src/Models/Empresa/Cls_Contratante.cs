@@ -2,15 +2,15 @@
 
 namespace Models.Empresa
 {
-    public class Contratante : Empresa
+    public class Cls_Contratante : Cls_Empresa
     {
         public DateTime InicioContrato { get; private set; }
         public DateTime FimContrato { get; private set; }
-        public List<Servico> Servicos { get; set; }
+        public List<Cls_Servico> Servicos { get; set; }
         private decimal CsvFinal { get; set; }
         public bool UnidadeIntegrada { get; set; }
 
-        public Contratante() : base()
+        public Cls_Contratante() : base()
         {
             InicioContrato = DateTime.MinValue;
             FimContrato = DateTime.MinValue;
@@ -19,7 +19,7 @@ namespace Models.Empresa
             UnidadeIntegrada = false;
         }
 
-        public Contratante(Empresa empresa)
+        public Cls_Contratante(Cls_Empresa empresa)
         {
             IdEmpresa = empresa.GetIdEmpresa();
             CodEmpresa = empresa.GetCodEmpresa();

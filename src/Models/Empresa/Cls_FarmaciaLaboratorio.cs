@@ -1,6 +1,6 @@
 ﻿namespace Models.Empresa
 {
-    public class FarmaciaLaboratorio : Empresa
+    public class Cls_FarmaciaLaboratorio : Cls_Empresa
     {
         public bool FlgIntegrada {  get; set; }
         private int IdFilial { get; set; }
@@ -10,7 +10,7 @@
         public string DescFarmLab {  get; set; }
         public string ObsFarmLab {  get; set; }
 
-        public FarmaciaLaboratorio() : base() 
+        public Cls_FarmaciaLaboratorio() : base() 
         {
             FlgIntegrada = false;
             IdFilial = 0;
@@ -21,7 +21,7 @@
             ObsFarmLab = string.Empty;
         }
 
-        public FarmaciaLaboratorio(Empresa empresa)
+        public Cls_FarmaciaLaboratorio(Cls_Empresa empresa)
         {
             IdEmpresa = empresa.GetIdEmpresa();
             CodEmpresa = empresa.GetCodEmpresa();

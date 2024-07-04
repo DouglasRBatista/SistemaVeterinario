@@ -1,18 +1,15 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq.Expressions;
-using System.Security.Cryptography;
-using System.Windows.Forms;
-using VetSysControl.Configuracao;
-using VetSysControl.FORMULARIOS.Cadastro;
+﻿using VetSysControl.FORMULARIOS.Cadastro;
 using VetSysControl.FORMULARIOS.Consulta;
+using VetSysControl.Configuracao;
+using BLL.Empresa;
+
 
 namespace VetSysControl.Formularios
 {
     public partial class MDI : Form
     {
         ConfigSystemDrawing configSystemDrawing = new ConfigSystemDrawing();
+        ConfigSettings configSettings = new ConfigSettings();
 
         protected override void WndProc(ref Message m)
         {
@@ -28,6 +25,10 @@ namespace VetSysControl.Formularios
         {
             InitializeComponent();
             DrawMdi();
+
+            Bll_Empresa bll = new Bll_Empresa();
+            bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
+            bll.GetEmpresa(1);
         }
 
         public void DrawMdi()

@@ -1,6 +1,6 @@
 ﻿namespace Models.Pessoa
 {
-    public class Funcionario : Pessoa
+    public class Cls_Funcionario : Cls_Pessoa
     {
         protected string Cargo { get; set; }
         protected string Departamento { get; set; }
@@ -12,7 +12,7 @@
         protected bool FlgInativo { get; set; }
         protected int IdEmpresa { get; set; }
 
-        public Funcionario() : base()
+        public Cls_Funcionario() : base()
         {
             Cargo = string.Empty;
             Departamento = string.Empty;
@@ -25,7 +25,7 @@
             IdEmpresa = 0;
         }
 
-        public Funcionario(Pessoa pessoa)
+        public Cls_Funcionario(Cls_Pessoa pessoa)
         {
             IdPessoa = pessoa.GetIdPessoa();
             IdUsuario = pessoa.GetIdUsuario();

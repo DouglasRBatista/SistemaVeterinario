@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Models.Animal
 {
-    public class PesoIdade {
+    public class Cls_PesoIdade {
         public int IdRaca { get; set; }
         public int IdadeMin { get; set; }
         public int IdadeMax { get; set; }
         public double PesoMin { get; set; }
         public double PesoMax { get; set; }
 
-        public PesoIdade() {
+        public Cls_PesoIdade() {
             IdRaca = 0;
             IdadeMin = 0; 
             IdadeMax = 0;

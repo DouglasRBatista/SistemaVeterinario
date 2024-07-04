@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Models.Animal
 {
-    public class Raca {
+    public class Cls_Raca {
         public int IdRaca { get; set; }
         public int IdEspecie { get; set; }
         public string CodRaca { get; set; }
         public string DescRaca { get; set; }
         public double TempCorpMin { get; set; }
         public double TempCorpMax { get; set; }
-        public List<PesoIdade> PesoPorIdade { get; set; }
+        public List<Cls_PesoIdade> PesoPorIdade { get; set; }
         public int EspectativaDeVidaMin { get; set; }
         public int EspectativaDeVidaMax { get; set; }
         public string ObsRaca { get; set; }
 
-        public Raca() {
+        public Cls_Raca() {
             IdRaca = 0;
             IdEspecie = 0;
             CodRaca = String.Empty;
@@ -31,7 +31,7 @@ namespace Models.Animal
             ObsRaca = String.Empty;
         }
         
-        public List<PesoIdade> GetPesoPorIdade() {
+        public List<Cls_PesoIdade> GetPesoPorIdade() {
             return PesoPorIdade;
         }
     }

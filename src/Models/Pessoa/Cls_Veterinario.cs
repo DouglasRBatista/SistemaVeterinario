@@ -2,7 +2,7 @@
 
 namespace Models.Pessoa
 {
-    public class Veterinario : Funcionario
+    public class Cls_Veterinario : Cls_Funcionario
     {
         public bool FlgAtAniPequenoPorte { get; set; }
         public bool FlgAtAniGrandePorte { get; set; }
@@ -16,9 +16,9 @@ namespace Models.Pessoa
         public bool FlgFunAnestesia { get; set; }
         public bool FlgFunFarmaciaVeterinaria { get; set; }
         public bool FlgFunPesquisa { get; set; }
-        public List<Raca> RacasCompetentes { get; set; }
+        public List<Cls_Raca> RacasCompetentes { get; set; }
 
-        public Veterinario() : base() 
+        public Cls_Veterinario() : base() 
         {
             FlgAtAniPequenoPorte = false;
             FlgAtAniGrandePorte = false;
@@ -35,7 +35,7 @@ namespace Models.Pessoa
             RacasCompetentes = GetRacasCompetentes();
         }
 
-        public Veterinario(Funcionario funcionario)
+        public Cls_Veterinario(Cls_Funcionario funcionario)
         {
             IdPessoa = funcionario.GetIdPessoa();
             IdUsuario = funcionario.GetIdUsuario();
@@ -69,7 +69,7 @@ namespace Models.Pessoa
             RacasCompetentes = GetRacasCompetentes();
         }
 
-        public List<Raca> GetRacasCompetentes() 
+        public List<Cls_Raca> GetRacasCompetentes() 
         {
             // Criar Função
             return null;

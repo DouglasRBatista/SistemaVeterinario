@@ -8,7 +8,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Models.Clinica
 {
-    public class Atendimento{
+    public class Cls_Atendimento{
         private int IdAtendimento;
         private int IdPet;
         private string Titulo;
@@ -17,10 +17,10 @@ namespace Models.Clinica
         private decimal ValorAtendimento;
         private int IdVeterinario;
         private int IdCliente;
-        public List<Servico> Servico;
+        public List<Cls_Servico> Servico;
         public List<String> Foto;
 
-        public Atendimento() {
+        public Cls_Atendimento() {
             IdAtendimento = 0;
             IdPet = 0;
             Titulo = string.Empty; 
@@ -97,7 +97,7 @@ namespace Models.Clinica
             IdCliente = id;
         }
 
-        public List<Servico> GetServico() {
+        public List<Cls_Servico> GetServico() {
             return Servico;
         }
 

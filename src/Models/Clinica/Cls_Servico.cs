@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Models.Clinica
 {
-    public class Servico{
+    public class Cls_Servico{
         public int IdServico { get; set; }
         public string CodServico { get; set; }
         public string DescServico { get; set; }
-        public List<Veterinario> Responsavel{ get; set; }
-        public List<Medicamento> Insumos { get; set; }
-        public List<Vacina> Vacinas { get; set; }
+        public List<Cls_Veterinario> Responsavel{ get; set; }
+        public List<Cls_Medicamento> Insumos { get; set; }
+        public List<Cls_Vacina> Vacinas { get; set; }
         public decimal ValorServico { get; set; }
 
-       public Servico() {
+       public Cls_Servico() {
             IdServico = 0;
             CodServico = string.Empty;
             DescServico = string.Empty;
@@ -26,15 +26,15 @@ namespace Models.Clinica
             ValorServico = 0;
         }
 
-        public List<Veterinario> GetResponsavel() {
+        public List<Cls_Veterinario> GetResponsavel() {
             return Responsavel;
         }
 
-        public List<Medicamento> GetInsumos() {
+        public List<Cls_Medicamento> GetInsumos() {
             return Insumos;
         }
 
-        public List<Vacina> GetVacinas() {
+        public List<Cls_Vacina> GetVacinas() {
             return Vacinas;
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Clinica
 {
-    public class CarteiraVacina {
+    public class Cls_CarteiraVacina {
         private int IdCarteiraVac;
         private int IdPet;
         private int IdVacina;
@@ -16,7 +16,7 @@ namespace Models.Clinica
         private int IdVeterinario;
         private int NumDose;
 
-        public CarteiraVacina() {
+        public Cls_CarteiraVacina() {
             IdCarteiraVac = 0;
             IdPet = 0;
             IdVacina = 0;
