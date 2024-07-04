@@ -25,11 +25,11 @@
         private void InitializeComponent() {
             Btn_Sair = new Button();
             GrpBox_ConsultaPet = new GroupBox();
+            MskTxt_Telefone = new MaskedTextBox();
             Lbl_Email = new Label();
             Txt_Email = new TextBox();
             Lbl_Nome = new Label();
             Txt_Nome = new TextBox();
-            Txt_Telefone = new TextBox();
             Lbl_Telefone = new Label();
             Btn_Buscar = new Button();
             Lbl_CPF = new Label();
@@ -41,7 +41,7 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 60;
@@ -50,26 +50,33 @@
             // 
             // GrpBox_ConsultaPet
             // 
+            GrpBox_ConsultaPet.Controls.Add(MskTxt_Telefone);
             GrpBox_ConsultaPet.Controls.Add(Lbl_Email);
             GrpBox_ConsultaPet.Controls.Add(Txt_Email);
             GrpBox_ConsultaPet.Controls.Add(Lbl_Nome);
             GrpBox_ConsultaPet.Controls.Add(Txt_Nome);
-            GrpBox_ConsultaPet.Controls.Add(Txt_Telefone);
             GrpBox_ConsultaPet.Controls.Add(Lbl_Telefone);
             GrpBox_ConsultaPet.Controls.Add(Btn_Buscar);
             GrpBox_ConsultaPet.Controls.Add(Lbl_CPF);
             GrpBox_ConsultaPet.Controls.Add(Txt_CPF);
             GrpBox_ConsultaPet.Location = new Point(12, 12);
             GrpBox_ConsultaPet.Name = "GrpBox_ConsultaPet";
-            GrpBox_ConsultaPet.Size = new Size(776, 72);
+            GrpBox_ConsultaPet.Size = new Size(1068, 72);
             GrpBox_ConsultaPet.TabIndex = 61;
             GrpBox_ConsultaPet.TabStop = false;
             GrpBox_ConsultaPet.Text = "Consulta";
             // 
+            // MskTxt_Telefone
+            // 
+            MskTxt_Telefone.Location = new Point(893, 16);
+            MskTxt_Telefone.Name = "MskTxt_Telefone";
+            MskTxt_Telefone.Size = new Size(164, 23);
+            MskTxt_Telefone.TabIndex = 79;
+            // 
             // Lbl_Email
             // 
             Lbl_Email.AutoSize = true;
-            Lbl_Email.Location = new Point(6, 47);
+            Lbl_Email.Location = new Point(534, 19);
             Lbl_Email.Name = "Lbl_Email";
             Lbl_Email.Size = new Size(39, 15);
             Lbl_Email.TabIndex = 78;
@@ -77,7 +84,7 @@
             // 
             // Txt_Email
             // 
-            Txt_Email.Location = new Point(58, 44);
+            Txt_Email.Location = new Point(586, 16);
             Txt_Email.Name = "Txt_Email";
             Txt_Email.Size = new Size(241, 23);
             Txt_Email.TabIndex = 77;
@@ -98,17 +105,10 @@
             Txt_Nome.Size = new Size(299, 23);
             Txt_Nome.TabIndex = 75;
             // 
-            // Txt_Telefone
-            // 
-            Txt_Telefone.Location = new Point(379, 44);
-            Txt_Telefone.Name = "Txt_Telefone";
-            Txt_Telefone.Size = new Size(121, 23);
-            Txt_Telefone.TabIndex = 74;
-            // 
             // Lbl_Telefone
             // 
             Lbl_Telefone.AutoSize = true;
-            Lbl_Telefone.Location = new Point(319, 47);
+            Lbl_Telefone.Location = new Point(833, 19);
             Lbl_Telefone.Name = "Lbl_Telefone";
             Lbl_Telefone.Size = new Size(54, 15);
             Lbl_Telefone.TabIndex = 73;
@@ -116,7 +116,7 @@
             // 
             // Btn_Buscar
             // 
-            Btn_Buscar.Location = new Point(694, 43);
+            Btn_Buscar.Location = new Point(982, 43);
             Btn_Buscar.Name = "Btn_Buscar";
             Btn_Buscar.Size = new Size(75, 23);
             Btn_Buscar.TabIndex = 72;
@@ -144,18 +144,18 @@
             DtGridView_Cliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DtGridView_Cliente.Location = new Point(12, 90);
             DtGridView_Cliente.Name = "DtGridView_Cliente";
-            DtGridView_Cliente.Size = new Size(776, 306);
+            DtGridView_Cliente.Size = new Size(1068, 427);
             DtGridView_Cliente.TabIndex = 62;
             // 
-            // ConsultaCliente
+            // FrmConsultaCli
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
             Controls.Add(DtGridView_Cliente);
             Controls.Add(GrpBox_ConsultaPet);
             Controls.Add(Btn_Sair);
-            Name = "ConsultaCliente";
+            Name = "FrmConsultaCli";
             Text = "ConsultaCliente";
             GrpBox_ConsultaPet.ResumeLayout(false);
             GrpBox_ConsultaPet.PerformLayout();
@@ -169,7 +169,6 @@
         private Button Btn_Sair;
         private GroupBox GrpBox_ConsultaPet;
         private Label Lbl_Telefone;
-        private TextBox Txt_Telefone;
         private Label Lbl_Nome;
         private TextBox Txt_Nome;
         private Label Lbl_Email;
@@ -177,5 +176,6 @@
         private Label Lbl_CPF;
         private TextBox Txt_CPF;
         private DataGridView DtGridView_Cliente;
+        private MaskedTextBox MskTxt_Telefone;
     }
 }

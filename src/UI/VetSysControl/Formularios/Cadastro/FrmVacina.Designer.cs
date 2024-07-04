@@ -45,11 +45,15 @@
             Btn_Editar = new Button();
             Btn_Salvar = new Button();
             Btn_Sair = new Button();
+            Lbl_Periodicidade = new Label();
+            textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
+            Lbl_UnidTempo = new Label();
             SuspendLayout();
             // 
             // Btn_Excluir
             // 
-            Btn_Excluir.Location = new Point(621, 402);
+            Btn_Excluir.Location = new Point(909, 523);
             Btn_Excluir.Name = "Btn_Excluir";
             Btn_Excluir.Size = new Size(75, 23);
             Btn_Excluir.TabIndex = 0;
@@ -84,7 +88,7 @@
             // Lbl_Nome
             // 
             Lbl_Nome.AutoSize = true;
-            Lbl_Nome.Location = new Point(38, 131);
+            Lbl_Nome.Location = new Point(364, 86);
             Lbl_Nome.Name = "Lbl_Nome";
             Lbl_Nome.Size = new Size(43, 15);
             Lbl_Nome.TabIndex = 7;
@@ -92,7 +96,7 @@
             // 
             // Txt_Nome
             // 
-            Txt_Nome.Location = new Point(105, 128);
+            Txt_Nome.Location = new Point(431, 83);
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(287, 23);
             Txt_Nome.TabIndex = 6;
@@ -100,7 +104,7 @@
             // Lbl_Desc
             // 
             Lbl_Desc.AutoSize = true;
-            Lbl_Desc.Location = new Point(38, 236);
+            Lbl_Desc.Location = new Point(38, 220);
             Lbl_Desc.Name = "Lbl_Desc";
             Lbl_Desc.Size = new Size(61, 15);
             Lbl_Desc.TabIndex = 9;
@@ -108,15 +112,16 @@
             // 
             // Txt_Desc
             // 
-            Txt_Desc.Location = new Point(105, 233);
+            Txt_Desc.Location = new Point(105, 217);
+            Txt_Desc.Multiline = true;
             Txt_Desc.Name = "Txt_Desc";
-            Txt_Desc.Size = new Size(421, 23);
+            Txt_Desc.Size = new Size(696, 126);
             Txt_Desc.TabIndex = 8;
             // 
             // Lbl_Tipo
             // 
             Lbl_Tipo.AutoSize = true;
-            Lbl_Tipo.Location = new Point(38, 165);
+            Lbl_Tipo.Location = new Point(38, 140);
             Lbl_Tipo.Name = "Lbl_Tipo";
             Lbl_Tipo.Size = new Size(33, 15);
             Lbl_Tipo.TabIndex = 11;
@@ -124,7 +129,7 @@
             // 
             // Txt_Tipo
             // 
-            Txt_Tipo.Location = new Point(105, 162);
+            Txt_Tipo.Location = new Point(105, 137);
             Txt_Tipo.Name = "Txt_Tipo";
             Txt_Tipo.Size = new Size(100, 23);
             Txt_Tipo.TabIndex = 10;
@@ -132,7 +137,7 @@
             // Lbl_Fabricante
             // 
             Lbl_Fabricante.AutoSize = true;
-            Lbl_Fabricante.Location = new Point(227, 165);
+            Lbl_Fabricante.Location = new Point(227, 140);
             Lbl_Fabricante.Name = "Lbl_Fabricante";
             Lbl_Fabricante.Size = new Size(65, 15);
             Lbl_Fabricante.TabIndex = 13;
@@ -140,7 +145,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(298, 162);
+            textBox1.Location = new Point(298, 137);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(187, 23);
             textBox1.TabIndex = 12;
@@ -148,7 +153,7 @@
             // Lbl_Lote
             // 
             Lbl_Lote.AutoSize = true;
-            Lbl_Lote.Location = new Point(506, 165);
+            Lbl_Lote.Location = new Point(506, 140);
             Lbl_Lote.Name = "Lbl_Lote";
             Lbl_Lote.Size = new Size(33, 15);
             Lbl_Lote.TabIndex = 15;
@@ -156,7 +161,7 @@
             // 
             // Txt_Lote
             // 
-            Txt_Lote.Location = new Point(545, 162);
+            Txt_Lote.Location = new Point(545, 137);
             Txt_Lote.Name = "Txt_Lote";
             Txt_Lote.Size = new Size(100, 23);
             Txt_Lote.TabIndex = 14;
@@ -164,7 +169,7 @@
             // Lbl_Validade
             // 
             Lbl_Validade.AutoSize = true;
-            Lbl_Validade.Location = new Point(38, 198);
+            Lbl_Validade.Location = new Point(38, 182);
             Lbl_Validade.Name = "Lbl_Validade";
             Lbl_Validade.Size = new Size(54, 15);
             Lbl_Validade.TabIndex = 16;
@@ -173,8 +178,7 @@
             // Dtp_Validade
             // 
             Dtp_Validade.Format = DateTimePickerFormat.Short;
-            Dtp_Validade.Location = new Point(105, 195);
-            Dtp_Validade.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            Dtp_Validade.Location = new Point(105, 179);
             Dtp_Validade.Name = "Dtp_Validade";
             Dtp_Validade.Size = new Size(100, 23);
             Dtp_Validade.TabIndex = 18;
@@ -182,7 +186,7 @@
             // Lbl_QtdDose
             // 
             Lbl_QtdDose.AutoSize = true;
-            Lbl_QtdDose.Location = new Point(227, 198);
+            Lbl_QtdDose.Location = new Point(227, 182);
             Lbl_QtdDose.Name = "Lbl_QtdDose";
             Lbl_QtdDose.Size = new Size(56, 15);
             Lbl_QtdDose.TabIndex = 20;
@@ -190,7 +194,7 @@
             // 
             // Txt_QtdDose
             // 
-            Txt_QtdDose.Location = new Point(298, 195);
+            Txt_QtdDose.Location = new Point(298, 179);
             Txt_QtdDose.Name = "Txt_QtdDose";
             Txt_QtdDose.Size = new Size(57, 23);
             Txt_QtdDose.TabIndex = 19;
@@ -206,7 +210,7 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(537, 402);
+            Btn_Editar.Location = new Point(825, 523);
             Btn_Editar.Name = "Btn_Editar";
             Btn_Editar.Size = new Size(75, 23);
             Btn_Editar.TabIndex = 22;
@@ -215,7 +219,7 @@
             // 
             // Btn_Salvar
             // 
-            Btn_Salvar.Location = new Point(451, 402);
+            Btn_Salvar.Location = new Point(739, 523);
             Btn_Salvar.Name = "Btn_Salvar";
             Btn_Salvar.Size = new Size(75, 23);
             Btn_Salvar.TabIndex = 23;
@@ -224,18 +228,55 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 24;
             Btn_Sair.Text = "Sair";
             Btn_Sair.UseVisualStyleBackColor = true;
             // 
-            // Vacina
+            // Lbl_Periodicidade
+            // 
+            Lbl_Periodicidade.AutoSize = true;
+            Lbl_Periodicidade.Location = new Point(387, 182);
+            Lbl_Periodicidade.Name = "Lbl_Periodicidade";
+            Lbl_Periodicidade.Size = new Size(82, 15);
+            Lbl_Periodicidade.TabIndex = 26;
+            Lbl_Periodicidade.Text = "Periodicidade:";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(475, 179);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 25;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(680, 179);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 27;
+            // 
+            // Lbl_UnidTempo
+            // 
+            Lbl_UnidTempo.AutoSize = true;
+            Lbl_UnidTempo.Location = new Point(581, 182);
+            Lbl_UnidTempo.Name = "Lbl_UnidTempo";
+            Lbl_UnidTempo.Size = new Size(93, 15);
+            Lbl_UnidTempo.TabIndex = 28;
+            Lbl_UnidTempo.Text = "Unidade Tempo:";
+            // 
+            // FrmVacina
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
+            Controls.Add(Lbl_UnidTempo);
+            Controls.Add(comboBox1);
+            Controls.Add(Lbl_Periodicidade);
+            Controls.Add(textBox2);
             Controls.Add(Btn_Sair);
             Controls.Add(Btn_Salvar);
             Controls.Add(Btn_Editar);
@@ -258,7 +299,7 @@
             Controls.Add(Txt_Codigo);
             Controls.Add(Lbl_CadastroVac);
             Controls.Add(Btn_Excluir);
-            Name = "Vacina";
+            Name = "FrmVacina";
             Text = "Vacina";
             Load += Vacina_Load;
             ResumeLayout(false);
@@ -289,5 +330,9 @@
         private Button Btn_Editar;
         private Button Btn_Salvar;
         private Button Btn_Sair;
+        private Label Lbl_Periodicidade;
+        private TextBox textBox2;
+        private ComboBox comboBox1;
+        private Label Lbl_UnidTempo;
     }
 }

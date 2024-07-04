@@ -17,7 +17,9 @@ namespace Models.Clinica
         private DateOnly Validade { get; set; }
         private bool DoseUnica { get; set; }
         private int QtdDose { get; set; }
+        private int Periodicidade { get; set; }
+        private string UnidTempo { get; set; }
 
-        
+
     }
 }

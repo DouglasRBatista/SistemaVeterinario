@@ -9,14 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VetSysControl.FORMULARIOS.Cadastro {
-    public partial class FrmAtendimento : Form {
-        public FrmAtendimento() {
+    public partial class FrmEmpresa : Form {
+        public FrmEmpresa() {
             InitializeComponent();
         }
-
-        private void FrmAtendimento_Load(object sender, EventArgs e) {
-
-        }
-
     }
 }
