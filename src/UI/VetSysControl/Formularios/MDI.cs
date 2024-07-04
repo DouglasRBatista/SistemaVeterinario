@@ -253,58 +253,47 @@ namespace VetSysControl.Formularios
 
 
         #region Eventos Design
-        private void BtnClientes_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnClientes_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnClientes);
             configSystemDrawing.SetToolStripButtonFont(BtnClientes);
         }
-        private void BtnFuncionarios_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnFuncionarios_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnFuncionarios);
             configSystemDrawing.SetToolStripButtonFont(BtnFuncionarios);
         }
-        private void BtnPets_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnPets_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnPets);
             configSystemDrawing.SetToolStripButtonFont(BtnPets);
         }
-        private void BtnAtendimentos_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnAtendimentos_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnAtendimentos);
             configSystemDrawing.SetToolStripButtonFont(BtnAtendimentos);
         }
-        private void BtnAgendamentos_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnAgendamentos_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnAgendamentos);
             configSystemDrawing.SetToolStripButtonFont(BtnAgendamentos);
         }
-        private void BtnExames_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnExames_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnExames);
             configSystemDrawing.SetToolStripButtonFont(BtnExames);
         }
-        private void BtnEspecieRaca_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnEspecieRaca_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnEspecieRaca);
             configSystemDrawing.SetToolStripButtonFont(BtnEspecieRaca);
         }
-        private void BtnMedicamento_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnMedicamento_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnMedicamento);
             configSystemDrawing.SetToolStripButtonFont(BtnMedicamento);
         }
-        private void BtnFornecedor_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnFornecedor_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnFornecedor);
             configSystemDrawing.SetToolStripButtonFont(BtnFornecedor);
         }
-        private void BtnServico_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnServico_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnServico);
             configSystemDrawing.SetToolStripButtonFont(BtnServico);
         }
-        private void BtnVacinas_Paint(object sender, PaintEventArgs e)
-        {
+        private void BtnVacinas_Paint(object sender, PaintEventArgs e) {
             configSystemDrawing.DrawToolStripButtonBorder(e.Graphics, this.ClientRectangle, BtnVacinas);
             configSystemDrawing.SetToolStripButtonFont(BtnVacinas);
         }

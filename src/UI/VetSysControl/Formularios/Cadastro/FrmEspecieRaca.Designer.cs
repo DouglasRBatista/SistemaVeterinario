@@ -74,7 +74,7 @@
             // Lbl_Raca
             // 
             Lbl_Raca.AutoSize = true;
-            Lbl_Raca.Location = new Point(37, 137);
+            Lbl_Raca.Location = new Point(37, 218);
             Lbl_Raca.Name = "Lbl_Raca";
             Lbl_Raca.Size = new Size(98, 15);
             Lbl_Raca.TabIndex = 25;
@@ -84,7 +84,7 @@
             // 
             Txt_CodEspecie.Location = new Point(150, 94);
             Txt_CodEspecie.Name = "Txt_CodEspecie";
-            Txt_CodEspecie.Size = new Size(135, 23);
+            Txt_CodEspecie.Size = new Size(175, 23);
             Txt_CodEspecie.TabIndex = 26;
             // 
             // Lbl_CodEspecie
@@ -99,7 +99,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(335, 97);
+            label2.Location = new Point(414, 97);
             label2.Name = "label2";
             label2.Size = new Size(61, 15);
             label2.TabIndex = 28;
@@ -107,15 +107,15 @@
             // 
             // Txt_DescEspecie
             // 
-            Txt_DescEspecie.Location = new Point(402, 94);
+            Txt_DescEspecie.Location = new Point(481, 94);
             Txt_DescEspecie.Name = "Txt_DescEspecie";
-            Txt_DescEspecie.Size = new Size(135, 23);
+            Txt_DescEspecie.Size = new Size(220, 23);
             Txt_DescEspecie.TabIndex = 29;
             // 
             // Lbl_TipoEspecie
             // 
             Lbl_TipoEspecie.AutoSize = true;
-            Lbl_TipoEspecie.Location = new Point(560, 97);
+            Lbl_TipoEspecie.Location = new Point(724, 97);
             Lbl_TipoEspecie.Name = "Lbl_TipoEspecie";
             Lbl_TipoEspecie.Size = new Size(33, 15);
             Lbl_TipoEspecie.TabIndex = 30;
@@ -123,15 +123,15 @@
             // 
             // Txt_DescRaca
             // 
-            Txt_DescRaca.Location = new Point(155, 207);
+            Txt_DescRaca.Location = new Point(155, 305);
             Txt_DescRaca.Name = "Txt_DescRaca";
-            Txt_DescRaca.Size = new Size(135, 23);
+            Txt_DescRaca.Size = new Size(241, 23);
             Txt_DescRaca.TabIndex = 35;
             // 
             // Lbl_DescRaca
             // 
             Lbl_DescRaca.AutoSize = true;
-            Lbl_DescRaca.Location = new Point(42, 210);
+            Lbl_DescRaca.Location = new Point(42, 308);
             Lbl_DescRaca.Name = "Lbl_DescRaca";
             Lbl_DescRaca.Size = new Size(61, 15);
             Lbl_DescRaca.TabIndex = 34;
@@ -140,7 +140,7 @@
             // Lbl_CodRaca
             // 
             Lbl_CodRaca.AutoSize = true;
-            Lbl_CodRaca.Location = new Point(42, 175);
+            Lbl_CodRaca.Location = new Point(42, 273);
             Lbl_CodRaca.Name = "Lbl_CodRaca";
             Lbl_CodRaca.Size = new Size(93, 15);
             Lbl_CodRaca.TabIndex = 33;
@@ -148,9 +148,9 @@
             // 
             // Txt_CodRaca
             // 
-            Txt_CodRaca.Location = new Point(155, 172);
+            Txt_CodRaca.Location = new Point(155, 270);
             Txt_CodRaca.Name = "Txt_CodRaca";
-            Txt_CodRaca.Size = new Size(108, 23);
+            Txt_CodRaca.Size = new Size(170, 23);
             Txt_CodRaca.TabIndex = 32;
             // 
             // GrpBox_Temperatura
@@ -159,7 +159,7 @@
             GrpBox_Temperatura.Controls.Add(Lbl_TempCorpMin);
             GrpBox_Temperatura.Controls.Add(Lbl_TempCorpMax);
             GrpBox_Temperatura.Controls.Add(Txt_TempCorpMin);
-            GrpBox_Temperatura.Location = new Point(307, 158);
+            GrpBox_Temperatura.Location = new Point(458, 256);
             GrpBox_Temperatura.Name = "GrpBox_Temperatura";
             GrpBox_Temperatura.Size = new Size(243, 100);
             GrpBox_Temperatura.TabIndex = 36;
@@ -204,7 +204,7 @@
             GrpBox_ExpecVida.Controls.Add(Lbl_ExpecVidaMin);
             GrpBox_ExpecVida.Controls.Add(Lbl_ExpecVidaMax);
             GrpBox_ExpecVida.Controls.Add(Txt_ExpecVidaMin);
-            GrpBox_ExpecVida.Location = new Point(556, 158);
+            GrpBox_ExpecVida.Location = new Point(739, 256);
             GrpBox_ExpecVida.Name = "GrpBox_ExpecVida";
             GrpBox_ExpecVida.Size = new Size(238, 100);
             GrpBox_ExpecVida.TabIndex = 41;
@@ -245,26 +245,27 @@
             // 
             // Txt_OBS
             // 
-            Txt_OBS.Location = new Point(6, 22);
+            Txt_OBS.Dock = DockStyle.Top;
+            Txt_OBS.Location = new Point(3, 19);
             Txt_OBS.Multiline = true;
             Txt_OBS.Name = "Txt_OBS";
-            Txt_OBS.Size = new Size(236, 114);
+            Txt_OBS.Size = new Size(389, 95);
             Txt_OBS.TabIndex = 42;
             // 
             // CmbBox_TipoEspecie
             // 
             CmbBox_TipoEspecie.FormattingEnabled = true;
-            CmbBox_TipoEspecie.Location = new Point(599, 94);
+            CmbBox_TipoEspecie.Location = new Point(763, 94);
             CmbBox_TipoEspecie.Name = "CmbBox_TipoEspecie";
-            CmbBox_TipoEspecie.Size = new Size(135, 23);
+            CmbBox_TipoEspecie.Size = new Size(204, 23);
             CmbBox_TipoEspecie.TabIndex = 44;
             // 
             // GrpBox_OBS
             // 
             GrpBox_OBS.Controls.Add(Txt_OBS);
-            GrpBox_OBS.Location = new Point(42, 251);
+            GrpBox_OBS.Location = new Point(42, 371);
             GrpBox_OBS.Name = "GrpBox_OBS";
-            GrpBox_OBS.Size = new Size(248, 142);
+            GrpBox_OBS.Size = new Size(395, 120);
             GrpBox_OBS.TabIndex = 45;
             GrpBox_OBS.TabStop = false;
             GrpBox_OBS.Text = "OBS";
@@ -272,9 +273,9 @@
             // GrpBox_PesoPorIdade
             // 
             GrpBox_PesoPorIdade.Controls.Add(DtGridView_PesoPorIdade);
-            GrpBox_PesoPorIdade.Location = new Point(302, 272);
+            GrpBox_PesoPorIdade.Location = new Point(458, 371);
             GrpBox_PesoPorIdade.Name = "GrpBox_PesoPorIdade";
-            GrpBox_PesoPorIdade.Size = new Size(487, 120);
+            GrpBox_PesoPorIdade.Size = new Size(597, 120);
             GrpBox_PesoPorIdade.TabIndex = 41;
             GrpBox_PesoPorIdade.TabStop = false;
             GrpBox_PesoPorIdade.Text = "Peso Por Idade";
@@ -282,14 +283,15 @@
             // DtGridView_PesoPorIdade
             // 
             DtGridView_PesoPorIdade.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_PesoPorIdade.Location = new Point(10, 20);
+            DtGridView_PesoPorIdade.Dock = DockStyle.Top;
+            DtGridView_PesoPorIdade.Location = new Point(3, 19);
             DtGridView_PesoPorIdade.Name = "DtGridView_PesoPorIdade";
-            DtGridView_PesoPorIdade.Size = new Size(467, 92);
+            DtGridView_PesoPorIdade.Size = new Size(591, 92);
             DtGridView_PesoPorIdade.TabIndex = 0;
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 49;
@@ -298,7 +300,7 @@
             // 
             // Btn_Salvar
             // 
-            Btn_Salvar.Location = new Point(451, 402);
+            Btn_Salvar.Location = new Point(739, 523);
             Btn_Salvar.Name = "Btn_Salvar";
             Btn_Salvar.Size = new Size(75, 23);
             Btn_Salvar.TabIndex = 48;
@@ -307,7 +309,7 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(537, 402);
+            Btn_Editar.Location = new Point(825, 523);
             Btn_Editar.Name = "Btn_Editar";
             Btn_Editar.Size = new Size(75, 23);
             Btn_Editar.TabIndex = 47;
@@ -316,7 +318,7 @@
             // 
             // Btn_Excluir
             // 
-            Btn_Excluir.Location = new Point(621, 402);
+            Btn_Excluir.Location = new Point(909, 523);
             Btn_Excluir.Name = "Btn_Excluir";
             Btn_Excluir.Size = new Size(75, 23);
             Btn_Excluir.TabIndex = 46;
@@ -325,25 +327,27 @@
             // 
             // Btn_BuscarRaca
             // 
-            Btn_BuscarRaca.Location = new Point(266, 172);
+            Btn_BuscarRaca.Location = new Point(335, 269);
             Btn_BuscarRaca.Name = "Btn_BuscarRaca";
-            Btn_BuscarRaca.Size = new Size(36, 23);
+            Btn_BuscarRaca.Size = new Size(59, 23);
             Btn_BuscarRaca.TabIndex = 50;
+            Btn_BuscarRaca.Text = "Buscar";
             Btn_BuscarRaca.UseVisualStyleBackColor = true;
             // 
             // Btn_BuscarEspecie
             // 
-            Btn_BuscarEspecie.Location = new Point(289, 94);
+            Btn_BuscarEspecie.Location = new Point(335, 94);
             Btn_BuscarEspecie.Name = "Btn_BuscarEspecie";
-            Btn_BuscarEspecie.Size = new Size(36, 23);
+            Btn_BuscarEspecie.Size = new Size(59, 23);
             Btn_BuscarEspecie.TabIndex = 51;
+            Btn_BuscarEspecie.Text = "Buscar";
             Btn_BuscarEspecie.UseVisualStyleBackColor = true;
             // 
-            // EspecieRaca
+            // FrmEspecieRaca
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
             Controls.Add(Btn_BuscarEspecie);
             Controls.Add(Btn_BuscarRaca);
             Controls.Add(Btn_Sair);
@@ -366,7 +370,7 @@
             Controls.Add(Txt_CodEspecie);
             Controls.Add(Lbl_Raca);
             Controls.Add(Lbl_Especie);
-            Name = "EspecieRaca";
+            Name = "FrmEspecieRaca";
             Text = "EspecieRaca";
             GrpBox_Temperatura.ResumeLayout(false);
             GrpBox_Temperatura.PerformLayout();

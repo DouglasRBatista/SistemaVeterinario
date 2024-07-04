@@ -25,27 +25,29 @@
         private void InitializeComponent() {
             Btn_Sair = new Button();
             GrpBox_ConsultaPet = new GroupBox();
-            DtGridView_Pet = new DataGridView();
+            Txt_Tipo = new TextBox();
+            Lbl_Tipo = new Label();
+            Lbl_Cliente = new Label();
+            Txt_Cliente = new TextBox();
+            Lbl_Raca = new Label();
+            Txt_Raca = new TextBox();
+            Lbl_Especie = new Label();
+            Txt_Especie = new TextBox();
+            Lbl_Nome = new Label();
+            Txt_Nome = new TextBox();
             Txt_Chip = new TextBox();
             Lbl_Chip = new Label();
             Btn_Buscar = new Button();
             Lbl_Codigo = new Label();
             Txt_Codigo = new TextBox();
-            Lbl_Nome = new Label();
-            Txt_Nome = new TextBox();
-            Lbl_Raca = new Label();
-            Txt_Raca = new TextBox();
-            Lbl_Especie = new Label();
-            Txt_Especie = new TextBox();
-            Lbl_Cliente = new Label();
-            Txt_Cliente = new TextBox();
+            DtGridView_Pet = new DataGridView();
             GrpBox_ConsultaPet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Pet).BeginInit();
             SuspendLayout();
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 60;
@@ -54,6 +56,8 @@
             // 
             // GrpBox_ConsultaPet
             // 
+            GrpBox_ConsultaPet.Controls.Add(Txt_Tipo);
+            GrpBox_ConsultaPet.Controls.Add(Lbl_Tipo);
             GrpBox_ConsultaPet.Controls.Add(Lbl_Cliente);
             GrpBox_ConsultaPet.Controls.Add(Txt_Cliente);
             GrpBox_ConsultaPet.Controls.Add(Lbl_Raca);
@@ -69,75 +73,42 @@
             GrpBox_ConsultaPet.Controls.Add(Txt_Codigo);
             GrpBox_ConsultaPet.Location = new Point(12, 12);
             GrpBox_ConsultaPet.Name = "GrpBox_ConsultaPet";
-            GrpBox_ConsultaPet.Size = new Size(776, 72);
+            GrpBox_ConsultaPet.Size = new Size(1068, 72);
             GrpBox_ConsultaPet.TabIndex = 61;
             GrpBox_ConsultaPet.TabStop = false;
             GrpBox_ConsultaPet.Text = "Consulta";
             // 
-            // DtGridView_Pet
+            // Txt_Tipo
             // 
-            DtGridView_Pet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_Pet.Location = new Point(12, 90);
-            DtGridView_Pet.Name = "DtGridView_Pet";
-            DtGridView_Pet.Size = new Size(776, 306);
-            DtGridView_Pet.TabIndex = 62;
+            Txt_Tipo.Location = new Point(532, 44);
+            Txt_Tipo.Name = "Txt_Tipo";
+            Txt_Tipo.Size = new Size(152, 23);
+            Txt_Tipo.TabIndex = 84;
             // 
-            // Txt_Chip
+            // Lbl_Tipo
             // 
-            Txt_Chip.Location = new Point(226, 16);
-            Txt_Chip.Name = "Txt_Chip";
-            Txt_Chip.Size = new Size(93, 23);
-            Txt_Chip.TabIndex = 74;
+            Lbl_Tipo.AutoSize = true;
+            Lbl_Tipo.Location = new Point(491, 47);
+            Lbl_Tipo.Name = "Lbl_Tipo";
+            Lbl_Tipo.Size = new Size(33, 15);
+            Lbl_Tipo.TabIndex = 83;
+            Lbl_Tipo.Text = "Tipo:";
             // 
-            // Lbl_Chip
+            // Lbl_Cliente
             // 
-            Lbl_Chip.AutoSize = true;
-            Lbl_Chip.Location = new Point(185, 19);
-            Lbl_Chip.Name = "Lbl_Chip";
-            Lbl_Chip.Size = new Size(35, 15);
-            Lbl_Chip.TabIndex = 73;
-            Lbl_Chip.Text = "Chip:";
+            Lbl_Cliente.AutoSize = true;
+            Lbl_Cliente.Location = new Point(696, 21);
+            Lbl_Cliente.Name = "Lbl_Cliente";
+            Lbl_Cliente.Size = new Size(47, 15);
+            Lbl_Cliente.TabIndex = 82;
+            Lbl_Cliente.Text = "Cliente:";
             // 
-            // Btn_Buscar
+            // Txt_Cliente
             // 
-            Btn_Buscar.Location = new Point(694, 43);
-            Btn_Buscar.Name = "Btn_Buscar";
-            Btn_Buscar.Size = new Size(75, 23);
-            Btn_Buscar.TabIndex = 72;
-            Btn_Buscar.Text = "Buscar";
-            Btn_Buscar.UseVisualStyleBackColor = true;
-            // 
-            // Lbl_Codigo
-            // 
-            Lbl_Codigo.AutoSize = true;
-            Lbl_Codigo.Location = new Point(6, 19);
-            Lbl_Codigo.Name = "Lbl_Codigo";
-            Lbl_Codigo.Size = new Size(49, 15);
-            Lbl_Codigo.TabIndex = 71;
-            Lbl_Codigo.Text = "Código:";
-            // 
-            // Txt_Codigo
-            // 
-            Txt_Codigo.Location = new Point(58, 16);
-            Txt_Codigo.Name = "Txt_Codigo";
-            Txt_Codigo.Size = new Size(119, 23);
-            Txt_Codigo.TabIndex = 70;
-            // 
-            // Lbl_Nome
-            // 
-            Lbl_Nome.AutoSize = true;
-            Lbl_Nome.Location = new Point(324, 21);
-            Lbl_Nome.Name = "Lbl_Nome";
-            Lbl_Nome.Size = new Size(43, 15);
-            Lbl_Nome.TabIndex = 76;
-            Lbl_Nome.Text = "Nome:";
-            // 
-            // Txt_Nome
-            // 
-            Txt_Nome.Location = new Point(373, 16);
-            Txt_Nome.Name = "Txt_Nome";
-            Txt_Nome.Size = new Size(299, 23);
-            Txt_Nome.TabIndex = 75;
+            Txt_Cliente.Location = new Point(749, 17);
+            Txt_Cliente.Name = "Txt_Cliente";
+            Txt_Cliente.Size = new Size(229, 23);
+            Txt_Cliente.TabIndex = 81;
             // 
             // Lbl_Raca
             // 
@@ -171,31 +142,80 @@
             Txt_Especie.Size = new Size(183, 23);
             Txt_Especie.TabIndex = 77;
             // 
-            // Lbl_Cliente
+            // Lbl_Nome
             // 
-            Lbl_Cliente.AutoSize = true;
-            Lbl_Cliente.Location = new Point(477, 47);
-            Lbl_Cliente.Name = "Lbl_Cliente";
-            Lbl_Cliente.Size = new Size(47, 15);
-            Lbl_Cliente.TabIndex = 82;
-            Lbl_Cliente.Text = "Cliente:";
+            Lbl_Nome.AutoSize = true;
+            Lbl_Nome.Location = new Point(198, 20);
+            Lbl_Nome.Name = "Lbl_Nome";
+            Lbl_Nome.Size = new Size(43, 15);
+            Lbl_Nome.TabIndex = 76;
+            Lbl_Nome.Text = "Nome:";
             // 
-            // Txt_Cliente
+            // Txt_Nome
             // 
-            Txt_Cliente.Location = new Point(530, 43);
-            Txt_Cliente.Name = "Txt_Cliente";
-            Txt_Cliente.Size = new Size(142, 23);
-            Txt_Cliente.TabIndex = 81;
+            Txt_Nome.Location = new Point(247, 15);
+            Txt_Nome.Name = "Txt_Nome";
+            Txt_Nome.Size = new Size(299, 23);
+            Txt_Nome.TabIndex = 75;
             // 
-            // ConsultaPet
+            // Txt_Chip
+            // 
+            Txt_Chip.Location = new Point(591, 16);
+            Txt_Chip.Name = "Txt_Chip";
+            Txt_Chip.Size = new Size(93, 23);
+            Txt_Chip.TabIndex = 74;
+            // 
+            // Lbl_Chip
+            // 
+            Lbl_Chip.AutoSize = true;
+            Lbl_Chip.Location = new Point(550, 19);
+            Lbl_Chip.Name = "Lbl_Chip";
+            Lbl_Chip.Size = new Size(35, 15);
+            Lbl_Chip.TabIndex = 73;
+            Lbl_Chip.Text = "Chip:";
+            // 
+            // Btn_Buscar
+            // 
+            Btn_Buscar.Location = new Point(982, 44);
+            Btn_Buscar.Name = "Btn_Buscar";
+            Btn_Buscar.Size = new Size(75, 23);
+            Btn_Buscar.TabIndex = 72;
+            Btn_Buscar.Text = "Buscar";
+            Btn_Buscar.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_Codigo
+            // 
+            Lbl_Codigo.AutoSize = true;
+            Lbl_Codigo.Location = new Point(6, 19);
+            Lbl_Codigo.Name = "Lbl_Codigo";
+            Lbl_Codigo.Size = new Size(49, 15);
+            Lbl_Codigo.TabIndex = 71;
+            Lbl_Codigo.Text = "Código:";
+            // 
+            // Txt_Codigo
+            // 
+            Txt_Codigo.Location = new Point(58, 16);
+            Txt_Codigo.Name = "Txt_Codigo";
+            Txt_Codigo.Size = new Size(119, 23);
+            Txt_Codigo.TabIndex = 70;
+            // 
+            // DtGridView_Pet
+            // 
+            DtGridView_Pet.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtGridView_Pet.Location = new Point(12, 90);
+            DtGridView_Pet.Name = "DtGridView_Pet";
+            DtGridView_Pet.Size = new Size(1068, 427);
+            DtGridView_Pet.TabIndex = 62;
+            // 
+            // FrmConsultaPet
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
             Controls.Add(DtGridView_Pet);
             Controls.Add(GrpBox_ConsultaPet);
             Controls.Add(Btn_Sair);
-            Name = "ConsultaPet";
+            Name = "FrmConsultaPet";
             Text = "ConsultaPet";
             GrpBox_ConsultaPet.ResumeLayout(false);
             GrpBox_ConsultaPet.PerformLayout();
@@ -221,5 +241,7 @@
         private TextBox Txt_Especie;
         private Label Lbl_Cliente;
         private TextBox Txt_Cliente;
+        private TextBox Txt_Tipo;
+        private Label Lbl_Tipo;
     }
 }

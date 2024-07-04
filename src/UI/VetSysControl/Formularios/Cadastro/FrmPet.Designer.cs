@@ -56,19 +56,21 @@
             Txt_Chip = new TextBox();
             Lbl_Chip = new Label();
             GrpBox_Alergias = new GroupBox();
+            DtGridView_Alergias = new DataGridView();
             Btn_Historico = new Button();
             GrpBox_Vacinas = new GroupBox();
+            DtGridView_Vacinas = new DataGridView();
             Txt_Cor = new TextBox();
             Lbl_Cor = new Label();
-            DtGridView_Vacinas = new DataGridView();
-            DtGridView_Alergias = new DataGridView();
+            Btn_AddAlergia = new Button();
+            Btn_DelAlergia = new Button();
             GrpBox_Sexo.SuspendLayout();
             GrpBox_Exotico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PicBox_Pet).BeginInit();
             GrpBox_Alergias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DtGridView_Alergias).BeginInit();
             GrpBox_Vacinas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Vacinas).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DtGridView_Alergias).BeginInit();
             SuspendLayout();
             // 
             // Lbl_CadastroPet
@@ -107,7 +109,7 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 47;
@@ -116,7 +118,7 @@
             // 
             // Btn_Salvar
             // 
-            Btn_Salvar.Location = new Point(451, 402);
+            Btn_Salvar.Location = new Point(739, 523);
             Btn_Salvar.Name = "Btn_Salvar";
             Btn_Salvar.Size = new Size(75, 23);
             Btn_Salvar.TabIndex = 46;
@@ -125,7 +127,7 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(537, 402);
+            Btn_Editar.Location = new Point(825, 523);
             Btn_Editar.Name = "Btn_Editar";
             Btn_Editar.Size = new Size(75, 23);
             Btn_Editar.TabIndex = 45;
@@ -134,7 +136,7 @@
             // 
             // Btn_Excluir
             // 
-            Btn_Excluir.Location = new Point(621, 402);
+            Btn_Excluir.Location = new Point(909, 523);
             Btn_Excluir.Name = "Btn_Excluir";
             Btn_Excluir.Size = new Size(75, 23);
             Btn_Excluir.TabIndex = 44;
@@ -184,7 +186,7 @@
             // 
             // Btn_BuscarRaca
             // 
-            Btn_BuscarRaca.Location = new Point(305, 190);
+            Btn_BuscarRaca.Location = new Point(666, 158);
             Btn_BuscarRaca.Name = "Btn_BuscarRaca";
             Btn_BuscarRaca.Size = new Size(75, 23);
             Btn_BuscarRaca.TabIndex = 55;
@@ -194,7 +196,7 @@
             // Lbl_Raca
             // 
             Lbl_Raca.AutoSize = true;
-            Lbl_Raca.Location = new Point(38, 193);
+            Lbl_Raca.Location = new Point(399, 160);
             Lbl_Raca.Name = "Lbl_Raca";
             Lbl_Raca.Size = new Size(35, 15);
             Lbl_Raca.TabIndex = 54;
@@ -202,7 +204,7 @@
             // 
             // Txt_Raca
             // 
-            Txt_Raca.Location = new Point(106, 190);
+            Txt_Raca.Location = new Point(471, 158);
             Txt_Raca.Name = "Txt_Raca";
             Txt_Raca.Size = new Size(183, 23);
             Txt_Raca.TabIndex = 53;
@@ -228,7 +230,7 @@
             // Lbl_Cliente
             // 
             Lbl_Cliente.AutoSize = true;
-            Lbl_Cliente.Location = new Point(38, 226);
+            Lbl_Cliente.Location = new Point(38, 195);
             Lbl_Cliente.Name = "Lbl_Cliente";
             Lbl_Cliente.Size = new Size(47, 15);
             Lbl_Cliente.TabIndex = 60;
@@ -236,14 +238,14 @@
             // 
             // Txt_Cliente
             // 
-            Txt_Cliente.Location = new Point(106, 223);
+            Txt_Cliente.Location = new Point(106, 192);
             Txt_Cliente.Name = "Txt_Cliente";
             Txt_Cliente.Size = new Size(183, 23);
             Txt_Cliente.TabIndex = 59;
             // 
             // Btn_BuscarCliente
             // 
-            Btn_BuscarCliente.Location = new Point(305, 223);
+            Btn_BuscarCliente.Location = new Point(305, 192);
             Btn_BuscarCliente.Name = "Btn_BuscarCliente";
             Btn_BuscarCliente.Size = new Size(75, 23);
             Btn_BuscarCliente.TabIndex = 61;
@@ -254,9 +256,9 @@
             // 
             GrpBox_Sexo.Controls.Add(RBtn_Femea);
             GrpBox_Sexo.Controls.Add(RBtn_Macho);
-            GrpBox_Sexo.Location = new Point(38, 289);
+            GrpBox_Sexo.Location = new Point(60, 258);
             GrpBox_Sexo.Name = "GrpBox_Sexo";
-            GrpBox_Sexo.Size = new Size(95, 84);
+            GrpBox_Sexo.Size = new Size(129, 84);
             GrpBox_Sexo.TabIndex = 62;
             GrpBox_Sexo.TabStop = false;
             GrpBox_Sexo.Text = "Sexo";
@@ -287,9 +289,9 @@
             // 
             GrpBox_Exotico.Controls.Add(RBtn_Nao);
             GrpBox_Exotico.Controls.Add(RBtn_Sim);
-            GrpBox_Exotico.Location = new Point(142, 289);
+            GrpBox_Exotico.Location = new Point(214, 258);
             GrpBox_Exotico.Name = "GrpBox_Exotico";
-            GrpBox_Exotico.Size = new Size(95, 84);
+            GrpBox_Exotico.Size = new Size(129, 84);
             GrpBox_Exotico.TabIndex = 63;
             GrpBox_Exotico.TabStop = false;
             GrpBox_Exotico.Text = "Exótico";
@@ -334,9 +336,9 @@
             // 
             // PicBox_Pet
             // 
-            PicBox_Pet.Location = new Point(527, 12);
+            PicBox_Pet.Location = new Point(763, 50);
             PicBox_Pet.Name = "PicBox_Pet";
-            PicBox_Pet.Size = new Size(214, 104);
+            PicBox_Pet.Size = new Size(314, 176);
             PicBox_Pet.TabIndex = 66;
             PicBox_Pet.TabStop = false;
             // 
@@ -344,7 +346,7 @@
             // 
             Txt_Chip.Location = new Point(399, 83);
             Txt_Chip.Name = "Txt_Chip";
-            Txt_Chip.Size = new Size(93, 23);
+            Txt_Chip.Size = new Size(148, 23);
             Txt_Chip.TabIndex = 69;
             // 
             // Lbl_Chip
@@ -358,17 +360,28 @@
             // 
             // GrpBox_Alergias
             // 
+            GrpBox_Alergias.Controls.Add(Btn_AddAlergia);
             GrpBox_Alergias.Controls.Add(DtGridView_Alergias);
-            GrpBox_Alergias.Location = new Point(399, 160);
+            GrpBox_Alergias.Controls.Add(Btn_DelAlergia);
+            GrpBox_Alergias.Location = new Point(38, 348);
             GrpBox_Alergias.Name = "GrpBox_Alergias";
-            GrpBox_Alergias.Size = new Size(382, 86);
+            GrpBox_Alergias.Size = new Size(342, 169);
             GrpBox_Alergias.TabIndex = 63;
             GrpBox_Alergias.TabStop = false;
             GrpBox_Alergias.Text = "Alergias";
             // 
+            // DtGridView_Alergias
+            // 
+            DtGridView_Alergias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtGridView_Alergias.Dock = DockStyle.Top;
+            DtGridView_Alergias.Location = new Point(3, 19);
+            DtGridView_Alergias.Name = "DtGridView_Alergias";
+            DtGridView_Alergias.Size = new Size(336, 115);
+            DtGridView_Alergias.TabIndex = 1;
+            // 
             // Btn_Historico
             // 
-            Btn_Historico.Location = new Point(37, 402);
+            Btn_Historico.Location = new Point(51, 523);
             Btn_Historico.Name = "Btn_Historico";
             Btn_Historico.Size = new Size(82, 23);
             Btn_Historico.TabIndex = 70;
@@ -378,16 +391,25 @@
             // GrpBox_Vacinas
             // 
             GrpBox_Vacinas.Controls.Add(DtGridView_Vacinas);
-            GrpBox_Vacinas.Location = new Point(399, 252);
+            GrpBox_Vacinas.Location = new Point(399, 258);
             GrpBox_Vacinas.Name = "GrpBox_Vacinas";
-            GrpBox_Vacinas.Size = new Size(382, 121);
+            GrpBox_Vacinas.Size = new Size(681, 259);
             GrpBox_Vacinas.TabIndex = 64;
             GrpBox_Vacinas.TabStop = false;
             GrpBox_Vacinas.Text = "Vacinas";
             // 
+            // DtGridView_Vacinas
+            // 
+            DtGridView_Vacinas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DtGridView_Vacinas.Dock = DockStyle.Top;
+            DtGridView_Vacinas.Location = new Point(3, 19);
+            DtGridView_Vacinas.Name = "DtGridView_Vacinas";
+            DtGridView_Vacinas.Size = new Size(675, 234);
+            DtGridView_Vacinas.TabIndex = 0;
+            // 
             // Txt_Cor
             // 
-            Txt_Cor.Location = new Point(106, 258);
+            Txt_Cor.Location = new Point(106, 227);
             Txt_Cor.Name = "Txt_Cor";
             Txt_Cor.Size = new Size(183, 23);
             Txt_Cor.TabIndex = 72;
@@ -395,33 +417,35 @@
             // Lbl_Cor
             // 
             Lbl_Cor.AutoSize = true;
-            Lbl_Cor.Location = new Point(38, 261);
+            Lbl_Cor.Location = new Point(41, 230);
             Lbl_Cor.Name = "Lbl_Cor";
             Lbl_Cor.Size = new Size(29, 15);
             Lbl_Cor.TabIndex = 71;
             Lbl_Cor.Text = "Cor:";
             // 
-            // DtGridView_Vacinas
+            // Btn_AddAlergia
             // 
-            DtGridView_Vacinas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_Vacinas.Location = new Point(6, 22);
-            DtGridView_Vacinas.Name = "DtGridView_Vacinas";
-            DtGridView_Vacinas.Size = new Size(370, 93);
-            DtGridView_Vacinas.TabIndex = 0;
+            Btn_AddAlergia.Location = new Point(297, 140);
+            Btn_AddAlergia.Name = "Btn_AddAlergia";
+            Btn_AddAlergia.Size = new Size(39, 23);
+            Btn_AddAlergia.TabIndex = 73;
+            Btn_AddAlergia.Text = "+";
+            Btn_AddAlergia.UseVisualStyleBackColor = true;
             // 
-            // DtGridView_Alergias
+            // Btn_DelAlergia
             // 
-            DtGridView_Alergias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_Alergias.Location = new Point(6, 15);
-            DtGridView_Alergias.Name = "DtGridView_Alergias";
-            DtGridView_Alergias.Size = new Size(370, 65);
-            DtGridView_Alergias.TabIndex = 1;
+            Btn_DelAlergia.Location = new Point(252, 140);
+            Btn_DelAlergia.Name = "Btn_DelAlergia";
+            Btn_DelAlergia.Size = new Size(39, 23);
+            Btn_DelAlergia.TabIndex = 74;
+            Btn_DelAlergia.Text = "-";
+            Btn_DelAlergia.UseVisualStyleBackColor = true;
             // 
-            // Pet
+            // FrmPet
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
             Controls.Add(Txt_Cor);
             Controls.Add(Lbl_Cor);
             Controls.Add(GrpBox_Vacinas);
@@ -455,7 +479,7 @@
             Controls.Add(Lbl_Codigo);
             Controls.Add(Txt_Codigo);
             Controls.Add(Lbl_CadastroPet);
-            Name = "Pet";
+            Name = "FrmPet";
             Text = "Pet";
             GrpBox_Sexo.ResumeLayout(false);
             GrpBox_Sexo.PerformLayout();
@@ -463,9 +487,9 @@
             GrpBox_Exotico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PicBox_Pet).EndInit();
             GrpBox_Alergias.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)DtGridView_Alergias).EndInit();
             GrpBox_Vacinas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DtGridView_Vacinas).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DtGridView_Alergias).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -511,5 +535,7 @@
         private Label Lbl_Cor;
         private DataGridView DtGridView_Vacinas;
         private DataGridView DtGridView_Alergias;
+        private Button Btn_AddAlergia;
+        private Button Btn_DelAlergia;
     }
 }

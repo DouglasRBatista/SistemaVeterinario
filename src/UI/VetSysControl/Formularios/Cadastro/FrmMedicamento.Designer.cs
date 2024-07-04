@@ -46,7 +46,6 @@
             Btn_Editar = new Button();
             Btn_Excluir = new Button();
             Lbl_Valor = new Label();
-            Txt_Valor = new TextBox();
             Lbl_Fornecedor = new Label();
             CmbBox_Fornecedor = new ComboBox();
             Lbl_UnidMed = new Label();
@@ -60,8 +59,11 @@
             Btn_AddComp = new Button();
             Lbl_Compostos = new Label();
             Txt_Compostos = new TextBox();
+            Grp_Fornecedor = new GroupBox();
+            MskBox_Valor = new MaskedTextBox();
             GrpBox_Quimicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Quimicos).BeginInit();
+            Grp_Fornecedor.SuspendLayout();
             SuspendLayout();
             // 
             // Btn_Buscar
@@ -76,7 +78,7 @@
             // Lbl_Qtd
             // 
             Lbl_Qtd.AutoSize = true;
-            Lbl_Qtd.Location = new Point(482, 145);
+            Lbl_Qtd.Location = new Point(15, 78);
             Lbl_Qtd.Name = "Lbl_Qtd";
             Lbl_Qtd.Size = new Size(30, 15);
             Lbl_Qtd.TabIndex = 38;
@@ -84,7 +86,7 @@
             // 
             // Txt_Qtd
             // 
-            Txt_Qtd.Location = new Point(521, 142);
+            Txt_Qtd.Location = new Point(91, 75);
             Txt_Qtd.Name = "Txt_Qtd";
             Txt_Qtd.Size = new Size(57, 23);
             Txt_Qtd.TabIndex = 37;
@@ -92,16 +94,16 @@
             // Dtp_Validade
             // 
             Dtp_Validade.Format = DateTimePickerFormat.Short;
-            Dtp_Validade.Location = new Point(686, 110);
+            Dtp_Validade.Location = new Point(387, 46);
             Dtp_Validade.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             Dtp_Validade.Name = "Dtp_Validade";
-            Dtp_Validade.Size = new Size(93, 23);
+            Dtp_Validade.Size = new Size(112, 23);
             Dtp_Validade.TabIndex = 36;
             // 
             // Lbl_Validade
             // 
             Lbl_Validade.AutoSize = true;
-            Lbl_Validade.Location = new Point(626, 116);
+            Lbl_Validade.Location = new Point(306, 49);
             Lbl_Validade.Name = "Lbl_Validade";
             Lbl_Validade.Size = new Size(54, 15);
             Lbl_Validade.TabIndex = 35;
@@ -110,7 +112,7 @@
             // Lbl_Lote
             // 
             Lbl_Lote.AutoSize = true;
-            Lbl_Lote.Location = new Point(482, 116);
+            Lbl_Lote.Location = new Point(14, 49);
             Lbl_Lote.Name = "Lbl_Lote";
             Lbl_Lote.Size = new Size(33, 15);
             Lbl_Lote.TabIndex = 34;
@@ -118,9 +120,9 @@
             // 
             // Txt_Lote
             // 
-            Txt_Lote.Location = new Point(521, 113);
+            Txt_Lote.Location = new Point(91, 46);
             Txt_Lote.Name = "Txt_Lote";
-            Txt_Lote.Size = new Size(100, 23);
+            Txt_Lote.Size = new Size(165, 23);
             Txt_Lote.TabIndex = 33;
             // 
             // Lbl_Fabricante
@@ -215,7 +217,7 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 43;
@@ -224,7 +226,7 @@
             // 
             // Btn_Salvar
             // 
-            Btn_Salvar.Location = new Point(451, 402);
+            Btn_Salvar.Location = new Point(739, 523);
             Btn_Salvar.Name = "Btn_Salvar";
             Btn_Salvar.Size = new Size(75, 23);
             Btn_Salvar.TabIndex = 42;
@@ -233,7 +235,7 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(537, 402);
+            Btn_Editar.Location = new Point(825, 523);
             Btn_Editar.Name = "Btn_Editar";
             Btn_Editar.Size = new Size(75, 23);
             Btn_Editar.TabIndex = 41;
@@ -242,7 +244,7 @@
             // 
             // Btn_Excluir
             // 
-            Btn_Excluir.Location = new Point(621, 402);
+            Btn_Excluir.Location = new Point(909, 523);
             Btn_Excluir.Name = "Btn_Excluir";
             Btn_Excluir.Size = new Size(75, 23);
             Btn_Excluir.TabIndex = 40;
@@ -252,23 +254,16 @@
             // Lbl_Valor
             // 
             Lbl_Valor.AutoSize = true;
-            Lbl_Valor.Location = new Point(642, 142);
+            Lbl_Valor.Location = new Point(15, 107);
             Lbl_Valor.Name = "Lbl_Valor";
             Lbl_Valor.Size = new Size(36, 15);
             Lbl_Valor.TabIndex = 45;
             Lbl_Valor.Text = "Valor:";
             // 
-            // Txt_Valor
-            // 
-            Txt_Valor.Location = new Point(686, 139);
-            Txt_Valor.Name = "Txt_Valor";
-            Txt_Valor.Size = new Size(93, 23);
-            Txt_Valor.TabIndex = 44;
-            // 
             // Lbl_Fornecedor
             // 
             Lbl_Fornecedor.AutoSize = true;
-            Lbl_Fornecedor.Location = new Point(445, 87);
+            Lbl_Fornecedor.Location = new Point(15, 19);
             Lbl_Fornecedor.Name = "Lbl_Fornecedor";
             Lbl_Fornecedor.Size = new Size(70, 15);
             Lbl_Fornecedor.TabIndex = 46;
@@ -277,7 +272,7 @@
             // CmbBox_Fornecedor
             // 
             CmbBox_Fornecedor.FormattingEnabled = true;
-            CmbBox_Fornecedor.Location = new Point(521, 84);
+            CmbBox_Fornecedor.Location = new Point(91, 16);
             CmbBox_Fornecedor.Name = "CmbBox_Fornecedor";
             CmbBox_Fornecedor.Size = new Size(258, 23);
             CmbBox_Fornecedor.TabIndex = 47;
@@ -285,7 +280,7 @@
             // Lbl_UnidMed
             // 
             Lbl_UnidMed.AutoSize = true;
-            Lbl_UnidMed.Location = new Point(147, 151);
+            Lbl_UnidMed.Location = new Point(159, 153);
             Lbl_UnidMed.Name = "Lbl_UnidMed";
             Lbl_UnidMed.Size = new Size(113, 15);
             Lbl_UnidMed.TabIndex = 49;
@@ -293,7 +288,7 @@
             // 
             // Txt_UnidMed
             // 
-            Txt_UnidMed.Location = new Point(266, 148);
+            Txt_UnidMed.Location = new Point(278, 150);
             Txt_UnidMed.Name = "Txt_UnidMed";
             Txt_UnidMed.Size = new Size(52, 23);
             Txt_UnidMed.TabIndex = 48;
@@ -301,7 +296,7 @@
             // Lbl_Dosagem
             // 
             Lbl_Dosagem.AutoSize = true;
-            Lbl_Dosagem.Location = new Point(15, 151);
+            Lbl_Dosagem.Location = new Point(15, 153);
             Lbl_Dosagem.Name = "Lbl_Dosagem";
             Lbl_Dosagem.Size = new Size(60, 15);
             Lbl_Dosagem.TabIndex = 51;
@@ -309,9 +304,9 @@
             // 
             // Txt_Dosagem
             // 
-            Txt_Dosagem.Location = new Point(81, 148);
+            Txt_Dosagem.Location = new Point(81, 150);
             Txt_Dosagem.Name = "Txt_Dosagem";
-            Txt_Dosagem.Size = new Size(55, 23);
+            Txt_Dosagem.Size = new Size(72, 23);
             Txt_Dosagem.TabIndex = 50;
             // 
             // GrpBox_Quimicos
@@ -326,9 +321,9 @@
             GrpBox_Quimicos.Controls.Add(Txt_UnidMed);
             GrpBox_Quimicos.Controls.Add(Txt_Dosagem);
             GrpBox_Quimicos.Controls.Add(Lbl_UnidMed);
-            GrpBox_Quimicos.Location = new Point(451, 187);
+            GrpBox_Quimicos.Location = new Point(482, 260);
             GrpBox_Quimicos.Name = "GrpBox_Quimicos";
-            GrpBox_Quimicos.Size = new Size(337, 209);
+            GrpBox_Quimicos.Size = new Size(587, 189);
             GrpBox_Quimicos.TabIndex = 53;
             GrpBox_Quimicos.TabStop = false;
             GrpBox_Quimicos.Text = "Quimicos";
@@ -336,14 +331,15 @@
             // DtGridView_Quimicos
             // 
             DtGridView_Quimicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_Quimicos.Location = new Point(6, 21);
+            DtGridView_Quimicos.Dock = DockStyle.Top;
+            DtGridView_Quimicos.Location = new Point(3, 19);
             DtGridView_Quimicos.Name = "DtGridView_Quimicos";
-            DtGridView_Quimicos.Size = new Size(325, 94);
+            DtGridView_Quimicos.Size = new Size(581, 94);
             DtGridView_Quimicos.TabIndex = 54;
             // 
             // Btn_ExcluirComp
             // 
-            Btn_ExcluirComp.Location = new Point(255, 180);
+            Btn_ExcluirComp.Location = new Point(504, 145);
             Btn_ExcluirComp.Name = "Btn_ExcluirComp";
             Btn_ExcluirComp.Size = new Size(75, 23);
             Btn_ExcluirComp.TabIndex = 54;
@@ -352,7 +348,7 @@
             // 
             // Btn_EditarComp
             // 
-            Btn_EditarComp.Location = new Point(175, 180);
+            Btn_EditarComp.Location = new Point(424, 145);
             Btn_EditarComp.Name = "Btn_EditarComp";
             Btn_EditarComp.Size = new Size(75, 23);
             Btn_EditarComp.TabIndex = 54;
@@ -361,7 +357,7 @@
             // 
             // Btn_AddComp
             // 
-            Btn_AddComp.Location = new Point(94, 180);
+            Btn_AddComp.Location = new Point(343, 145);
             Btn_AddComp.Name = "Btn_AddComp";
             Btn_AddComp.Size = new Size(75, 23);
             Btn_AddComp.TabIndex = 54;
@@ -381,30 +377,47 @@
             // 
             Txt_Compostos.Location = new Point(81, 121);
             Txt_Compostos.Name = "Txt_Compostos";
-            Txt_Compostos.Size = new Size(237, 23);
+            Txt_Compostos.Size = new Size(249, 23);
             Txt_Compostos.TabIndex = 53;
             // 
-            // Medicamento
+            // Grp_Fornecedor
+            // 
+            Grp_Fornecedor.Controls.Add(MskBox_Valor);
+            Grp_Fornecedor.Controls.Add(Lbl_Fornecedor);
+            Grp_Fornecedor.Controls.Add(Txt_Lote);
+            Grp_Fornecedor.Controls.Add(CmbBox_Fornecedor);
+            Grp_Fornecedor.Controls.Add(Lbl_Lote);
+            Grp_Fornecedor.Controls.Add(Lbl_Validade);
+            Grp_Fornecedor.Controls.Add(Lbl_Valor);
+            Grp_Fornecedor.Controls.Add(Dtp_Validade);
+            Grp_Fornecedor.Controls.Add(Txt_Qtd);
+            Grp_Fornecedor.Controls.Add(Lbl_Qtd);
+            Grp_Fornecedor.Location = new Point(482, 103);
+            Grp_Fornecedor.Name = "Grp_Fornecedor";
+            Grp_Fornecedor.Size = new Size(587, 151);
+            Grp_Fornecedor.TabIndex = 54;
+            Grp_Fornecedor.TabStop = false;
+            Grp_Fornecedor.Text = "Fornecedor";
+            // 
+            // MskBox_Valor
+            // 
+            MskBox_Valor.Location = new Point(91, 104);
+            MskBox_Valor.Name = "MskBox_Valor";
+            MskBox_Valor.Size = new Size(100, 23);
+            MskBox_Valor.TabIndex = 48;
+            // 
+            // FrmMedicamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
+            Controls.Add(Grp_Fornecedor);
             Controls.Add(GrpBox_Quimicos);
-            Controls.Add(CmbBox_Fornecedor);
-            Controls.Add(Lbl_Fornecedor);
-            Controls.Add(Lbl_Valor);
-            Controls.Add(Txt_Valor);
             Controls.Add(Btn_Sair);
             Controls.Add(Btn_Salvar);
             Controls.Add(Btn_Editar);
             Controls.Add(Btn_Excluir);
             Controls.Add(Btn_Buscar);
-            Controls.Add(Lbl_Qtd);
-            Controls.Add(Txt_Qtd);
-            Controls.Add(Dtp_Validade);
-            Controls.Add(Lbl_Validade);
-            Controls.Add(Lbl_Lote);
-            Controls.Add(Txt_Lote);
             Controls.Add(Lbl_Fabricante);
             Controls.Add(Txt_Fabricante);
             Controls.Add(Lbl_Tipo);
@@ -416,11 +429,13 @@
             Controls.Add(Lbl_Codigo);
             Controls.Add(Txt_Codigo);
             Controls.Add(Lbl_CadastroMed);
-            Name = "Medicamento";
+            Name = "FrmMedicamento";
             Text = "Medicamento";
             GrpBox_Quimicos.ResumeLayout(false);
             GrpBox_Quimicos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Quimicos).EndInit();
+            Grp_Fornecedor.ResumeLayout(false);
+            Grp_Fornecedor.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -450,7 +465,6 @@
         private Button Btn_Editar;
         private Button Btn_Excluir;
         private Label Lbl_Valor;
-        private TextBox Txt_Valor;
         private Label Lbl_Fornecedor;
         private ComboBox CmbBox_Fornecedor;
         private Label Lbl_UnidMed;
@@ -464,5 +478,7 @@
         private Label Lbl_Compostos;
         private TextBox Txt_Compostos;
         private DataGridView DtGridView_Quimicos;
+        private GroupBox Grp_Fornecedor;
+        private MaskedTextBox MskBox_Valor;
     }
 }

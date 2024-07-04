@@ -40,9 +40,9 @@
             Btn_Editar = new Button();
             Btn_Excluir = new Button();
             Lbl_Valor = new Label();
-            Txt_Valor = new TextBox();
             Lbl_Fornecedor = new Label();
             CmbBox_Fornecedor = new ComboBox();
+            MskBox_Valor = new MaskedTextBox();
             SuspendLayout();
             // 
             // Btn_Buscar
@@ -107,7 +107,7 @@
             // Lbl_Nome
             // 
             Lbl_Nome.AutoSize = true;
-            Lbl_Nome.Location = new Point(38, 131);
+            Lbl_Nome.Location = new Point(38, 126);
             Lbl_Nome.Name = "Lbl_Nome";
             Lbl_Nome.Size = new Size(43, 15);
             Lbl_Nome.TabIndex = 26;
@@ -115,9 +115,9 @@
             // 
             // Txt_Nome
             // 
-            Txt_Nome.Location = new Point(105, 128);
+            Txt_Nome.Location = new Point(105, 123);
             Txt_Nome.Name = "Txt_Nome";
-            Txt_Nome.Size = new Size(287, 23);
+            Txt_Nome.Size = new Size(289, 23);
             Txt_Nome.TabIndex = 25;
             // 
             // Lbl_Codigo
@@ -147,7 +147,7 @@
             // 
             // Btn_Sair
             // 
-            Btn_Sair.Location = new Point(706, 402);
+            Btn_Sair.Location = new Point(994, 523);
             Btn_Sair.Name = "Btn_Sair";
             Btn_Sair.Size = new Size(75, 23);
             Btn_Sair.TabIndex = 43;
@@ -156,7 +156,7 @@
             // 
             // Btn_Salvar
             // 
-            Btn_Salvar.Location = new Point(451, 402);
+            Btn_Salvar.Location = new Point(739, 523);
             Btn_Salvar.Name = "Btn_Salvar";
             Btn_Salvar.Size = new Size(75, 23);
             Btn_Salvar.TabIndex = 42;
@@ -165,7 +165,7 @@
             // 
             // Btn_Editar
             // 
-            Btn_Editar.Location = new Point(537, 402);
+            Btn_Editar.Location = new Point(825, 523);
             Btn_Editar.Name = "Btn_Editar";
             Btn_Editar.Size = new Size(75, 23);
             Btn_Editar.TabIndex = 41;
@@ -174,7 +174,7 @@
             // 
             // Btn_Excluir
             // 
-            Btn_Excluir.Location = new Point(621, 402);
+            Btn_Excluir.Location = new Point(909, 523);
             Btn_Excluir.Name = "Btn_Excluir";
             Btn_Excluir.Size = new Size(75, 23);
             Btn_Excluir.TabIndex = 40;
@@ -184,23 +184,16 @@
             // Lbl_Valor
             // 
             Lbl_Valor.AutoSize = true;
-            Lbl_Valor.Location = new Point(245, 204);
+            Lbl_Valor.Location = new Point(245, 207);
             Lbl_Valor.Name = "Lbl_Valor";
             Lbl_Valor.Size = new Size(36, 15);
             Lbl_Valor.TabIndex = 45;
             Lbl_Valor.Text = "Valor:";
             // 
-            // Txt_Valor
-            // 
-            Txt_Valor.Location = new Point(294, 201);
-            Txt_Valor.Name = "Txt_Valor";
-            Txt_Valor.Size = new Size(93, 23);
-            Txt_Valor.TabIndex = 44;
-            // 
             // Lbl_Fornecedor
             // 
             Lbl_Fornecedor.AutoSize = true;
-            Lbl_Fornecedor.Location = new Point(411, 131);
+            Lbl_Fornecedor.Location = new Point(382, 86);
             Lbl_Fornecedor.Name = "Lbl_Fornecedor";
             Lbl_Fornecedor.Size = new Size(70, 15);
             Lbl_Fornecedor.TabIndex = 46;
@@ -209,20 +202,27 @@
             // CmbBox_Fornecedor
             // 
             CmbBox_Fornecedor.FormattingEnabled = true;
-            CmbBox_Fornecedor.Location = new Point(487, 128);
+            CmbBox_Fornecedor.Location = new Point(458, 83);
             CmbBox_Fornecedor.Name = "CmbBox_Fornecedor";
-            CmbBox_Fornecedor.Size = new Size(163, 23);
+            CmbBox_Fornecedor.Size = new Size(255, 23);
             CmbBox_Fornecedor.TabIndex = 47;
             // 
-            // MedicamentoFornecedor
+            // MskBox_Valor
+            // 
+            MskBox_Valor.Location = new Point(294, 204);
+            MskBox_Valor.Name = "MskBox_Valor";
+            MskBox_Valor.Size = new Size(100, 23);
+            MskBox_Valor.TabIndex = 48;
+            // 
+            // FrmMedicamentoFornecedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1092, 569);
+            Controls.Add(MskBox_Valor);
             Controls.Add(CmbBox_Fornecedor);
             Controls.Add(Lbl_Fornecedor);
             Controls.Add(Lbl_Valor);
-            Controls.Add(Txt_Valor);
             Controls.Add(Btn_Sair);
             Controls.Add(Btn_Salvar);
             Controls.Add(Btn_Editar);
@@ -239,7 +239,7 @@
             Controls.Add(Lbl_Codigo);
             Controls.Add(Txt_Codigo);
             Controls.Add(Lbl_CadastroMed);
-            Name = "MedicamentoFornecedor";
+            Name = "FrmMedicamentoFornecedor";
             Text = "MedicamentoFornecedor";
             ResumeLayout(false);
             PerformLayout();
@@ -264,8 +264,8 @@
         private Button Btn_Editar;
         private Button Btn_Excluir;
         private Label Lbl_Valor;
-        private TextBox Txt_Valor;
         private Label Lbl_Fornecedor;
         private ComboBox CmbBox_Fornecedor;
+        private MaskedTextBox MskBox_Valor;
     }
 }
