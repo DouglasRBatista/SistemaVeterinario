@@ -19,7 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "src\DAL\DAL.csproj",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "src\Models\Models.csproj", "{94115A7C-CE2D-4E40-AAA5-7F8F7619DEC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetSysControl", "src\UI\VetSysControl\VetSysControl.csproj", "{4B2760E5-01A7-4C9F-B9CE-1BCEB968DF99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetSysControl", "src\UI\VetSysControl\VetSysControl.csproj", "{4B2760E5-01A7-4C9F-B9CE-1BCEB968DF99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Script SQL", "Script SQL", "{AEDEFCAC-962A-4594-8652-2BB724637093}"
+	ProjectSection(SolutionItems) = preProject
+		Script SQL\Script VetSysControlv4.sql = Script SQL\Script VetSysControlv4.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
