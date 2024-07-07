@@ -69,5 +69,36 @@ namespace BLL.Empresa
             }
             return empresa;
         }
+        public Cls_Empresa GetEmpresas() {
+            Cls_Empresa empresa = new Cls_Empresa();
+
+            if (_SqlConnectionString == string.Empty)
+                return null;
+
+            //DB Interaction.
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+                    sqlCommand.CommandText =
+                        "SELECT [IdEmpresa]\r\n      " +
+                              ",[CodEmpresa]\r\n      " +
+                              ",[RazaoSocial]\r\n      " +
+                              ",[Endereco]\r\n      " +
+                              ",[CNPJ]\r\n      " +
+                              ",[Telefone]\r\n      " +
+                              ",[Unidade]\r\n      " +
+                              ",[Logo]\r\n  " +
+                        "FROM [Empresa]\r\n ";
+
+                    conn.ExecuteQuery(sqlCommand.CommandText);
+
+                }
+
+            }
+
+            return empresa;
+        }
     }
+    
 }
+
+

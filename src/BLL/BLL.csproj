@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pessoa\" />
-    <Folder Include="Clinica\" />
+    <Compile Remove="Clinica\NovaPasta\**" />
+    <Compile Remove="Pessoa\NovaPasta\**" />
+    <EmbeddedResource Remove="Clinica\NovaPasta\**" />
+    <EmbeddedResource Remove="Pessoa\NovaPasta\**" />
+    <None Remove="Clinica\NovaPasta\**" />
+    <None Remove="Pessoa\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Animal\" />
+    <Folder Include="Clinica\" />
   </ItemGroup>
 
   <ItemGroup>
