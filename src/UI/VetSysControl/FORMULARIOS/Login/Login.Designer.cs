@@ -57,21 +57,26 @@
             Btn_Login.TabIndex = 2;
             Btn_Login.Text = "Login";
             Btn_Login.UseVisualStyleBackColor = true;
+            Btn_Login.Click += Btn_Login_Click;
             // 
             // Txt_Login
             // 
             Txt_Login.Location = new Point(277, 179);
+            Txt_Login.MaxLength = 15;
             Txt_Login.Name = "Txt_Login";
             Txt_Login.Size = new Size(220, 23);
             Txt_Login.TabIndex = 3;
+            Txt_Login.KeyDown += Txt_Login_KeyDown;
             // 
             // Txt_Senha
             // 
             Txt_Senha.Location = new Point(277, 223);
+            Txt_Senha.MaxLength = 15;
             Txt_Senha.Name = "Txt_Senha";
             Txt_Senha.Size = new Size(220, 23);
             Txt_Senha.TabIndex = 4;
             Txt_Senha.UseSystemPasswordChar = true;
+            Txt_Senha.KeyDown += Txt_Senha_KeyDown;
             // 
             // Lbl_VetSysControl
             // 
@@ -97,6 +102,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }

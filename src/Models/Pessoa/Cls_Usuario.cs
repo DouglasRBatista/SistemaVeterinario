@@ -14,6 +14,8 @@
             Ativo = false;
         }
 
+
+
         public int GetIdUsuario() {
             return IdUsuario;
         }

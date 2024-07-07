@@ -11,6 +11,7 @@ namespace Models.Clinica
     {
         public int IdMedicamento { get; set; }
         public string CodMedicamento { get; set; }
+        public string Nome { get; set; }
         public string Descricao { get; set; }
         public string Tipo { get; set; }
         public int Quantidade { get; set; }
@@ -23,6 +24,7 @@ namespace Models.Clinica
         public Cls_Medicamento() {
             IdMedicamento = 0;
             CodMedicamento = string.Empty;
+            Nome = string.Empty;
             Descricao = string.Empty;
             Tipo = string.Empty;
             Quantidade = 0;

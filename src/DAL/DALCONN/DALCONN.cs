@@ -137,7 +137,6 @@ namespace DAL.DALCONN
             }
         }
 
-
         protected virtual void Dispose(bool disposing)
         {
             if (!disposed)

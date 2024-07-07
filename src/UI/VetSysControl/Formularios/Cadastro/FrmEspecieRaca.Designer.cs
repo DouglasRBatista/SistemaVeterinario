@@ -83,6 +83,7 @@
             // Txt_CodEspecie
             // 
             Txt_CodEspecie.Location = new Point(150, 94);
+            Txt_CodEspecie.MaxLength = 20;
             Txt_CodEspecie.Name = "Txt_CodEspecie";
             Txt_CodEspecie.Size = new Size(175, 23);
             Txt_CodEspecie.TabIndex = 26;
@@ -108,6 +109,7 @@
             // Txt_DescEspecie
             // 
             Txt_DescEspecie.Location = new Point(481, 94);
+            Txt_DescEspecie.MaxLength = 50;
             Txt_DescEspecie.Name = "Txt_DescEspecie";
             Txt_DescEspecie.Size = new Size(220, 23);
             Txt_DescEspecie.TabIndex = 29;
@@ -124,6 +126,7 @@
             // Txt_DescRaca
             // 
             Txt_DescRaca.Location = new Point(155, 305);
+            Txt_DescRaca.MaxLength = 50;
             Txt_DescRaca.Name = "Txt_DescRaca";
             Txt_DescRaca.Size = new Size(241, 23);
             Txt_DescRaca.TabIndex = 35;
@@ -149,6 +152,7 @@
             // Txt_CodRaca
             // 
             Txt_CodRaca.Location = new Point(155, 270);
+            Txt_CodRaca.MaxLength = 20;
             Txt_CodRaca.Name = "Txt_CodRaca";
             Txt_CodRaca.Size = new Size(170, 23);
             Txt_CodRaca.TabIndex = 32;
@@ -214,6 +218,7 @@
             // Txt_ExpecVidaMax
             // 
             Txt_ExpecVidaMax.Location = new Point(156, 61);
+            Txt_ExpecVidaMax.MaxLength = 3;
             Txt_ExpecVidaMax.Name = "Txt_ExpecVidaMax";
             Txt_ExpecVidaMax.Size = new Size(72, 23);
             Txt_ExpecVidaMax.TabIndex = 40;
@@ -239,6 +244,7 @@
             // Txt_ExpecVidaMin
             // 
             Txt_ExpecVidaMin.Location = new Point(156, 26);
+            Txt_ExpecVidaMin.MaxLength = 3;
             Txt_ExpecVidaMin.Name = "Txt_ExpecVidaMin";
             Txt_ExpecVidaMin.Size = new Size(72, 23);
             Txt_ExpecVidaMin.TabIndex = 37;

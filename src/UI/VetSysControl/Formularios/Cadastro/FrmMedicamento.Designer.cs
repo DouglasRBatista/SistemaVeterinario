@@ -87,6 +87,7 @@
             // Txt_Qtd
             // 
             Txt_Qtd.Location = new Point(91, 75);
+            Txt_Qtd.MaxLength = 10;
             Txt_Qtd.Name = "Txt_Qtd";
             Txt_Qtd.Size = new Size(57, 23);
             Txt_Qtd.TabIndex = 37;
@@ -121,6 +122,7 @@
             // Txt_Lote
             // 
             Txt_Lote.Location = new Point(91, 46);
+            Txt_Lote.MaxLength = 10;
             Txt_Lote.Name = "Txt_Lote";
             Txt_Lote.Size = new Size(165, 23);
             Txt_Lote.TabIndex = 33;
@@ -137,6 +139,7 @@
             // Txt_Fabricante
             // 
             Txt_Fabricante.Location = new Point(293, 162);
+            Txt_Fabricante.MaxLength = 30;
             Txt_Fabricante.Name = "Txt_Fabricante";
             Txt_Fabricante.Size = new Size(147, 23);
             Txt_Fabricante.TabIndex = 31;
@@ -153,6 +156,7 @@
             // Txt_Tipo
             // 
             Txt_Tipo.Location = new Point(105, 162);
+            Txt_Tipo.MaxLength = 30;
             Txt_Tipo.Name = "Txt_Tipo";
             Txt_Tipo.Size = new Size(100, 23);
             Txt_Tipo.TabIndex = 29;
@@ -186,6 +190,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(105, 128);
+            Txt_Nome.MaxLength = 70;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(287, 23);
             Txt_Nome.TabIndex = 25;
@@ -202,6 +207,7 @@
             // Txt_Codigo
             // 
             Txt_Codigo.Location = new Point(106, 83);
+            Txt_Codigo.MaxLength = 30;
             Txt_Codigo.Name = "Txt_Codigo";
             Txt_Codigo.Size = new Size(119, 23);
             Txt_Codigo.TabIndex = 23;
@@ -289,6 +295,7 @@
             // Txt_UnidMed
             // 
             Txt_UnidMed.Location = new Point(278, 150);
+            Txt_UnidMed.MaxLength = 10;
             Txt_UnidMed.Name = "Txt_UnidMed";
             Txt_UnidMed.Size = new Size(52, 23);
             Txt_UnidMed.TabIndex = 48;
@@ -376,6 +383,7 @@
             // Txt_Compostos
             // 
             Txt_Compostos.Location = new Point(81, 121);
+            Txt_Compostos.MaxLength = 60;
             Txt_Compostos.Name = "Txt_Compostos";
             Txt_Compostos.Size = new Size(249, 23);
             Txt_Compostos.TabIndex = 53;

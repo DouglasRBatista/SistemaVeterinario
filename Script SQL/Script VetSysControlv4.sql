@@ -178,7 +178,8 @@ GO
 CREATE TABLE Raca(
 	IdRaca INT PRIMARY KEY IDENTITY(1,1),
 	IdEspecie INT,
-	CodRaca NVARCHAR(20) UNIQUE,
+	CodRaca NVARCHAR(30) UNIQUE,
+	DescRaca NVARCHAR(50) UNIQUE,
 	TempCorpMin FLOAT,
 	TempCorpMax FLOAT,
 	ExpectativaDeVidaMin INT,
@@ -255,7 +256,8 @@ GO
 CREATE TABLE Medicamento(
 	IdMedicamento INT PRIMARY KEY IDENTITY(1,1),
 	CodMedicamento NVARCHAR(30),
-	Descricao NVARCHAR(70),
+	Nome NVARCHAR(70),
+	Descricao NVARCHAR(MAX),
 	Tipo NVARCHAR(30),
 	Fabricante NVARCHAR(30),
 );

@@ -71,6 +71,8 @@
             Lbl_Atendimento = new Label();
             Txt_Atendimento = new TextBox();
             MskTxt_Valor = new MaskedTextBox();
+            Btn_BuscarEspecie = new Button();
+            Btn_BuscarRaca = new Button();
             GrpBox_Servicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Servicos).BeginInit();
             GrpBox_Desc.SuspendLayout();
@@ -101,6 +103,7 @@
             // Txt_Titulo
             // 
             Txt_Titulo.Location = new Point(117, 94);
+            Txt_Titulo.MaxLength = 25;
             Txt_Titulo.Name = "Txt_Titulo";
             Txt_Titulo.Size = new Size(354, 23);
             Txt_Titulo.TabIndex = 52;
@@ -147,7 +150,7 @@
             Txt_Desc.Location = new Point(3, 19);
             Txt_Desc.Multiline = true;
             Txt_Desc.Name = "Txt_Desc";
-            Txt_Desc.Size = new Size(644, 101);
+            Txt_Desc.Size = new Size(570, 101);
             Txt_Desc.TabIndex = 60;
             // 
             // Lbl_DataAtend
@@ -171,7 +174,7 @@
             // 
             // Dtp_Hora
             // 
-            Dtp_Hora.CustomFormat = "H:m";
+            Dtp_Hora.CustomFormat = "H:mm";
             Dtp_Hora.Format = DateTimePickerFormat.Custom;
             Dtp_Hora.Location = new Point(540, 124);
             Dtp_Hora.Name = "Dtp_Hora";
@@ -200,6 +203,7 @@
             // Txt_Cliente
             // 
             Txt_Cliente.Location = new Point(117, 127);
+            Txt_Cliente.MaxLength = 60;
             Txt_Cliente.Name = "Txt_Cliente";
             Txt_Cliente.Size = new Size(260, 23);
             Txt_Cliente.TabIndex = 65;
@@ -216,6 +220,7 @@
             // textBox2
             // 
             textBox2.Location = new Point(51, 22);
+            textBox2.MaxLength = 20;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(229, 23);
             textBox2.TabIndex = 67;
@@ -232,6 +237,7 @@
             // Txt_Vet
             // 
             Txt_Vet.Location = new Point(117, 156);
+            Txt_Vet.MaxLength = 60;
             Txt_Vet.Name = "Txt_Vet";
             Txt_Vet.Size = new Size(260, 23);
             Txt_Vet.TabIndex = 70;
@@ -271,9 +277,9 @@
             // 
             // Btn_BuscarPet
             // 
-            Btn_BuscarPet.Location = new Point(310, 22);
+            Btn_BuscarPet.Location = new Point(285, 22);
             Btn_BuscarPet.Name = "Btn_BuscarPet";
-            Btn_BuscarPet.Size = new Size(58, 23);
+            Btn_BuscarPet.Size = new Size(55, 23);
             Btn_BuscarPet.TabIndex = 77;
             Btn_BuscarPet.Text = "Buscar";
             Btn_BuscarPet.UseVisualStyleBackColor = true;
@@ -283,16 +289,16 @@
             GrpBox_Servicos.Controls.Add(Btn_DelServico);
             GrpBox_Servicos.Controls.Add(Btn_AddServ);
             GrpBox_Servicos.Controls.Add(DtGridView_Servicos);
-            GrpBox_Servicos.Location = new Point(430, 190);
+            GrpBox_Servicos.Location = new Point(504, 190);
             GrpBox_Servicos.Name = "GrpBox_Servicos";
-            GrpBox_Servicos.Size = new Size(650, 137);
+            GrpBox_Servicos.Size = new Size(576, 137);
             GrpBox_Servicos.TabIndex = 80;
             GrpBox_Servicos.TabStop = false;
             GrpBox_Servicos.Text = "Serviços";
             // 
             // Btn_DelServico
             // 
-            Btn_DelServico.Location = new Point(588, 51);
+            Btn_DelServico.Location = new Point(518, 50);
             Btn_DelServico.Name = "Btn_DelServico";
             Btn_DelServico.Size = new Size(50, 23);
             Btn_DelServico.TabIndex = 82;
@@ -301,7 +307,7 @@
             // 
             // Btn_AddServ
             // 
-            Btn_AddServ.Location = new Point(588, 22);
+            Btn_AddServ.Location = new Point(518, 21);
             Btn_AddServ.Name = "Btn_AddServ";
             Btn_AddServ.Size = new Size(50, 23);
             Btn_AddServ.TabIndex = 81;
@@ -313,21 +319,23 @@
             DtGridView_Servicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DtGridView_Servicos.Location = new Point(6, 18);
             DtGridView_Servicos.Name = "DtGridView_Servicos";
-            DtGridView_Servicos.Size = new Size(571, 109);
+            DtGridView_Servicos.Size = new Size(506, 109);
             DtGridView_Servicos.TabIndex = 80;
             // 
             // GrpBox_Desc
             // 
             GrpBox_Desc.Controls.Add(Txt_Desc);
-            GrpBox_Desc.Location = new Point(430, 333);
+            GrpBox_Desc.Location = new Point(504, 333);
             GrpBox_Desc.Name = "GrpBox_Desc";
-            GrpBox_Desc.Size = new Size(650, 126);
+            GrpBox_Desc.Size = new Size(576, 126);
             GrpBox_Desc.TabIndex = 81;
             GrpBox_Desc.TabStop = false;
             GrpBox_Desc.Text = "Descrição";
             // 
             // GrpBox_Pet
             // 
+            GrpBox_Pet.Controls.Add(Btn_BuscarRaca);
+            GrpBox_Pet.Controls.Add(Btn_BuscarEspecie);
             GrpBox_Pet.Controls.Add(Lbl_Vacinas);
             GrpBox_Pet.Controls.Add(DtGridView_Vacinas);
             GrpBox_Pet.Controls.Add(Txt_Raca);
@@ -346,7 +354,7 @@
             GrpBox_Pet.Controls.Add(Lbl_Pet);
             GrpBox_Pet.Location = new Point(37, 190);
             GrpBox_Pet.Name = "GrpBox_Pet";
-            GrpBox_Pet.Size = new Size(387, 339);
+            GrpBox_Pet.Size = new Size(461, 339);
             GrpBox_Pet.TabIndex = 82;
             GrpBox_Pet.TabStop = false;
             GrpBox_Pet.Text = "Pet";
@@ -365,12 +373,13 @@
             DtGridView_Vacinas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DtGridView_Vacinas.Location = new Point(9, 162);
             DtGridView_Vacinas.Name = "DtGridView_Vacinas";
-            DtGridView_Vacinas.Size = new Size(370, 76);
+            DtGridView_Vacinas.Size = new Size(439, 76);
             DtGridView_Vacinas.TabIndex = 90;
             // 
             // Txt_Raca
             // 
             Txt_Raca.Location = new Point(64, 114);
+            Txt_Raca.MaxLength = 30;
             Txt_Raca.Name = "Txt_Raca";
             Txt_Raca.Size = new Size(216, 23);
             Txt_Raca.TabIndex = 88;
@@ -387,6 +396,7 @@
             // Txt_Especie
             // 
             Txt_Especie.Location = new Point(64, 85);
+            Txt_Especie.MaxLength = 50;
             Txt_Especie.Name = "Txt_Especie";
             Txt_Especie.Size = new Size(216, 23);
             Txt_Especie.TabIndex = 86;
@@ -403,6 +413,7 @@
             // Txt_Idade
             // 
             Txt_Idade.Location = new Point(225, 56);
+            Txt_Idade.MaxLength = 3;
             Txt_Idade.Name = "Txt_Idade";
             Txt_Idade.Size = new Size(55, 23);
             Txt_Idade.TabIndex = 85;
@@ -438,9 +449,9 @@
             // 
             GrpBox_Sexo.Controls.Add(RBtn_Femea);
             GrpBox_Sexo.Controls.Add(RBtn_Macho);
-            GrpBox_Sexo.Location = new Point(291, 51);
+            GrpBox_Sexo.Location = new Point(346, 18);
             GrpBox_Sexo.Name = "GrpBox_Sexo";
-            GrpBox_Sexo.Size = new Size(88, 84);
+            GrpBox_Sexo.Size = new Size(102, 84);
             GrpBox_Sexo.TabIndex = 81;
             GrpBox_Sexo.TabStop = false;
             GrpBox_Sexo.Text = "Sexo";
@@ -472,7 +483,7 @@
             DtGridView_Alergias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DtGridView_Alergias.Location = new Point(9, 258);
             DtGridView_Alergias.Name = "DtGridView_Alergias";
-            DtGridView_Alergias.Size = new Size(370, 65);
+            DtGridView_Alergias.Size = new Size(439, 65);
             DtGridView_Alergias.TabIndex = 80;
             // 
             // Lbl_Alergias
@@ -507,6 +518,24 @@
             MskTxt_Valor.Name = "MskTxt_Valor";
             MskTxt_Valor.Size = new Size(118, 23);
             MskTxt_Valor.TabIndex = 85;
+            // 
+            // Btn_BuscarEspecie
+            // 
+            Btn_BuscarEspecie.Location = new Point(285, 85);
+            Btn_BuscarEspecie.Name = "Btn_BuscarEspecie";
+            Btn_BuscarEspecie.Size = new Size(55, 23);
+            Btn_BuscarEspecie.TabIndex = 92;
+            Btn_BuscarEspecie.Text = "Buscar";
+            Btn_BuscarEspecie.UseVisualStyleBackColor = true;
+            // 
+            // Btn_BuscarRaca
+            // 
+            Btn_BuscarRaca.Location = new Point(285, 114);
+            Btn_BuscarRaca.Name = "Btn_BuscarRaca";
+            Btn_BuscarRaca.Size = new Size(55, 23);
+            Btn_BuscarRaca.TabIndex = 93;
+            Btn_BuscarRaca.Text = "Buscar";
+            Btn_BuscarRaca.UseVisualStyleBackColor = true;
             // 
             // FrmAtendimento
             // 
@@ -603,5 +632,7 @@
         private DataGridView DtGridView_Vacinas;
         private Label Lbl_Vacinas;
         private MaskedTextBox MskTxt_Valor;
+        private Button Btn_BuscarRaca;
+        private Button Btn_BuscarEspecie;
     }
 }

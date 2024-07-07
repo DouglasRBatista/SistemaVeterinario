@@ -43,38 +43,38 @@
             CmbBox_Unidade = new ComboBox();
             PicBox_Logo = new PictureBox();
             GrpBox_Filial = new GroupBox();
-            GrpBox_Contrat = new GroupBox();
-            GrpBox_FarmLab = new GroupBox();
-            ChkBox_DayCare = new CheckBox();
-            MskBox_DayCare = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
-            ChkBox_UnidHosp = new CheckBox();
+            Lbl_FaturamentoFilial = new Label();
+            Lbl_CustosFilial = new Label();
+            MskBox_FaturamentoFilial = new MaskedTextBox();
+            MskBox_CustosFilial = new MaskedTextBox();
+            ChkBox_Farmacia = new CheckBox();
             maskedTextBox3 = new MaskedTextBox();
             ChkBox_ProntoAtend = new CheckBox();
-            ChkBox_Farmacia = new CheckBox();
-            MskBox_CustosFilial = new MaskedTextBox();
-            MskBox_FaturamentoFilial = new MaskedTextBox();
-            Lbl_CustosFilial = new Label();
-            Lbl_FaturamentoFilial = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            Lbl_InicioContr = new Label();
-            Lbl_FimContr = new Label();
-            Lbl_Servicos = new Label();
-            Lbl_CustosContr = new Label();
-            MskBox_CustosContr = new MaskedTextBox();
-            LstBox_Servicos = new ListBox();
-            ChkBox_UnidIntegr = new CheckBox();
+            maskedTextBox2 = new MaskedTextBox();
+            ChkBox_UnidHosp = new CheckBox();
+            MskBox_DayCare = new MaskedTextBox();
+            ChkBox_DayCare = new CheckBox();
+            GrpBox_Contrat = new GroupBox();
             Btn_AddServico = new Button();
             Btn_DelServico = new Button();
-            ChkBox_Integr = new CheckBox();
-            comboBox1 = new ComboBox();
-            Lbl_Filial = new Label();
-            ChkBox_Terceirizada = new CheckBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            Lbl_DescFarmLab = new Label();
+            ChkBox_UnidIntegr = new CheckBox();
+            LstBox_Servicos = new ListBox();
+            Lbl_CustosContr = new Label();
+            Lbl_Servicos = new Label();
+            MskBox_CustosContr = new MaskedTextBox();
+            Lbl_FimContr = new Label();
+            Lbl_InicioContr = new Label();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            GrpBox_FarmLab = new GroupBox();
             Lbl_OBS = new Label();
+            Lbl_DescFarmLab = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            ChkBox_Terceirizada = new CheckBox();
+            Lbl_Filial = new Label();
+            comboBox1 = new ComboBox();
+            ChkBox_Integr = new CheckBox();
             ChkBox_Filial = new CheckBox();
             ChkBox_Contr = new CheckBox();
             ChkBox_FarmLab = new CheckBox();
@@ -141,6 +141,7 @@
             // Txt_RazaoSoc
             // 
             Txt_RazaoSoc.Location = new Point(445, 94);
+            Txt_RazaoSoc.MaxLength = 100;
             Txt_RazaoSoc.Name = "Txt_RazaoSoc";
             Txt_RazaoSoc.Size = new Size(235, 23);
             Txt_RazaoSoc.TabIndex = 68;
@@ -166,6 +167,7 @@
             // Txt_CodEmpresa
             // 
             Txt_CodEmpresa.Location = new Point(100, 94);
+            Txt_CodEmpresa.MaxLength = 20;
             Txt_CodEmpresa.Name = "Txt_CodEmpresa";
             Txt_CodEmpresa.Size = new Size(175, 23);
             Txt_CodEmpresa.TabIndex = 65;
@@ -173,6 +175,7 @@
             // Txt_Endereco
             // 
             Txt_Endereco.Location = new Point(100, 123);
+            Txt_Endereco.MaxLength = 100;
             Txt_Endereco.Name = "Txt_Endereco";
             Txt_Endereco.Size = new Size(580, 23);
             Txt_Endereco.TabIndex = 71;
@@ -189,6 +192,7 @@
             // MskBox_CNPJ
             // 
             MskBox_CNPJ.Location = new Point(100, 152);
+            MskBox_CNPJ.Mask = "99.999.999/9999-99";
             MskBox_CNPJ.Name = "MskBox_CNPJ";
             MskBox_CNPJ.Size = new Size(230, 23);
             MskBox_CNPJ.TabIndex = 72;
@@ -214,6 +218,7 @@
             // MskBox_Telefone
             // 
             MskBox_Telefone.Location = new Point(445, 152);
+            MskBox_Telefone.Mask = "(99) 99999-9999";
             MskBox_Telefone.Name = "MskBox_Telefone";
             MskBox_Telefone.Size = new Size(230, 23);
             MskBox_Telefone.TabIndex = 74;
@@ -263,6 +268,99 @@
             GrpBox_Filial.TabStop = false;
             GrpBox_Filial.Text = "Filial";
             // 
+            // Lbl_FaturamentoFilial
+            // 
+            Lbl_FaturamentoFilial.AutoSize = true;
+            Lbl_FaturamentoFilial.Location = new Point(6, 270);
+            Lbl_FaturamentoFilial.Name = "Lbl_FaturamentoFilial";
+            Lbl_FaturamentoFilial.Size = new Size(78, 15);
+            Lbl_FaturamentoFilial.TabIndex = 90;
+            Lbl_FaturamentoFilial.Text = "Faturamento:";
+            // 
+            // Lbl_CustosFilial
+            // 
+            Lbl_CustosFilial.AutoSize = true;
+            Lbl_CustosFilial.Location = new Point(6, 241);
+            Lbl_CustosFilial.Name = "Lbl_CustosFilial";
+            Lbl_CustosFilial.Size = new Size(46, 15);
+            Lbl_CustosFilial.TabIndex = 82;
+            Lbl_CustosFilial.Text = "Custos:";
+            // 
+            // MskBox_FaturamentoFilial
+            // 
+            MskBox_FaturamentoFilial.Location = new Point(104, 267);
+            MskBox_FaturamentoFilial.Name = "MskBox_FaturamentoFilial";
+            MskBox_FaturamentoFilial.Size = new Size(113, 23);
+            MskBox_FaturamentoFilial.TabIndex = 89;
+            // 
+            // MskBox_CustosFilial
+            // 
+            MskBox_CustosFilial.Location = new Point(104, 238);
+            MskBox_CustosFilial.Name = "MskBox_CustosFilial";
+            MskBox_CustosFilial.Size = new Size(113, 23);
+            MskBox_CustosFilial.TabIndex = 88;
+            // 
+            // ChkBox_Farmacia
+            // 
+            ChkBox_Farmacia.AutoSize = true;
+            ChkBox_Farmacia.Location = new Point(6, 164);
+            ChkBox_Farmacia.Name = "ChkBox_Farmacia";
+            ChkBox_Farmacia.Size = new Size(74, 19);
+            ChkBox_Farmacia.TabIndex = 87;
+            ChkBox_Farmacia.Text = "Farmacia";
+            ChkBox_Farmacia.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox3
+            // 
+            maskedTextBox3.Location = new Point(117, 121);
+            maskedTextBox3.Name = "maskedTextBox3";
+            maskedTextBox3.Size = new Size(100, 23);
+            maskedTextBox3.TabIndex = 85;
+            // 
+            // ChkBox_ProntoAtend
+            // 
+            ChkBox_ProntoAtend.AutoSize = true;
+            ChkBox_ProntoAtend.Location = new Point(6, 123);
+            ChkBox_ProntoAtend.Name = "ChkBox_ProntoAtend";
+            ChkBox_ProntoAtend.Size = new Size(100, 19);
+            ChkBox_ProntoAtend.TabIndex = 86;
+            ChkBox_ProntoAtend.Text = "Pronto Atend.";
+            ChkBox_ProntoAtend.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox2
+            // 
+            maskedTextBox2.Location = new Point(117, 79);
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new Size(100, 23);
+            maskedTextBox2.TabIndex = 83;
+            // 
+            // ChkBox_UnidHosp
+            // 
+            ChkBox_UnidHosp.AutoSize = true;
+            ChkBox_UnidHosp.Location = new Point(6, 81);
+            ChkBox_UnidHosp.Name = "ChkBox_UnidHosp";
+            ChkBox_UnidHosp.Size = new Size(111, 19);
+            ChkBox_UnidHosp.TabIndex = 84;
+            ChkBox_UnidHosp.Text = "Unid. Hospitalar";
+            ChkBox_UnidHosp.UseVisualStyleBackColor = true;
+            // 
+            // MskBox_DayCare
+            // 
+            MskBox_DayCare.Location = new Point(117, 35);
+            MskBox_DayCare.Name = "MskBox_DayCare";
+            MskBox_DayCare.Size = new Size(100, 23);
+            MskBox_DayCare.TabIndex = 82;
+            // 
+            // ChkBox_DayCare
+            // 
+            ChkBox_DayCare.AutoSize = true;
+            ChkBox_DayCare.Location = new Point(6, 39);
+            ChkBox_DayCare.Name = "ChkBox_DayCare";
+            ChkBox_DayCare.Size = new Size(70, 19);
+            ChkBox_DayCare.TabIndex = 82;
+            ChkBox_DayCare.Text = "DayCare";
+            ChkBox_DayCare.UseVisualStyleBackColor = true;
+            // 
             // GrpBox_Contrat
             // 
             GrpBox_Contrat.Controls.Add(Btn_AddServico);
@@ -283,194 +381,6 @@
             GrpBox_Contrat.TabStop = false;
             GrpBox_Contrat.Text = "Contratante";
             // 
-            // GrpBox_FarmLab
-            // 
-            GrpBox_FarmLab.Controls.Add(Lbl_OBS);
-            GrpBox_FarmLab.Controls.Add(Lbl_DescFarmLab);
-            GrpBox_FarmLab.Controls.Add(textBox2);
-            GrpBox_FarmLab.Controls.Add(textBox1);
-            GrpBox_FarmLab.Controls.Add(ChkBox_Terceirizada);
-            GrpBox_FarmLab.Controls.Add(Lbl_Filial);
-            GrpBox_FarmLab.Controls.Add(comboBox1);
-            GrpBox_FarmLab.Controls.Add(ChkBox_Integr);
-            GrpBox_FarmLab.Location = new Point(525, 256);
-            GrpBox_FarmLab.Name = "GrpBox_FarmLab";
-            GrpBox_FarmLab.Size = new Size(200, 301);
-            GrpBox_FarmLab.TabIndex = 81;
-            GrpBox_FarmLab.TabStop = false;
-            GrpBox_FarmLab.Text = "Farmacia - Laboratório";
-            // 
-            // ChkBox_DayCare
-            // 
-            ChkBox_DayCare.AutoSize = true;
-            ChkBox_DayCare.Location = new Point(6, 39);
-            ChkBox_DayCare.Name = "ChkBox_DayCare";
-            ChkBox_DayCare.Size = new Size(70, 19);
-            ChkBox_DayCare.TabIndex = 82;
-            ChkBox_DayCare.Text = "DayCare";
-            ChkBox_DayCare.UseVisualStyleBackColor = true;
-            // 
-            // MskBox_DayCare
-            // 
-            MskBox_DayCare.Location = new Point(117, 35);
-            MskBox_DayCare.Name = "MskBox_DayCare";
-            MskBox_DayCare.Size = new Size(100, 23);
-            MskBox_DayCare.TabIndex = 82;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(117, 79);
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 23);
-            maskedTextBox2.TabIndex = 83;
-            // 
-            // ChkBox_UnidHosp
-            // 
-            ChkBox_UnidHosp.AutoSize = true;
-            ChkBox_UnidHosp.Location = new Point(6, 81);
-            ChkBox_UnidHosp.Name = "ChkBox_UnidHosp";
-            ChkBox_UnidHosp.Size = new Size(111, 19);
-            ChkBox_UnidHosp.TabIndex = 84;
-            ChkBox_UnidHosp.Text = "Unid. Hospitalar";
-            ChkBox_UnidHosp.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox3
-            // 
-            maskedTextBox3.Location = new Point(117, 121);
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(100, 23);
-            maskedTextBox3.TabIndex = 85;
-            // 
-            // ChkBox_ProntoAtend
-            // 
-            ChkBox_ProntoAtend.AutoSize = true;
-            ChkBox_ProntoAtend.Location = new Point(6, 123);
-            ChkBox_ProntoAtend.Name = "ChkBox_ProntoAtend";
-            ChkBox_ProntoAtend.Size = new Size(100, 19);
-            ChkBox_ProntoAtend.TabIndex = 86;
-            ChkBox_ProntoAtend.Text = "Pronto Atend.";
-            ChkBox_ProntoAtend.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Farmacia
-            // 
-            ChkBox_Farmacia.AutoSize = true;
-            ChkBox_Farmacia.Location = new Point(6, 164);
-            ChkBox_Farmacia.Name = "ChkBox_Farmacia";
-            ChkBox_Farmacia.Size = new Size(74, 19);
-            ChkBox_Farmacia.TabIndex = 87;
-            ChkBox_Farmacia.Text = "Farmacia";
-            ChkBox_Farmacia.UseVisualStyleBackColor = true;
-            // 
-            // MskBox_CustosFilial
-            // 
-            MskBox_CustosFilial.Location = new Point(104, 238);
-            MskBox_CustosFilial.Name = "MskBox_CustosFilial";
-            MskBox_CustosFilial.Size = new Size(113, 23);
-            MskBox_CustosFilial.TabIndex = 88;
-            // 
-            // MskBox_FaturamentoFilial
-            // 
-            MskBox_FaturamentoFilial.Location = new Point(104, 267);
-            MskBox_FaturamentoFilial.Name = "MskBox_FaturamentoFilial";
-            MskBox_FaturamentoFilial.Size = new Size(113, 23);
-            MskBox_FaturamentoFilial.TabIndex = 89;
-            // 
-            // Lbl_CustosFilial
-            // 
-            Lbl_CustosFilial.AutoSize = true;
-            Lbl_CustosFilial.Location = new Point(6, 241);
-            Lbl_CustosFilial.Name = "Lbl_CustosFilial";
-            Lbl_CustosFilial.Size = new Size(46, 15);
-            Lbl_CustosFilial.TabIndex = 82;
-            Lbl_CustosFilial.Text = "Custos:";
-            // 
-            // Lbl_FaturamentoFilial
-            // 
-            Lbl_FaturamentoFilial.AutoSize = true;
-            Lbl_FaturamentoFilial.Location = new Point(6, 270);
-            Lbl_FaturamentoFilial.Name = "Lbl_FaturamentoFilial";
-            Lbl_FaturamentoFilial.Size = new Size(78, 15);
-            Lbl_FaturamentoFilial.TabIndex = 90;
-            Lbl_FaturamentoFilial.Text = "Faturamento:";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(96, 56);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(98, 23);
-            dateTimePicker1.TabIndex = 0;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(96, 98);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(98, 23);
-            dateTimePicker2.TabIndex = 1;
-            // 
-            // Lbl_InicioContr
-            // 
-            Lbl_InicioContr.AutoSize = true;
-            Lbl_InicioContr.Location = new Point(6, 62);
-            Lbl_InicioContr.Name = "Lbl_InicioContr";
-            Lbl_InicioContr.Size = new Size(89, 15);
-            Lbl_InicioContr.TabIndex = 91;
-            Lbl_InicioContr.Text = "Início Contrato:";
-            // 
-            // Lbl_FimContr
-            // 
-            Lbl_FimContr.AutoSize = true;
-            Lbl_FimContr.Location = new Point(6, 104);
-            Lbl_FimContr.Name = "Lbl_FimContr";
-            Lbl_FimContr.Size = new Size(80, 15);
-            Lbl_FimContr.TabIndex = 92;
-            Lbl_FimContr.Text = "Fim Contrato:";
-            // 
-            // Lbl_Servicos
-            // 
-            Lbl_Servicos.AutoSize = true;
-            Lbl_Servicos.Location = new Point(6, 127);
-            Lbl_Servicos.Name = "Lbl_Servicos";
-            Lbl_Servicos.Size = new Size(53, 15);
-            Lbl_Servicos.TabIndex = 93;
-            Lbl_Servicos.Text = "Servicos:";
-            // 
-            // Lbl_CustosContr
-            // 
-            Lbl_CustosContr.AutoSize = true;
-            Lbl_CustosContr.Location = new Point(13, 270);
-            Lbl_CustosContr.Name = "Lbl_CustosContr";
-            Lbl_CustosContr.Size = new Size(46, 15);
-            Lbl_CustosContr.TabIndex = 91;
-            Lbl_CustosContr.Text = "Custos:";
-            // 
-            // MskBox_CustosContr
-            // 
-            MskBox_CustosContr.Location = new Point(65, 267);
-            MskBox_CustosContr.Name = "MskBox_CustosContr";
-            MskBox_CustosContr.Size = new Size(129, 23);
-            MskBox_CustosContr.TabIndex = 92;
-            // 
-            // LstBox_Servicos
-            // 
-            LstBox_Servicos.FormattingEnabled = true;
-            LstBox_Servicos.ItemHeight = 15;
-            LstBox_Servicos.Location = new Point(6, 146);
-            LstBox_Servicos.Name = "LstBox_Servicos";
-            LstBox_Servicos.Size = new Size(143, 94);
-            LstBox_Servicos.TabIndex = 94;
-            // 
-            // ChkBox_UnidIntegr
-            // 
-            ChkBox_UnidIntegr.AutoSize = true;
-            ChkBox_UnidIntegr.Location = new Point(8, 26);
-            ChkBox_UnidIntegr.Name = "ChkBox_UnidIntegr";
-            ChkBox_UnidIntegr.Size = new Size(123, 19);
-            ChkBox_UnidIntegr.TabIndex = 95;
-            ChkBox_UnidIntegr.Text = "Unidade Integrada";
-            ChkBox_UnidIntegr.UseVisualStyleBackColor = true;
-            // 
             // Btn_AddServico
             // 
             Btn_AddServico.Location = new Point(155, 146);
@@ -489,32 +399,134 @@
             Btn_DelServico.Text = "-";
             Btn_DelServico.UseVisualStyleBackColor = true;
             // 
-            // ChkBox_Integr
+            // ChkBox_UnidIntegr
             // 
-            ChkBox_Integr.AutoSize = true;
-            ChkBox_Integr.Location = new Point(6, 48);
-            ChkBox_Integr.Name = "ChkBox_Integr";
-            ChkBox_Integr.Size = new Size(124, 19);
-            ChkBox_Integr.TabIndex = 96;
-            ChkBox_Integr.Text = "Integrada a Clínica";
-            ChkBox_Integr.UseVisualStyleBackColor = true;
+            ChkBox_UnidIntegr.AutoSize = true;
+            ChkBox_UnidIntegr.Location = new Point(8, 26);
+            ChkBox_UnidIntegr.Name = "ChkBox_UnidIntegr";
+            ChkBox_UnidIntegr.Size = new Size(123, 19);
+            ChkBox_UnidIntegr.TabIndex = 95;
+            ChkBox_UnidIntegr.Text = "Unidade Integrada";
+            ChkBox_UnidIntegr.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // LstBox_Servicos
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(59, 75);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(135, 23);
-            comboBox1.TabIndex = 97;
+            LstBox_Servicos.FormattingEnabled = true;
+            LstBox_Servicos.ItemHeight = 15;
+            LstBox_Servicos.Location = new Point(6, 146);
+            LstBox_Servicos.Name = "LstBox_Servicos";
+            LstBox_Servicos.Size = new Size(143, 94);
+            LstBox_Servicos.TabIndex = 94;
             // 
-            // Lbl_Filial
+            // Lbl_CustosContr
             // 
-            Lbl_Filial.AutoSize = true;
-            Lbl_Filial.Location = new Point(6, 78);
-            Lbl_Filial.Name = "Lbl_Filial";
-            Lbl_Filial.Size = new Size(34, 15);
-            Lbl_Filial.TabIndex = 82;
-            Lbl_Filial.Text = "Filial:";
+            Lbl_CustosContr.AutoSize = true;
+            Lbl_CustosContr.Location = new Point(13, 270);
+            Lbl_CustosContr.Name = "Lbl_CustosContr";
+            Lbl_CustosContr.Size = new Size(46, 15);
+            Lbl_CustosContr.TabIndex = 91;
+            Lbl_CustosContr.Text = "Custos:";
+            // 
+            // Lbl_Servicos
+            // 
+            Lbl_Servicos.AutoSize = true;
+            Lbl_Servicos.Location = new Point(6, 127);
+            Lbl_Servicos.Name = "Lbl_Servicos";
+            Lbl_Servicos.Size = new Size(53, 15);
+            Lbl_Servicos.TabIndex = 93;
+            Lbl_Servicos.Text = "Servicos:";
+            // 
+            // MskBox_CustosContr
+            // 
+            MskBox_CustosContr.Location = new Point(65, 267);
+            MskBox_CustosContr.Name = "MskBox_CustosContr";
+            MskBox_CustosContr.Size = new Size(129, 23);
+            MskBox_CustosContr.TabIndex = 92;
+            // 
+            // Lbl_FimContr
+            // 
+            Lbl_FimContr.AutoSize = true;
+            Lbl_FimContr.Location = new Point(6, 104);
+            Lbl_FimContr.Name = "Lbl_FimContr";
+            Lbl_FimContr.Size = new Size(80, 15);
+            Lbl_FimContr.TabIndex = 92;
+            Lbl_FimContr.Text = "Fim Contrato:";
+            // 
+            // Lbl_InicioContr
+            // 
+            Lbl_InicioContr.AutoSize = true;
+            Lbl_InicioContr.Location = new Point(6, 62);
+            Lbl_InicioContr.Name = "Lbl_InicioContr";
+            Lbl_InicioContr.Size = new Size(89, 15);
+            Lbl_InicioContr.TabIndex = 91;
+            Lbl_InicioContr.Text = "Início Contrato:";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(96, 98);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(98, 23);
+            dateTimePicker2.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(96, 56);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(98, 23);
+            dateTimePicker1.TabIndex = 0;
+            // 
+            // GrpBox_FarmLab
+            // 
+            GrpBox_FarmLab.Controls.Add(Lbl_OBS);
+            GrpBox_FarmLab.Controls.Add(Lbl_DescFarmLab);
+            GrpBox_FarmLab.Controls.Add(textBox2);
+            GrpBox_FarmLab.Controls.Add(textBox1);
+            GrpBox_FarmLab.Controls.Add(ChkBox_Terceirizada);
+            GrpBox_FarmLab.Controls.Add(Lbl_Filial);
+            GrpBox_FarmLab.Controls.Add(comboBox1);
+            GrpBox_FarmLab.Controls.Add(ChkBox_Integr);
+            GrpBox_FarmLab.Location = new Point(525, 256);
+            GrpBox_FarmLab.Name = "GrpBox_FarmLab";
+            GrpBox_FarmLab.Size = new Size(200, 301);
+            GrpBox_FarmLab.TabIndex = 81;
+            GrpBox_FarmLab.TabStop = false;
+            GrpBox_FarmLab.Text = "Farmacia - Laboratório";
+            // 
+            // Lbl_OBS
+            // 
+            Lbl_OBS.AutoSize = true;
+            Lbl_OBS.Location = new Point(6, 163);
+            Lbl_OBS.Name = "Lbl_OBS";
+            Lbl_OBS.Size = new Size(32, 15);
+            Lbl_OBS.TabIndex = 101;
+            Lbl_OBS.Text = "OBS:";
+            // 
+            // Lbl_DescFarmLab
+            // 
+            Lbl_DescFarmLab.AutoSize = true;
+            Lbl_DescFarmLab.Location = new Point(6, 113);
+            Lbl_DescFarmLab.Name = "Lbl_DescFarmLab";
+            Lbl_DescFarmLab.Size = new Size(61, 15);
+            Lbl_DescFarmLab.TabIndex = 100;
+            Lbl_DescFarmLab.Text = "Descrição:";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(6, 181);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(188, 77);
+            textBox2.TabIndex = 99;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(6, 131);
+            textBox1.MaxLength = 20;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(188, 23);
+            textBox1.TabIndex = 82;
             // 
             // ChkBox_Terceirizada
             // 
@@ -526,38 +538,32 @@
             ChkBox_Terceirizada.Text = "Terceirizada";
             ChkBox_Terceirizada.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Lbl_Filial
             // 
-            textBox1.Location = new Point(6, 131);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(188, 23);
-            textBox1.TabIndex = 82;
+            Lbl_Filial.AutoSize = true;
+            Lbl_Filial.Location = new Point(6, 78);
+            Lbl_Filial.Name = "Lbl_Filial";
+            Lbl_Filial.Size = new Size(34, 15);
+            Lbl_Filial.TabIndex = 82;
+            Lbl_Filial.Text = "Filial:";
             // 
-            // textBox2
+            // comboBox1
             // 
-            textBox2.Location = new Point(6, 181);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(188, 77);
-            textBox2.TabIndex = 99;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(59, 75);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(135, 23);
+            comboBox1.TabIndex = 97;
             // 
-            // Lbl_DescFarmLab
+            // ChkBox_Integr
             // 
-            Lbl_DescFarmLab.AutoSize = true;
-            Lbl_DescFarmLab.Location = new Point(6, 113);
-            Lbl_DescFarmLab.Name = "Lbl_DescFarmLab";
-            Lbl_DescFarmLab.Size = new Size(61, 15);
-            Lbl_DescFarmLab.TabIndex = 100;
-            Lbl_DescFarmLab.Text = "Descrição:";
-            // 
-            // Lbl_OBS
-            // 
-            Lbl_OBS.AutoSize = true;
-            Lbl_OBS.Location = new Point(6, 163);
-            Lbl_OBS.Name = "Lbl_OBS";
-            Lbl_OBS.Size = new Size(32, 15);
-            Lbl_OBS.TabIndex = 101;
-            Lbl_OBS.Text = "OBS:";
+            ChkBox_Integr.AutoSize = true;
+            ChkBox_Integr.Location = new Point(6, 48);
+            ChkBox_Integr.Name = "ChkBox_Integr";
+            ChkBox_Integr.Size = new Size(124, 19);
+            ChkBox_Integr.TabIndex = 96;
+            ChkBox_Integr.Text = "Integrada a Clínica";
+            ChkBox_Integr.UseVisualStyleBackColor = true;
             // 
             // ChkBox_Filial
             // 
