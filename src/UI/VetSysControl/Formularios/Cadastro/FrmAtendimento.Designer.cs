@@ -39,7 +39,7 @@
             Lbl_Cliente = new Label();
             Txt_Cliente = new TextBox();
             Lbl_Pet = new Label();
-            textBox2 = new TextBox();
+            Txt_Pet = new TextBox();
             Lbl_Vet = new Label();
             Txt_Vet = new TextBox();
             Lbl_Valor = new Label();
@@ -53,6 +53,8 @@
             DtGridView_Servicos = new DataGridView();
             GrpBox_Desc = new GroupBox();
             GrpBox_Pet = new GroupBox();
+            Btn_BuscarRaca = new Button();
+            Btn_BuscarEspecie = new Button();
             Lbl_Vacinas = new Label();
             DtGridView_Vacinas = new DataGridView();
             Txt_Raca = new TextBox();
@@ -71,8 +73,6 @@
             Lbl_Atendimento = new Label();
             Txt_Atendimento = new TextBox();
             MskTxt_Valor = new MaskedTextBox();
-            Btn_BuscarEspecie = new Button();
-            Btn_BuscarRaca = new Button();
             GrpBox_Servicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Servicos).BeginInit();
             GrpBox_Desc.SuspendLayout();
@@ -217,13 +217,13 @@
             Lbl_Pet.TabIndex = 68;
             Lbl_Pet.Text = "Pet:";
             // 
-            // textBox2
+            // Txt_Pet
             // 
-            textBox2.Location = new Point(51, 22);
-            textBox2.MaxLength = 20;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(229, 23);
-            textBox2.TabIndex = 67;
+            Txt_Pet.Location = new Point(51, 22);
+            Txt_Pet.MaxLength = 20;
+            Txt_Pet.Name = "Txt_Pet";
+            Txt_Pet.Size = new Size(229, 23);
+            Txt_Pet.TabIndex = 67;
             // 
             // Lbl_Vet
             // 
@@ -350,7 +350,7 @@
             GrpBox_Pet.Controls.Add(DtGridView_Alergias);
             GrpBox_Pet.Controls.Add(Lbl_Alergias);
             GrpBox_Pet.Controls.Add(Btn_BuscarPet);
-            GrpBox_Pet.Controls.Add(textBox2);
+            GrpBox_Pet.Controls.Add(Txt_Pet);
             GrpBox_Pet.Controls.Add(Lbl_Pet);
             GrpBox_Pet.Location = new Point(37, 190);
             GrpBox_Pet.Name = "GrpBox_Pet";
@@ -358,6 +358,24 @@
             GrpBox_Pet.TabIndex = 82;
             GrpBox_Pet.TabStop = false;
             GrpBox_Pet.Text = "Pet";
+            // 
+            // Btn_BuscarRaca
+            // 
+            Btn_BuscarRaca.Location = new Point(285, 114);
+            Btn_BuscarRaca.Name = "Btn_BuscarRaca";
+            Btn_BuscarRaca.Size = new Size(55, 23);
+            Btn_BuscarRaca.TabIndex = 93;
+            Btn_BuscarRaca.Text = "Buscar";
+            Btn_BuscarRaca.UseVisualStyleBackColor = true;
+            // 
+            // Btn_BuscarEspecie
+            // 
+            Btn_BuscarEspecie.Location = new Point(285, 85);
+            Btn_BuscarEspecie.Name = "Btn_BuscarEspecie";
+            Btn_BuscarEspecie.Size = new Size(55, 23);
+            Btn_BuscarEspecie.TabIndex = 92;
+            Btn_BuscarEspecie.Text = "Buscar";
+            Btn_BuscarEspecie.UseVisualStyleBackColor = true;
             // 
             // Lbl_Vacinas
             // 
@@ -519,24 +537,6 @@
             MskTxt_Valor.Size = new Size(118, 23);
             MskTxt_Valor.TabIndex = 85;
             // 
-            // Btn_BuscarEspecie
-            // 
-            Btn_BuscarEspecie.Location = new Point(285, 85);
-            Btn_BuscarEspecie.Name = "Btn_BuscarEspecie";
-            Btn_BuscarEspecie.Size = new Size(55, 23);
-            Btn_BuscarEspecie.TabIndex = 92;
-            Btn_BuscarEspecie.Text = "Buscar";
-            Btn_BuscarEspecie.UseVisualStyleBackColor = true;
-            // 
-            // Btn_BuscarRaca
-            // 
-            Btn_BuscarRaca.Location = new Point(285, 114);
-            Btn_BuscarRaca.Name = "Btn_BuscarRaca";
-            Btn_BuscarRaca.Size = new Size(55, 23);
-            Btn_BuscarRaca.TabIndex = 93;
-            Btn_BuscarRaca.Text = "Buscar";
-            Btn_BuscarRaca.UseVisualStyleBackColor = true;
-            // 
             // FrmAtendimento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -600,7 +600,7 @@
         private Label Lbl_Cliente;
         private TextBox Txt_Cliente;
         private Label Lbl_Pet;
-        private TextBox textBox2;
+        private TextBox Txt_Pet;
         private Label Lbl_Vet;
         private TextBox Txt_Vet;
         private Label Lbl_Valor;

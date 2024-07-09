@@ -48,6 +48,18 @@
             CmbBox_TipoEspecie = new ComboBox();
             GrpBox_OBS = new GroupBox();
             GrpBox_PesoPorIdade = new GroupBox();
+            Lbl_Faixa2 = new Label();
+            Lbl_Faixa = new Label();
+            Txt_PesoMax = new TextBox();
+            Txt_PesoMin = new TextBox();
+            Lbl_PesoMax = new Label();
+            Lbl_PesoMin = new Label();
+            Txt_IdadeMax = new TextBox();
+            Txt_IdadeMin = new TextBox();
+            label1 = new Label();
+            Lbl_IdadeMin = new Label();
+            Btn_Del = new Button();
+            Btn_Add = new Button();
             DtGridView_PesoPorIdade = new DataGridView();
             Btn_Sair = new Button();
             Btn_Salvar = new Button();
@@ -255,7 +267,7 @@
             Txt_OBS.Location = new Point(3, 19);
             Txt_OBS.Multiline = true;
             Txt_OBS.Name = "Txt_OBS";
-            Txt_OBS.Size = new Size(389, 95);
+            Txt_OBS.Size = new Size(389, 112);
             Txt_OBS.TabIndex = 42;
             // 
             // CmbBox_TipoEspecie
@@ -271,28 +283,143 @@
             GrpBox_OBS.Controls.Add(Txt_OBS);
             GrpBox_OBS.Location = new Point(42, 371);
             GrpBox_OBS.Name = "GrpBox_OBS";
-            GrpBox_OBS.Size = new Size(395, 120);
+            GrpBox_OBS.Size = new Size(395, 137);
             GrpBox_OBS.TabIndex = 45;
             GrpBox_OBS.TabStop = false;
             GrpBox_OBS.Text = "OBS";
             // 
             // GrpBox_PesoPorIdade
             // 
+            GrpBox_PesoPorIdade.Controls.Add(Lbl_Faixa2);
+            GrpBox_PesoPorIdade.Controls.Add(Lbl_Faixa);
+            GrpBox_PesoPorIdade.Controls.Add(Txt_PesoMax);
+            GrpBox_PesoPorIdade.Controls.Add(Txt_PesoMin);
+            GrpBox_PesoPorIdade.Controls.Add(Lbl_PesoMax);
+            GrpBox_PesoPorIdade.Controls.Add(Lbl_PesoMin);
+            GrpBox_PesoPorIdade.Controls.Add(Txt_IdadeMax);
+            GrpBox_PesoPorIdade.Controls.Add(Txt_IdadeMin);
+            GrpBox_PesoPorIdade.Controls.Add(label1);
+            GrpBox_PesoPorIdade.Controls.Add(Lbl_IdadeMin);
+            GrpBox_PesoPorIdade.Controls.Add(Btn_Del);
+            GrpBox_PesoPorIdade.Controls.Add(Btn_Add);
             GrpBox_PesoPorIdade.Controls.Add(DtGridView_PesoPorIdade);
             GrpBox_PesoPorIdade.Location = new Point(458, 371);
             GrpBox_PesoPorIdade.Name = "GrpBox_PesoPorIdade";
-            GrpBox_PesoPorIdade.Size = new Size(597, 120);
+            GrpBox_PesoPorIdade.Size = new Size(602, 137);
             GrpBox_PesoPorIdade.TabIndex = 41;
             GrpBox_PesoPorIdade.TabStop = false;
             GrpBox_PesoPorIdade.Text = "Peso Por Idade";
             // 
+            // Lbl_Faixa2
+            // 
+            Lbl_Faixa2.AutoSize = true;
+            Lbl_Faixa2.Location = new Point(483, 80);
+            Lbl_Faixa2.Name = "Lbl_Faixa2";
+            Lbl_Faixa2.Size = new Size(15, 15);
+            Lbl_Faixa2.TabIndex = 59;
+            Lbl_Faixa2.Text = "~";
+            // 
+            // Lbl_Faixa
+            // 
+            Lbl_Faixa.AutoSize = true;
+            Lbl_Faixa.Location = new Point(483, 36);
+            Lbl_Faixa.Name = "Lbl_Faixa";
+            Lbl_Faixa.Size = new Size(15, 15);
+            Lbl_Faixa.TabIndex = 52;
+            Lbl_Faixa.Text = "~";
+            // 
+            // Txt_PesoMax
+            // 
+            Txt_PesoMax.Location = new Point(515, 78);
+            Txt_PesoMax.MaxLength = 20;
+            Txt_PesoMax.Name = "Txt_PesoMax";
+            Txt_PesoMax.Size = new Size(70, 23);
+            Txt_PesoMax.TabIndex = 58;
+            // 
+            // Txt_PesoMin
+            // 
+            Txt_PesoMin.Location = new Point(395, 78);
+            Txt_PesoMin.MaxLength = 20;
+            Txt_PesoMin.Name = "Txt_PesoMin";
+            Txt_PesoMin.Size = new Size(70, 23);
+            Txt_PesoMin.TabIndex = 55;
+            // 
+            // Lbl_PesoMax
+            // 
+            Lbl_PesoMax.AutoSize = true;
+            Lbl_PesoMax.Location = new Point(515, 60);
+            Lbl_PesoMax.Name = "Lbl_PesoMax";
+            Lbl_PesoMax.Size = new Size(64, 15);
+            Lbl_PesoMax.TabIndex = 57;
+            Lbl_PesoMax.Text = "Peso Max.:";
+            // 
+            // Lbl_PesoMin
+            // 
+            Lbl_PesoMin.AutoSize = true;
+            Lbl_PesoMin.Location = new Point(395, 60);
+            Lbl_PesoMin.Name = "Lbl_PesoMin";
+            Lbl_PesoMin.Size = new Size(62, 15);
+            Lbl_PesoMin.TabIndex = 56;
+            Lbl_PesoMin.Text = "Peso Min.:";
+            // 
+            // Txt_IdadeMax
+            // 
+            Txt_IdadeMax.Location = new Point(515, 34);
+            Txt_IdadeMax.MaxLength = 20;
+            Txt_IdadeMax.Name = "Txt_IdadeMax";
+            Txt_IdadeMax.Size = new Size(70, 23);
+            Txt_IdadeMax.TabIndex = 54;
+            // 
+            // Txt_IdadeMin
+            // 
+            Txt_IdadeMin.Location = new Point(395, 34);
+            Txt_IdadeMin.MaxLength = 20;
+            Txt_IdadeMin.Name = "Txt_IdadeMin";
+            Txt_IdadeMin.Size = new Size(70, 23);
+            Txt_IdadeMin.TabIndex = 52;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(515, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 15);
+            label1.TabIndex = 53;
+            label1.Text = "Idade Max.:";
+            // 
+            // Lbl_IdadeMin
+            // 
+            Lbl_IdadeMin.AutoSize = true;
+            Lbl_IdadeMin.Location = new Point(395, 16);
+            Lbl_IdadeMin.Name = "Lbl_IdadeMin";
+            Lbl_IdadeMin.Size = new Size(66, 15);
+            Lbl_IdadeMin.TabIndex = 52;
+            Lbl_IdadeMin.Text = "Idade Min.:";
+            // 
+            // Btn_Del
+            // 
+            Btn_Del.Location = new Point(533, 108);
+            Btn_Del.Name = "Btn_Del";
+            Btn_Del.Size = new Size(58, 23);
+            Btn_Del.TabIndex = 2;
+            Btn_Del.Text = "-";
+            Btn_Del.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Add
+            // 
+            Btn_Add.Location = new Point(469, 108);
+            Btn_Add.Name = "Btn_Add";
+            Btn_Add.Size = new Size(58, 23);
+            Btn_Add.TabIndex = 1;
+            Btn_Add.Text = "+";
+            Btn_Add.UseVisualStyleBackColor = true;
+            // 
             // DtGridView_PesoPorIdade
             // 
             DtGridView_PesoPorIdade.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DtGridView_PesoPorIdade.Dock = DockStyle.Top;
             DtGridView_PesoPorIdade.Location = new Point(3, 19);
             DtGridView_PesoPorIdade.Name = "DtGridView_PesoPorIdade";
-            DtGridView_PesoPorIdade.Size = new Size(591, 92);
+            DtGridView_PesoPorIdade.Size = new Size(378, 92);
             DtGridView_PesoPorIdade.TabIndex = 0;
             // 
             // Btn_Sair
@@ -378,6 +505,7 @@
             Controls.Add(Lbl_Especie);
             Name = "FrmEspecieRaca";
             Text = "EspecieRaca";
+            Load += FrmEspecieRaca_Load;
             GrpBox_Temperatura.ResumeLayout(false);
             GrpBox_Temperatura.PerformLayout();
             GrpBox_ExpecVida.ResumeLayout(false);
@@ -385,6 +513,7 @@
             GrpBox_OBS.ResumeLayout(false);
             GrpBox_OBS.PerformLayout();
             GrpBox_PesoPorIdade.ResumeLayout(false);
+            GrpBox_PesoPorIdade.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_PesoPorIdade).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -424,5 +553,17 @@
         private Button Btn_Excluir;
         private Button Btn_BuscarRaca;
         private Button Btn_BuscarEspecie;
+        private Button Btn_Del;
+        private Button Btn_Add;
+        private Label Lbl_Faixa;
+        private TextBox Txt_PesoMax;
+        private TextBox Txt_PesoMin;
+        private Label Lbl_PesoMax;
+        private Label Lbl_PesoMin;
+        private TextBox Txt_IdadeMax;
+        private TextBox Txt_IdadeMin;
+        private Label label1;
+        private Label Lbl_IdadeMin;
+        private Label Lbl_Faixa2;
     }
 }

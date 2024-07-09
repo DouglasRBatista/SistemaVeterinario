@@ -48,9 +48,9 @@
             MskBox_FaturamentoFilial = new MaskedTextBox();
             MskBox_CustosFilial = new MaskedTextBox();
             ChkBox_Farmacia = new CheckBox();
-            maskedTextBox3 = new MaskedTextBox();
+            MskBox_ProntoAtend = new MaskedTextBox();
             ChkBox_ProntoAtend = new CheckBox();
-            maskedTextBox2 = new MaskedTextBox();
+            MskBox_UnidHosp = new MaskedTextBox();
             ChkBox_UnidHosp = new CheckBox();
             MskBox_DayCare = new MaskedTextBox();
             ChkBox_DayCare = new CheckBox();
@@ -64,16 +64,16 @@
             MskBox_CustosContr = new MaskedTextBox();
             Lbl_FimContr = new Label();
             Lbl_InicioContr = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
+            Dtp_FimContr = new DateTimePicker();
+            Dtp_InicioContr = new DateTimePicker();
             GrpBox_FarmLab = new GroupBox();
             Lbl_OBS = new Label();
             Lbl_DescFarmLab = new Label();
-            textBox2 = new TextBox();
+            Txt_OBS = new TextBox();
             textBox1 = new TextBox();
             ChkBox_Terceirizada = new CheckBox();
             Lbl_Filial = new Label();
-            comboBox1 = new ComboBox();
+            CmbBox_Filial = new ComboBox();
             ChkBox_Integr = new CheckBox();
             ChkBox_Filial = new CheckBox();
             ChkBox_Contr = new CheckBox();
@@ -255,9 +255,9 @@
             GrpBox_Filial.Controls.Add(MskBox_FaturamentoFilial);
             GrpBox_Filial.Controls.Add(MskBox_CustosFilial);
             GrpBox_Filial.Controls.Add(ChkBox_Farmacia);
-            GrpBox_Filial.Controls.Add(maskedTextBox3);
+            GrpBox_Filial.Controls.Add(MskBox_ProntoAtend);
             GrpBox_Filial.Controls.Add(ChkBox_ProntoAtend);
-            GrpBox_Filial.Controls.Add(maskedTextBox2);
+            GrpBox_Filial.Controls.Add(MskBox_UnidHosp);
             GrpBox_Filial.Controls.Add(ChkBox_UnidHosp);
             GrpBox_Filial.Controls.Add(MskBox_DayCare);
             GrpBox_Filial.Controls.Add(ChkBox_DayCare);
@@ -310,12 +310,12 @@
             ChkBox_Farmacia.Text = "Farmacia";
             ChkBox_Farmacia.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox3
+            // MskBox_ProntoAtend
             // 
-            maskedTextBox3.Location = new Point(117, 121);
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(100, 23);
-            maskedTextBox3.TabIndex = 85;
+            MskBox_ProntoAtend.Location = new Point(117, 121);
+            MskBox_ProntoAtend.Name = "MskBox_ProntoAtend";
+            MskBox_ProntoAtend.Size = new Size(100, 23);
+            MskBox_ProntoAtend.TabIndex = 85;
             // 
             // ChkBox_ProntoAtend
             // 
@@ -327,12 +327,12 @@
             ChkBox_ProntoAtend.Text = "Pronto Atend.";
             ChkBox_ProntoAtend.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox2
+            // MskBox_UnidHosp
             // 
-            maskedTextBox2.Location = new Point(117, 79);
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 23);
-            maskedTextBox2.TabIndex = 83;
+            MskBox_UnidHosp.Location = new Point(117, 79);
+            MskBox_UnidHosp.Name = "MskBox_UnidHosp";
+            MskBox_UnidHosp.Size = new Size(100, 23);
+            MskBox_UnidHosp.TabIndex = 83;
             // 
             // ChkBox_UnidHosp
             // 
@@ -372,8 +372,8 @@
             GrpBox_Contrat.Controls.Add(MskBox_CustosContr);
             GrpBox_Contrat.Controls.Add(Lbl_FimContr);
             GrpBox_Contrat.Controls.Add(Lbl_InicioContr);
-            GrpBox_Contrat.Controls.Add(dateTimePicker2);
-            GrpBox_Contrat.Controls.Add(dateTimePicker1);
+            GrpBox_Contrat.Controls.Add(Dtp_FimContr);
+            GrpBox_Contrat.Controls.Add(Dtp_InicioContr);
             GrpBox_Contrat.Location = new Point(300, 256);
             GrpBox_Contrat.Name = "GrpBox_Contrat";
             GrpBox_Contrat.Size = new Size(200, 301);
@@ -461,31 +461,31 @@
             Lbl_InicioContr.TabIndex = 91;
             Lbl_InicioContr.Text = "Início Contrato:";
             // 
-            // dateTimePicker2
+            // Dtp_FimContr
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(96, 98);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(98, 23);
-            dateTimePicker2.TabIndex = 1;
+            Dtp_FimContr.Format = DateTimePickerFormat.Short;
+            Dtp_FimContr.Location = new Point(96, 98);
+            Dtp_FimContr.Name = "Dtp_FimContr";
+            Dtp_FimContr.Size = new Size(98, 23);
+            Dtp_FimContr.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // Dtp_InicioContr
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(96, 56);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(98, 23);
-            dateTimePicker1.TabIndex = 0;
+            Dtp_InicioContr.Format = DateTimePickerFormat.Short;
+            Dtp_InicioContr.Location = new Point(96, 56);
+            Dtp_InicioContr.Name = "Dtp_InicioContr";
+            Dtp_InicioContr.Size = new Size(98, 23);
+            Dtp_InicioContr.TabIndex = 0;
             // 
             // GrpBox_FarmLab
             // 
             GrpBox_FarmLab.Controls.Add(Lbl_OBS);
             GrpBox_FarmLab.Controls.Add(Lbl_DescFarmLab);
-            GrpBox_FarmLab.Controls.Add(textBox2);
+            GrpBox_FarmLab.Controls.Add(Txt_OBS);
             GrpBox_FarmLab.Controls.Add(textBox1);
             GrpBox_FarmLab.Controls.Add(ChkBox_Terceirizada);
             GrpBox_FarmLab.Controls.Add(Lbl_Filial);
-            GrpBox_FarmLab.Controls.Add(comboBox1);
+            GrpBox_FarmLab.Controls.Add(CmbBox_Filial);
             GrpBox_FarmLab.Controls.Add(ChkBox_Integr);
             GrpBox_FarmLab.Location = new Point(525, 256);
             GrpBox_FarmLab.Name = "GrpBox_FarmLab";
@@ -512,13 +512,13 @@
             Lbl_DescFarmLab.TabIndex = 100;
             Lbl_DescFarmLab.Text = "Descrição:";
             // 
-            // textBox2
+            // Txt_OBS
             // 
-            textBox2.Location = new Point(6, 181);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(188, 77);
-            textBox2.TabIndex = 99;
+            Txt_OBS.Location = new Point(6, 181);
+            Txt_OBS.Multiline = true;
+            Txt_OBS.Name = "Txt_OBS";
+            Txt_OBS.Size = new Size(188, 77);
+            Txt_OBS.TabIndex = 99;
             // 
             // textBox1
             // 
@@ -547,13 +547,13 @@
             Lbl_Filial.TabIndex = 82;
             Lbl_Filial.Text = "Filial:";
             // 
-            // comboBox1
+            // CmbBox_Filial
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(59, 75);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(135, 23);
-            comboBox1.TabIndex = 97;
+            CmbBox_Filial.FormattingEnabled = true;
+            CmbBox_Filial.Location = new Point(59, 75);
+            CmbBox_Filial.Name = "CmbBox_Filial";
+            CmbBox_Filial.Size = new Size(135, 23);
+            CmbBox_Filial.TabIndex = 97;
             // 
             // ChkBox_Integr
             // 
@@ -627,6 +627,7 @@
             Controls.Add(Btn_Excluir);
             Name = "FrmEmpresa";
             Text = "FrmEmpresa";
+            Load += FrmEmpresa_Load;
             ((System.ComponentModel.ISupportInitialize)PicBox_Logo).EndInit();
             GrpBox_Filial.ResumeLayout(false);
             GrpBox_Filial.PerformLayout();
@@ -666,9 +667,9 @@
         private MaskedTextBox MskBox_FaturamentoFilial;
         private MaskedTextBox MskBox_CustosFilial;
         private CheckBox ChkBox_Farmacia;
-        private MaskedTextBox maskedTextBox3;
+        private MaskedTextBox MskBox_ProntoAtend;
         private CheckBox ChkBox_ProntoAtend;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox MskBox_UnidHosp;
         private CheckBox ChkBox_UnidHosp;
         private MaskedTextBox MskBox_DayCare;
         private Label Lbl_CustosFilial;
@@ -678,8 +679,8 @@
         private MaskedTextBox MskBox_CustosContr;
         private Label Lbl_FimContr;
         private Label Lbl_InicioContr;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker Dtp_FimContr;
+        private DateTimePicker Dtp_InicioContr;
         private CheckBox ChkBox_UnidIntegr;
         private ListBox LstBox_Servicos;
         private Button Btn_AddServico;
@@ -687,11 +688,11 @@
         private CheckBox ChkBox_Integr;
         private Label Lbl_OBS;
         private Label Lbl_DescFarmLab;
-        private TextBox textBox2;
+        private TextBox Txt_OBS;
         private TextBox textBox1;
         private CheckBox ChkBox_Terceirizada;
         private Label Lbl_Filial;
-        private ComboBox comboBox1;
+        private ComboBox CmbBox_Filial;
         private CheckBox ChkBox_Filial;
         private CheckBox ChkBox_Contr;
         private CheckBox ChkBox_FarmLab;

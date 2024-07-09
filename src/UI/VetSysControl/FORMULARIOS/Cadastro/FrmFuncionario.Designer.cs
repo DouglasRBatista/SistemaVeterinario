@@ -42,11 +42,10 @@
             Lbl_DataNasc = new Label();
             Dtp_DataNasc = new DateTimePicker();
             Lbl_Endereco = new Label();
-            textBox1 = new TextBox();
+            Txt_Endereco = new TextBox();
             MskBox_Salario = new MaskedTextBox();
             Lbl_Salario = new Label();
             Lbl_Comissao = new Label();
-            textBox2 = new TextBox();
             ChkBox_Inativo = new CheckBox();
             ChkBox_Terceirizado = new CheckBox();
             GrpBox_VetAnim = new GroupBox();
@@ -67,6 +66,7 @@
             GrpBox_Competencias = new GroupBox();
             Btn_AddCompetencia = new Button();
             Btn_DelCompetencia = new Button();
+            MskBox_Comissao = new MaskedTextBox();
             GrpBox_VetAnim.SuspendLayout();
             GrpBox_VetFunc.SuspendLayout();
             GrpBox_Competencias.SuspendLayout();
@@ -180,6 +180,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(350, 84);
+            Txt_Nome.MaxLength = 60;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(299, 23);
             Txt_Nome.TabIndex = 90;
@@ -196,6 +197,7 @@
             // Txt_CPF
             // 
             Txt_CPF.Location = new Point(74, 83);
+            Txt_CPF.MaxLength = 14;
             Txt_CPF.Name = "Txt_CPF";
             Txt_CPF.Size = new Size(128, 23);
             Txt_CPF.TabIndex = 88;
@@ -235,12 +237,13 @@
             Lbl_Endereco.TabIndex = 101;
             Lbl_Endereco.Text = "Endereço:";
             // 
-            // textBox1
+            // Txt_Endereco
             // 
-            textBox1.Location = new Point(102, 119);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(547, 23);
-            textBox1.TabIndex = 102;
+            Txt_Endereco.Location = new Point(102, 119);
+            Txt_Endereco.MaxLength = 100;
+            Txt_Endereco.Name = "Txt_Endereco";
+            Txt_Endereco.Size = new Size(547, 23);
+            Txt_Endereco.TabIndex = 102;
             // 
             // MskBox_Salario
             // 
@@ -266,13 +269,6 @@
             Lbl_Comissao.Size = new Size(62, 15);
             Lbl_Comissao.TabIndex = 105;
             Lbl_Comissao.Text = "Comissão:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(313, 215);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(98, 23);
-            textBox2.TabIndex = 106;
             // 
             // ChkBox_Inativo
             // 
@@ -484,21 +480,28 @@
             Btn_DelCompetencia.Text = "-";
             Btn_DelCompetencia.UseVisualStyleBackColor = true;
             // 
+            // MskBox_Comissao
+            // 
+            MskBox_Comissao.Location = new Point(313, 215);
+            MskBox_Comissao.Name = "MskBox_Comissao";
+            MskBox_Comissao.Size = new Size(98, 23);
+            MskBox_Comissao.TabIndex = 113;
+            // 
             // FrmFuncionario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1092, 569);
+            Controls.Add(MskBox_Comissao);
             Controls.Add(GrpBox_Competencias);
             Controls.Add(GrpBox_VetFunc);
             Controls.Add(GrpBox_VetAnim);
             Controls.Add(ChkBox_Terceirizado);
             Controls.Add(ChkBox_Inativo);
-            Controls.Add(textBox2);
             Controls.Add(Lbl_Comissao);
             Controls.Add(Lbl_Salario);
             Controls.Add(MskBox_Salario);
-            Controls.Add(textBox1);
+            Controls.Add(Txt_Endereco);
             Controls.Add(Lbl_Endereco);
             Controls.Add(Dtp_DataNasc);
             Controls.Add(Lbl_DataNasc);
@@ -520,6 +523,7 @@
             Controls.Add(Lbl_CadastroFunc);
             Name = "FrmFuncionario";
             Text = "FrmFuncionario";
+            Load += FrmFuncionario_Load;
             GrpBox_VetAnim.ResumeLayout(false);
             GrpBox_VetAnim.PerformLayout();
             GrpBox_VetFunc.ResumeLayout(false);
@@ -550,11 +554,10 @@
         private Label Lbl_DataNasc;
         private DateTimePicker Dtp_DataNasc;
         private Label Lbl_Endereco;
-        private TextBox textBox1;
+        private TextBox Txt_Endereco;
         private MaskedTextBox MskBox_Salario;
         private Label Lbl_Salario;
         private Label Lbl_Comissao;
-        private TextBox textBox2;
         private CheckBox ChkBox_Inativo;
         private CheckBox ChkBox_Terceirizado;
         private GroupBox GrpBox_VetAnim;
@@ -575,5 +578,6 @@
         private GroupBox GrpBox_Competencias;
         private Button Btn_AddCompetencia;
         private Button Btn_DelCompetencia;
+        private MaskedTextBox MskBox_Comissao;
     }
 }

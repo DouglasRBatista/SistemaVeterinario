@@ -17,5 +17,16 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
 
         }
 
+        private void ClearComp() {
+            Txt_Codigo.Text = string.Empty;
+            Txt_Nome.Text = string.Empty;
+            Txt_Tipo.Text = string.Empty;
+            Txt_Fabricante.Text = string.Empty;
+            Txt_Lote.Text = string.Empty;
+            Dtp_Validade.Value = DateTime.Today;
+            Txt_QtdDose.Text = string.Empty;
+            Txt_Periodicidade.Text = string.Empty;
+            CmbBox_UnidTempo.DataSource = null;
+        }
     }
 }

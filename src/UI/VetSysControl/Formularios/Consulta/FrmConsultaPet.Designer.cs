@@ -84,6 +84,7 @@
             Txt_Tipo.Name = "Txt_Tipo";
             Txt_Tipo.Size = new Size(152, 23);
             Txt_Tipo.TabIndex = 84;
+            Txt_Tipo.Visible = false;
             // 
             // Lbl_Tipo
             // 
@@ -93,6 +94,7 @@
             Lbl_Tipo.Size = new Size(33, 15);
             Lbl_Tipo.TabIndex = 83;
             Lbl_Tipo.Text = "Tipo:";
+            Lbl_Tipo.Visible = false;
             // 
             // Lbl_Cliente
             // 
@@ -106,6 +108,7 @@
             // Txt_Cliente
             // 
             Txt_Cliente.Location = new Point(749, 17);
+            Txt_Cliente.MaxLength = 60;
             Txt_Cliente.Name = "Txt_Cliente";
             Txt_Cliente.Size = new Size(229, 23);
             Txt_Cliente.TabIndex = 81;
@@ -122,6 +125,7 @@
             // Txt_Raca
             // 
             Txt_Raca.Location = new Point(288, 44);
+            Txt_Raca.MaxLength = 50;
             Txt_Raca.Name = "Txt_Raca";
             Txt_Raca.Size = new Size(183, 23);
             Txt_Raca.TabIndex = 79;
@@ -138,6 +142,7 @@
             // Txt_Especie
             // 
             Txt_Especie.Location = new Point(58, 44);
+            Txt_Especie.MaxLength = 50;
             Txt_Especie.Name = "Txt_Especie";
             Txt_Especie.Size = new Size(183, 23);
             Txt_Especie.TabIndex = 77;
@@ -154,6 +159,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(247, 15);
+            Txt_Nome.MaxLength = 20;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(299, 23);
             Txt_Nome.TabIndex = 75;
@@ -195,6 +201,7 @@
             // Txt_Codigo
             // 
             Txt_Codigo.Location = new Point(58, 16);
+            Txt_Codigo.MaxLength = 20;
             Txt_Codigo.Name = "Txt_Codigo";
             Txt_Codigo.Size = new Size(119, 23);
             Txt_Codigo.TabIndex = 70;
@@ -217,6 +224,7 @@
             Controls.Add(Btn_Sair);
             Name = "FrmConsultaPet";
             Text = "ConsultaPet";
+            Load += FrmConsultaPet_Load;
             GrpBox_ConsultaPet.ResumeLayout(false);
             GrpBox_ConsultaPet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Pet).EndInit();

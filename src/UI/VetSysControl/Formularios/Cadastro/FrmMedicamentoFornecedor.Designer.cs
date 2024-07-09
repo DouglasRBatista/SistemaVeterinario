@@ -66,6 +66,7 @@
             // Txt_Qtd
             // 
             Txt_Qtd.Location = new Point(106, 204);
+            Txt_Qtd.MaxLength = 10;
             Txt_Qtd.Name = "Txt_Qtd";
             Txt_Qtd.Size = new Size(57, 23);
             Txt_Qtd.TabIndex = 37;
@@ -100,6 +101,7 @@
             // Txt_Lote
             // 
             Txt_Lote.Location = new Point(105, 166);
+            Txt_Lote.MaxLength = 10;
             Txt_Lote.Name = "Txt_Lote";
             Txt_Lote.Size = new Size(100, 23);
             Txt_Lote.TabIndex = 33;
@@ -116,6 +118,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(105, 123);
+            Txt_Nome.MaxLength = 70;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(289, 23);
             Txt_Nome.TabIndex = 25;
@@ -132,6 +135,7 @@
             // Txt_Codigo
             // 
             Txt_Codigo.Location = new Point(106, 83);
+            Txt_Codigo.MaxLength = 30;
             Txt_Codigo.Name = "Txt_Codigo";
             Txt_Codigo.Size = new Size(119, 23);
             Txt_Codigo.TabIndex = 23;
@@ -241,6 +245,7 @@
             Controls.Add(Lbl_CadastroMed);
             Name = "FrmMedicamentoFornecedor";
             Text = "MedicamentoFornecedor";
+            Load += FrmMedicamentoFornecedor_Load;
             ResumeLayout(false);
             PerformLayout();
         }

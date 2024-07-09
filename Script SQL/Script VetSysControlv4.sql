@@ -194,6 +194,7 @@ CREATE TABLE Pet(
 	CodPet NVARCHAR(20),
 	IdEspecie INT,
 	IdRaca INT,
+	Nome NVARCHAR(20),
 	DtNascimento Date,
 	IdCliente INT,
 	Sexo CHAR(1),

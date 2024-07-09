@@ -34,7 +34,7 @@
             Lbl_Tipo = new Label();
             Txt_Tipo = new TextBox();
             Lbl_Fabricante = new Label();
-            textBox1 = new TextBox();
+            Txt_Fabricante = new TextBox();
             Lbl_Lote = new Label();
             Txt_Lote = new TextBox();
             Lbl_Validade = new Label();
@@ -46,8 +46,8 @@
             Btn_Salvar = new Button();
             Btn_Sair = new Button();
             Lbl_Periodicidade = new Label();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
+            Txt_Periodicidade = new TextBox();
+            CmbBox_UnidTempo = new ComboBox();
             Lbl_UnidTempo = new Label();
             SuspendLayout();
             // 
@@ -81,6 +81,7 @@
             // Txt_Codigo
             // 
             Txt_Codigo.Location = new Point(106, 83);
+            Txt_Codigo.MaxLength = 15;
             Txt_Codigo.Name = "Txt_Codigo";
             Txt_Codigo.Size = new Size(119, 23);
             Txt_Codigo.TabIndex = 4;
@@ -97,6 +98,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(431, 83);
+            Txt_Nome.MaxLength = 50;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(287, 23);
             Txt_Nome.TabIndex = 6;
@@ -130,6 +132,7 @@
             // Txt_Tipo
             // 
             Txt_Tipo.Location = new Point(105, 137);
+            Txt_Tipo.MaxLength = 30;
             Txt_Tipo.Name = "Txt_Tipo";
             Txt_Tipo.Size = new Size(100, 23);
             Txt_Tipo.TabIndex = 10;
@@ -143,12 +146,13 @@
             Lbl_Fabricante.TabIndex = 13;
             Lbl_Fabricante.Text = "Fabricante:";
             // 
-            // textBox1
+            // Txt_Fabricante
             // 
-            textBox1.Location = new Point(298, 137);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(187, 23);
-            textBox1.TabIndex = 12;
+            Txt_Fabricante.Location = new Point(298, 137);
+            Txt_Fabricante.MaxLength = 30;
+            Txt_Fabricante.Name = "Txt_Fabricante";
+            Txt_Fabricante.Size = new Size(187, 23);
+            Txt_Fabricante.TabIndex = 12;
             // 
             // Lbl_Lote
             // 
@@ -162,6 +166,7 @@
             // Txt_Lote
             // 
             Txt_Lote.Location = new Point(545, 137);
+            Txt_Lote.MaxLength = 10;
             Txt_Lote.Name = "Txt_Lote";
             Txt_Lote.Size = new Size(100, 23);
             Txt_Lote.TabIndex = 14;
@@ -244,20 +249,20 @@
             Lbl_Periodicidade.TabIndex = 26;
             Lbl_Periodicidade.Text = "Periodicidade:";
             // 
-            // textBox2
+            // Txt_Periodicidade
             // 
-            textBox2.Location = new Point(475, 179);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 25;
+            Txt_Periodicidade.Location = new Point(475, 179);
+            Txt_Periodicidade.Name = "Txt_Periodicidade";
+            Txt_Periodicidade.Size = new Size(100, 23);
+            Txt_Periodicidade.TabIndex = 25;
             // 
-            // comboBox1
+            // CmbBox_UnidTempo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(680, 179);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 27;
+            CmbBox_UnidTempo.FormattingEnabled = true;
+            CmbBox_UnidTempo.Location = new Point(680, 179);
+            CmbBox_UnidTempo.Name = "CmbBox_UnidTempo";
+            CmbBox_UnidTempo.Size = new Size(121, 23);
+            CmbBox_UnidTempo.TabIndex = 27;
             // 
             // Lbl_UnidTempo
             // 
@@ -274,9 +279,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1092, 569);
             Controls.Add(Lbl_UnidTempo);
-            Controls.Add(comboBox1);
+            Controls.Add(CmbBox_UnidTempo);
             Controls.Add(Lbl_Periodicidade);
-            Controls.Add(textBox2);
+            Controls.Add(Txt_Periodicidade);
             Controls.Add(Btn_Sair);
             Controls.Add(Btn_Salvar);
             Controls.Add(Btn_Editar);
@@ -288,7 +293,7 @@
             Controls.Add(Lbl_Lote);
             Controls.Add(Txt_Lote);
             Controls.Add(Lbl_Fabricante);
-            Controls.Add(textBox1);
+            Controls.Add(Txt_Fabricante);
             Controls.Add(Lbl_Tipo);
             Controls.Add(Txt_Tipo);
             Controls.Add(Lbl_Desc);
@@ -319,7 +324,7 @@
         private Label Lbl_Tipo;
         private TextBox Txt_Tipo;
         private Label Lbl_Fabricante;
-        private TextBox textBox1;
+        private TextBox Txt_Fabricante;
         private Label Lbl_Lote;
         private TextBox Txt_Lote;
         private Label Lbl_Validade;
@@ -331,8 +336,8 @@
         private Button Btn_Salvar;
         private Button Btn_Sair;
         private Label Lbl_Periodicidade;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
+        private TextBox Txt_Periodicidade;
+        private ComboBox CmbBox_UnidTempo;
         private Label Lbl_UnidTempo;
     }
 }

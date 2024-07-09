@@ -2,6 +2,9 @@
 using VetSysControl.FORMULARIOS.Consulta;
 using VetSysControl.Configuracao;
 using BLL.Empresa;
+using VetSysControl.FORMULARIOS.Configuracao;
+using BLL.Pessoa;
+using Models.Pessoa;
 
 
 namespace VetSysControl.Formularios
@@ -10,6 +13,8 @@ namespace VetSysControl.Formularios
     {
         ConfigSystemDrawing configSystemDrawing = new ConfigSystemDrawing();
         ConfigSettings configSettings = new ConfigSettings();
+
+        static Cls_Funcionario func = new Cls_Funcionario();
 
         protected override void WndProc(ref Message m)
         {
@@ -24,11 +29,15 @@ namespace VetSysControl.Formularios
         public MDI()
         {
             InitializeComponent();
-            DrawMdi();
+            //DrawMdi();
 
             Bll_Empresa bll = new Bll_Empresa();
             bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
             bll.GetEmpresa(1);
+
+            //Bll_Usuario bllFunc = new Bll_Usuario();
+            //bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
+            //FrmAlterarSenha.SetUsuario(func);
         }
 
         public void DrawMdi()

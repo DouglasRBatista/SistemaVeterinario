@@ -85,6 +85,7 @@
             // Txt_Email
             // 
             Txt_Email.Location = new Point(586, 16);
+            Txt_Email.MaxLength = 50;
             Txt_Email.Name = "Txt_Email";
             Txt_Email.Size = new Size(241, 23);
             Txt_Email.TabIndex = 77;
@@ -101,6 +102,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(229, 16);
+            Txt_Nome.MaxLength = 60;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(299, 23);
             Txt_Nome.TabIndex = 75;
@@ -135,6 +137,7 @@
             // Txt_CPF
             // 
             Txt_CPF.Location = new Point(58, 16);
+            Txt_CPF.MaxLength = 14;
             Txt_CPF.Name = "Txt_CPF";
             Txt_CPF.Size = new Size(119, 23);
             Txt_CPF.TabIndex = 70;
@@ -157,6 +160,7 @@
             Controls.Add(Btn_Sair);
             Name = "FrmConsultaCli";
             Text = "ConsultaCliente";
+            Load += FrmConsultaCli_Load;
             GrpBox_ConsultaPet.ResumeLayout(false);
             GrpBox_ConsultaPet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Cliente).EndInit();

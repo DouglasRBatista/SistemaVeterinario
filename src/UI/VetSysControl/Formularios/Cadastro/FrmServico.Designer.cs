@@ -82,6 +82,7 @@
             // Txt_Desc
             // 
             Txt_Desc.Location = new Point(104, 128);
+            Txt_Desc.MaxLength = 50;
             Txt_Desc.Name = "Txt_Desc";
             Txt_Desc.Size = new Size(378, 23);
             Txt_Desc.TabIndex = 26;
@@ -98,6 +99,7 @@
             // Txt_Codigo
             // 
             Txt_Codigo.Location = new Point(105, 83);
+            Txt_Codigo.MaxLength = 20;
             Txt_Codigo.Name = "Txt_Codigo";
             Txt_Codigo.Size = new Size(182, 23);
             Txt_Codigo.TabIndex = 24;
@@ -296,6 +298,7 @@
             Controls.Add(GrpBox_Resp);
             Name = "FrmServico";
             Text = "Servico";
+            Load += FrmServico_Load;
             GrpBox_Resp.ResumeLayout(false);
             GrpBox_Vac.ResumeLayout(false);
             groupBox1.ResumeLayout(false);

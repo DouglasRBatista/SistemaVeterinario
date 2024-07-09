@@ -14,5 +14,15 @@ namespace VetSysControl.FORMULARIOS.Consulta {
             InitializeComponent();
         }
 
+        private void FrmConsultaCli_Load(object sender, EventArgs e) {
+            ClearComp();
+        }
+
+        private void ClearComp() {
+            Txt_CPF.Text = string.Empty;
+            Txt_Nome.Text = string.Empty;
+            Txt_Email.Text = string.Empty;
+            MskTxt_Telefone.Text = string.Empty;
+        }
     }
 }

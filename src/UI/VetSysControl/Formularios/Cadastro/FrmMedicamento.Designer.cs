@@ -439,6 +439,7 @@
             Controls.Add(Lbl_CadastroMed);
             Name = "FrmMedicamento";
             Text = "Medicamento";
+            Load += FrmMedicamento_Load;
             GrpBox_Quimicos.ResumeLayout(false);
             GrpBox_Quimicos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Quimicos).EndInit();

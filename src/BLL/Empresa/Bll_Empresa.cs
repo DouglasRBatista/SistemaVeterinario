@@ -1,6 +1,7 @@
 ﻿using DAL.DALCONN;
 using Microsoft.Win32.SafeHandles;
 using Models.Empresa;
+using Models.Pessoa;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Data.SqlClient;

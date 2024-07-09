@@ -13,5 +13,20 @@ namespace VetSysControl.FORMULARIOS.Consulta {
         public FrmConsultaPet() {
             InitializeComponent();
         }
+
+        private void FrmConsultaPet_Load(object sender, EventArgs e) {
+            ClearComp();
+        }
+
+        private void ClearComp() { 
+
+            Txt_Codigo.Text = string.Empty;
+            Txt_Nome.Text = string.Empty;
+            Txt_Chip.Text = string.Empty;
+            Txt_Cliente.Text = string.Empty;
+            Txt_Especie.Text = string.Empty;
+            Txt_Raca.Text = string.Empty;
+            Txt_Tipo.Text = string.Empty;
+        }
     }
 }

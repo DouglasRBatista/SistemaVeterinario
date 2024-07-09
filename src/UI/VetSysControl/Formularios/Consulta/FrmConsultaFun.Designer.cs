@@ -25,6 +25,12 @@
         private void InitializeComponent() {
             Btn_Sair = new Button();
             GrpBox_ConsultaPet = new GroupBox();
+            GrpBox_VetAnim = new GroupBox();
+            ChkBox_AnimPesqu = new CheckBox();
+            ChkBox_AnimExot = new CheckBox();
+            ChkBox_AnimSelv = new CheckBox();
+            ChkBox_AnimPortGrand = new CheckBox();
+            ChkBox_AnimPortPeq = new CheckBox();
             GrpBox_VetFunc = new GroupBox();
             ChkBox_Pesquisa = new CheckBox();
             ChkBox_Farmac = new CheckBox();
@@ -33,12 +39,6 @@
             ChkBox_Lab = new CheckBox();
             ChkBox_ProdAnim = new CheckBox();
             ChkBox_ClinCirurg = new CheckBox();
-            GrpBox_VetAnim = new GroupBox();
-            ChkBox_AnimPesqu = new CheckBox();
-            ChkBox_AnimExot = new CheckBox();
-            ChkBox_AnimSelv = new CheckBox();
-            ChkBox_AnimPortGrand = new CheckBox();
-            ChkBox_AnimPortPeq = new CheckBox();
             CmbBox_Emp = new ComboBox();
             Lbl_Emp = new Label();
             GrpBox_Inativo = new GroupBox();
@@ -58,8 +58,8 @@
             Txt_CPF = new TextBox();
             DtGridView_Func = new DataGridView();
             GrpBox_ConsultaPet.SuspendLayout();
-            GrpBox_VetFunc.SuspendLayout();
             GrpBox_VetAnim.SuspendLayout();
+            GrpBox_VetFunc.SuspendLayout();
             GrpBox_Inativo.SuspendLayout();
             GrpBox_Terceirizado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DtGridView_Func).BeginInit();
@@ -97,6 +97,70 @@
             GrpBox_ConsultaPet.TabIndex = 61;
             GrpBox_ConsultaPet.TabStop = false;
             GrpBox_ConsultaPet.Text = "Consulta";
+            // 
+            // GrpBox_VetAnim
+            // 
+            GrpBox_VetAnim.Controls.Add(ChkBox_AnimPesqu);
+            GrpBox_VetAnim.Controls.Add(ChkBox_AnimExot);
+            GrpBox_VetAnim.Controls.Add(ChkBox_AnimSelv);
+            GrpBox_VetAnim.Controls.Add(ChkBox_AnimPortGrand);
+            GrpBox_VetAnim.Controls.Add(ChkBox_AnimPortPeq);
+            GrpBox_VetAnim.Location = new Point(534, 16);
+            GrpBox_VetAnim.Name = "GrpBox_VetAnim";
+            GrpBox_VetAnim.Size = new Size(131, 117);
+            GrpBox_VetAnim.TabIndex = 89;
+            GrpBox_VetAnim.TabStop = false;
+            GrpBox_VetAnim.Text = "Veterinário - Animal";
+            // 
+            // ChkBox_AnimPesqu
+            // 
+            ChkBox_AnimPesqu.AutoSize = true;
+            ChkBox_AnimPesqu.Location = new Point(6, 93);
+            ChkBox_AnimPesqu.Name = "ChkBox_AnimPesqu";
+            ChkBox_AnimPesqu.Size = new Size(72, 19);
+            ChkBox_AnimPesqu.TabIndex = 4;
+            ChkBox_AnimPesqu.Text = "Pesquisa";
+            ChkBox_AnimPesqu.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_AnimExot
+            // 
+            ChkBox_AnimExot.AutoSize = true;
+            ChkBox_AnimExot.Location = new Point(6, 76);
+            ChkBox_AnimExot.Name = "ChkBox_AnimExot";
+            ChkBox_AnimExot.Size = new Size(65, 19);
+            ChkBox_AnimExot.TabIndex = 3;
+            ChkBox_AnimExot.Text = "Exótico";
+            ChkBox_AnimExot.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_AnimSelv
+            // 
+            ChkBox_AnimSelv.AutoSize = true;
+            ChkBox_AnimSelv.Location = new Point(6, 57);
+            ChkBox_AnimSelv.Name = "ChkBox_AnimSelv";
+            ChkBox_AnimSelv.Size = new Size(77, 19);
+            ChkBox_AnimSelv.TabIndex = 2;
+            ChkBox_AnimSelv.Text = "Selvagem";
+            ChkBox_AnimSelv.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_AnimPortGrand
+            // 
+            ChkBox_AnimPortGrand.AutoSize = true;
+            ChkBox_AnimPortGrand.Location = new Point(6, 37);
+            ChkBox_AnimPortGrand.Name = "ChkBox_AnimPortGrand";
+            ChkBox_AnimPortGrand.Size = new Size(95, 19);
+            ChkBox_AnimPortGrand.TabIndex = 1;
+            ChkBox_AnimPortGrand.Text = "Porte Grande";
+            ChkBox_AnimPortGrand.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_AnimPortPeq
+            // 
+            ChkBox_AnimPortPeq.AutoSize = true;
+            ChkBox_AnimPortPeq.Location = new Point(6, 18);
+            ChkBox_AnimPortPeq.Name = "ChkBox_AnimPortPeq";
+            ChkBox_AnimPortPeq.Size = new Size(104, 19);
+            ChkBox_AnimPortPeq.TabIndex = 0;
+            ChkBox_AnimPortPeq.Text = "Porte Pequeno";
+            ChkBox_AnimPortPeq.UseVisualStyleBackColor = true;
             // 
             // GrpBox_VetFunc
             // 
@@ -183,70 +247,6 @@
             ChkBox_ClinCirurg.TabIndex = 0;
             ChkBox_ClinCirurg.Text = "Clínica Cirurgica";
             ChkBox_ClinCirurg.UseVisualStyleBackColor = true;
-            // 
-            // GrpBox_VetAnim
-            // 
-            GrpBox_VetAnim.Controls.Add(ChkBox_AnimPesqu);
-            GrpBox_VetAnim.Controls.Add(ChkBox_AnimExot);
-            GrpBox_VetAnim.Controls.Add(ChkBox_AnimSelv);
-            GrpBox_VetAnim.Controls.Add(ChkBox_AnimPortGrand);
-            GrpBox_VetAnim.Controls.Add(ChkBox_AnimPortPeq);
-            GrpBox_VetAnim.Location = new Point(534, 16);
-            GrpBox_VetAnim.Name = "GrpBox_VetAnim";
-            GrpBox_VetAnim.Size = new Size(131, 117);
-            GrpBox_VetAnim.TabIndex = 89;
-            GrpBox_VetAnim.TabStop = false;
-            GrpBox_VetAnim.Text = "Veterinário - Animal";
-            // 
-            // ChkBox_AnimPesqu
-            // 
-            ChkBox_AnimPesqu.AutoSize = true;
-            ChkBox_AnimPesqu.Location = new Point(6, 93);
-            ChkBox_AnimPesqu.Name = "ChkBox_AnimPesqu";
-            ChkBox_AnimPesqu.Size = new Size(72, 19);
-            ChkBox_AnimPesqu.TabIndex = 4;
-            ChkBox_AnimPesqu.Text = "Pesquisa";
-            ChkBox_AnimPesqu.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_AnimExot
-            // 
-            ChkBox_AnimExot.AutoSize = true;
-            ChkBox_AnimExot.Location = new Point(6, 76);
-            ChkBox_AnimExot.Name = "ChkBox_AnimExot";
-            ChkBox_AnimExot.Size = new Size(65, 19);
-            ChkBox_AnimExot.TabIndex = 3;
-            ChkBox_AnimExot.Text = "Exótico";
-            ChkBox_AnimExot.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_AnimSelv
-            // 
-            ChkBox_AnimSelv.AutoSize = true;
-            ChkBox_AnimSelv.Location = new Point(6, 57);
-            ChkBox_AnimSelv.Name = "ChkBox_AnimSelv";
-            ChkBox_AnimSelv.Size = new Size(77, 19);
-            ChkBox_AnimSelv.TabIndex = 2;
-            ChkBox_AnimSelv.Text = "Selvagem";
-            ChkBox_AnimSelv.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_AnimPortGrand
-            // 
-            ChkBox_AnimPortGrand.AutoSize = true;
-            ChkBox_AnimPortGrand.Location = new Point(6, 37);
-            ChkBox_AnimPortGrand.Name = "ChkBox_AnimPortGrand";
-            ChkBox_AnimPortGrand.Size = new Size(95, 19);
-            ChkBox_AnimPortGrand.TabIndex = 1;
-            ChkBox_AnimPortGrand.Text = "Porte Grande";
-            ChkBox_AnimPortGrand.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_AnimPortPeq
-            // 
-            ChkBox_AnimPortPeq.AutoSize = true;
-            ChkBox_AnimPortPeq.Location = new Point(6, 18);
-            ChkBox_AnimPortPeq.Name = "ChkBox_AnimPortPeq";
-            ChkBox_AnimPortPeq.Size = new Size(104, 19);
-            ChkBox_AnimPortPeq.TabIndex = 0;
-            ChkBox_AnimPortPeq.Text = "Porte Pequeno";
-            ChkBox_AnimPortPeq.UseVisualStyleBackColor = true;
             // 
             // CmbBox_Emp
             // 
@@ -377,6 +377,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(229, 16);
+            Txt_Nome.MaxLength = 60;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(299, 23);
             Txt_Nome.TabIndex = 75;
@@ -402,6 +403,7 @@
             // Txt_CPF
             // 
             Txt_CPF.Location = new Point(58, 16);
+            Txt_CPF.MaxLength = 14;
             Txt_CPF.Name = "Txt_CPF";
             Txt_CPF.Size = new Size(119, 23);
             Txt_CPF.TabIndex = 70;
@@ -424,12 +426,13 @@
             Controls.Add(Btn_Sair);
             Name = "FrmConsultaFun";
             Text = "ConsultaFunc";
+            Load += FrmConsultaFun_Load;
             GrpBox_ConsultaPet.ResumeLayout(false);
             GrpBox_ConsultaPet.PerformLayout();
-            GrpBox_VetFunc.ResumeLayout(false);
-            GrpBox_VetFunc.PerformLayout();
             GrpBox_VetAnim.ResumeLayout(false);
             GrpBox_VetAnim.PerformLayout();
+            GrpBox_VetFunc.ResumeLayout(false);
+            GrpBox_VetFunc.PerformLayout();
             GrpBox_Inativo.ResumeLayout(false);
             GrpBox_Inativo.PerformLayout();
             GrpBox_Terceirizado.ResumeLayout(false);

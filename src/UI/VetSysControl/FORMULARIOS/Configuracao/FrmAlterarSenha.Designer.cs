@@ -51,6 +51,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(79, 57);
+            Txt_Nome.MaxLength = 60;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(329, 23);
             Txt_Nome.TabIndex = 79;
@@ -67,6 +68,7 @@
             // Txt_CPF
             // 
             Txt_CPF.Location = new Point(79, 29);
+            Txt_CPF.MaxLength = 14;
             Txt_CPF.Name = "Txt_CPF";
             Txt_CPF.Size = new Size(131, 23);
             Txt_CPF.TabIndex = 77;
@@ -116,6 +118,7 @@
             // Txt_Senha2
             // 
             Txt_Senha2.Location = new Point(89, 151);
+            Txt_Senha2.MaxLength = 15;
             Txt_Senha2.Name = "Txt_Senha2";
             Txt_Senha2.Size = new Size(213, 23);
             Txt_Senha2.TabIndex = 83;
@@ -133,6 +136,7 @@
             // Txt_Senha
             // 
             Txt_Senha.Location = new Point(89, 97);
+            Txt_Senha.MaxLength = 15;
             Txt_Senha.Name = "Txt_Senha";
             Txt_Senha.Size = new Size(213, 23);
             Txt_Senha.TabIndex = 81;
@@ -150,6 +154,7 @@
             // Txt_Login
             // 
             Txt_Login.Location = new Point(89, 48);
+            Txt_Login.MaxLength = 15;
             Txt_Login.Name = "Txt_Login";
             Txt_Login.Size = new Size(213, 23);
             Txt_Login.TabIndex = 79;
@@ -168,6 +173,7 @@
             Controls.Add(Txt_CPF);
             Name = "FrmAlterarSenha";
             Text = "FrmAlterarSenha";
+            Load += FrmAlterarSenha_Load;
             GrpBox_Login.ResumeLayout(false);
             GrpBox_Login.PerformLayout();
             ResumeLayout(false);

@@ -14,5 +14,19 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
             InitializeComponent();
         }
 
+        private void FrmServico_Load(object sender, EventArgs e) {
+            ClearComp();
+        }
+
+        private void ClearComp() {
+
+            Txt_Codigo.Text = string.Empty;
+            Txt_Desc.Text = string.Empty;
+            MskBox_Valor.Text = string.Empty;
+
+            LstBox_Func.DataSource = null;
+            LstBox_Vac.DataSource = null;
+            LstBox_Insumos.DataSource = null;
+        }
     }
 }

@@ -56,14 +56,14 @@
             Txt_Chip = new TextBox();
             Lbl_Chip = new Label();
             GrpBox_Alergias = new GroupBox();
+            Btn_AddAlergia = new Button();
             DtGridView_Alergias = new DataGridView();
+            Btn_DelAlergia = new Button();
             Btn_Historico = new Button();
             GrpBox_Vacinas = new GroupBox();
             DtGridView_Vacinas = new DataGridView();
             Txt_Cor = new TextBox();
             Lbl_Cor = new Label();
-            Btn_AddAlergia = new Button();
-            Btn_DelAlergia = new Button();
             GrpBox_Sexo.SuspendLayout();
             GrpBox_Exotico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PicBox_Pet).BeginInit();
@@ -103,6 +103,7 @@
             // Txt_Codigo
             // 
             Txt_Codigo.Location = new Point(106, 83);
+            Txt_Codigo.MaxLength = 20;
             Txt_Codigo.Name = "Txt_Codigo";
             Txt_Codigo.Size = new Size(119, 23);
             Txt_Codigo.TabIndex = 40;
@@ -155,6 +156,7 @@
             // Txt_Nome
             // 
             Txt_Nome.Location = new Point(106, 122);
+            Txt_Nome.MaxLength = 20;
             Txt_Nome.Name = "Txt_Nome";
             Txt_Nome.Size = new Size(287, 23);
             Txt_Nome.TabIndex = 48;
@@ -171,6 +173,7 @@
             // Txt_Especie
             // 
             Txt_Especie.Location = new Point(106, 157);
+            Txt_Especie.MaxLength = 50;
             Txt_Especie.Name = "Txt_Especie";
             Txt_Especie.Size = new Size(183, 23);
             Txt_Especie.TabIndex = 50;
@@ -205,6 +208,7 @@
             // Txt_Raca
             // 
             Txt_Raca.Location = new Point(471, 158);
+            Txt_Raca.MaxLength = 50;
             Txt_Raca.Name = "Txt_Raca";
             Txt_Raca.Size = new Size(183, 23);
             Txt_Raca.TabIndex = 53;
@@ -239,6 +243,7 @@
             // Txt_Cliente
             // 
             Txt_Cliente.Location = new Point(106, 192);
+            Txt_Cliente.MaxLength = 60;
             Txt_Cliente.Name = "Txt_Cliente";
             Txt_Cliente.Size = new Size(183, 23);
             Txt_Cliente.TabIndex = 59;
@@ -370,6 +375,15 @@
             GrpBox_Alergias.TabStop = false;
             GrpBox_Alergias.Text = "Alergias";
             // 
+            // Btn_AddAlergia
+            // 
+            Btn_AddAlergia.Location = new Point(297, 140);
+            Btn_AddAlergia.Name = "Btn_AddAlergia";
+            Btn_AddAlergia.Size = new Size(39, 23);
+            Btn_AddAlergia.TabIndex = 73;
+            Btn_AddAlergia.Text = "+";
+            Btn_AddAlergia.UseVisualStyleBackColor = true;
+            // 
             // DtGridView_Alergias
             // 
             DtGridView_Alergias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -378,6 +392,15 @@
             DtGridView_Alergias.Name = "DtGridView_Alergias";
             DtGridView_Alergias.Size = new Size(336, 115);
             DtGridView_Alergias.TabIndex = 1;
+            // 
+            // Btn_DelAlergia
+            // 
+            Btn_DelAlergia.Location = new Point(252, 140);
+            Btn_DelAlergia.Name = "Btn_DelAlergia";
+            Btn_DelAlergia.Size = new Size(39, 23);
+            Btn_DelAlergia.TabIndex = 74;
+            Btn_DelAlergia.Text = "-";
+            Btn_DelAlergia.UseVisualStyleBackColor = true;
             // 
             // Btn_Historico
             // 
@@ -410,6 +433,7 @@
             // Txt_Cor
             // 
             Txt_Cor.Location = new Point(106, 227);
+            Txt_Cor.MaxLength = 25;
             Txt_Cor.Name = "Txt_Cor";
             Txt_Cor.Size = new Size(183, 23);
             Txt_Cor.TabIndex = 72;
@@ -422,24 +446,6 @@
             Lbl_Cor.Size = new Size(29, 15);
             Lbl_Cor.TabIndex = 71;
             Lbl_Cor.Text = "Cor:";
-            // 
-            // Btn_AddAlergia
-            // 
-            Btn_AddAlergia.Location = new Point(297, 140);
-            Btn_AddAlergia.Name = "Btn_AddAlergia";
-            Btn_AddAlergia.Size = new Size(39, 23);
-            Btn_AddAlergia.TabIndex = 73;
-            Btn_AddAlergia.Text = "+";
-            Btn_AddAlergia.UseVisualStyleBackColor = true;
-            // 
-            // Btn_DelAlergia
-            // 
-            Btn_DelAlergia.Location = new Point(252, 140);
-            Btn_DelAlergia.Name = "Btn_DelAlergia";
-            Btn_DelAlergia.Size = new Size(39, 23);
-            Btn_DelAlergia.TabIndex = 74;
-            Btn_DelAlergia.Text = "-";
-            Btn_DelAlergia.UseVisualStyleBackColor = true;
             // 
             // FrmPet
             // 
@@ -481,6 +487,7 @@
             Controls.Add(Lbl_CadastroPet);
             Name = "FrmPet";
             Text = "Pet";
+            Load += FrmPet_Load;
             GrpBox_Sexo.ResumeLayout(false);
             GrpBox_Sexo.PerformLayout();
             GrpBox_Exotico.ResumeLayout(false);
