@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Models.Clinica
 {
     public class Cls_Vacina {
-        private int IdVacina { get; set; }
-        private string CodVacina{ get; set; }
-        private string NomeVacina { get; set; }
-        private string Descricao { get; set; }
-        private string Tipo { get; set; }
-        private string Fabricante { get; set; }
-        private string Lote { get; set; }
-        private DateOnly Validade { get; set; }
-        private bool DoseUnica { get; set; }
-        private int QtdDose { get; set; }
-        private int Periodicidade { get; set; }
-        private string UnidTempo { get; set; }
+        public int IdVacina { get; set; }
+        public string CodVacina{ get; set; }
+        public string NomeVacina { get; set; }
+        public string Descricao { get; set; }
+        public string Tipo { get; set; }
+        public string Fabricante { get; set; }
+        public string Lote { get; set; }
+        public DateOnly Validade { get; set; }
+        public bool DoseUnica { get; set; }
+        public int QtdDose { get; set; }
+        public int Periodicidade { get; set; }
+        public string UnidTempo { get; set; }
 
 
     }

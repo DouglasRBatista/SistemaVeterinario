@@ -51,6 +51,22 @@ namespace DAL.DALCONN
             }
         }
 
+        public SqlDataReader ExecuteReader(string query)
+        {
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+                    return reader;
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public DataTable ExecuteQuery(string query)
         {
             try
