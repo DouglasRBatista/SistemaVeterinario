@@ -13,7 +13,7 @@ namespace VetSysControl.Formularios
     {
         ConfigSystemDrawing configSystemDrawing = new ConfigSystemDrawing();
         ConfigSettings configSettings = new ConfigSettings();
-
+        public Cls_Usuario usuario { get; set; }
         static Cls_Funcionario func = new Cls_Funcionario();
 
         protected override void WndProc(ref Message m)
@@ -35,9 +35,10 @@ namespace VetSysControl.Formularios
             bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
             bll.GetEmpresa(1);
 
-            //Bll_Usuario bllFunc = new Bll_Usuario();
-            //bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
-            //FrmAlterarSenha.SetUsuario(func);
+            Bll_Usuario bllFunc = new Bll_Usuario();
+            bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
+            FrmAlterarSenha frmAlterarSenha = new FrmAlterarSenha();
+            frmAlterarSenha.SetUsuario(usuario);
         }
 
         public void DrawMdi()

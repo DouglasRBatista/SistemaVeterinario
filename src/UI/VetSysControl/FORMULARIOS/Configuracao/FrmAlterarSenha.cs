@@ -17,7 +17,9 @@ namespace VetSysControl.FORMULARIOS.Configuracao {
         ConfigSystemDrawing configSystemDrawing = new ConfigSystemDrawing();
         ConfigSettings configSettings = new ConfigSettings();
 
-        Bll_Usuario bll = new Bll_Usuario();
+        Bll_Usuario bllUsuario = new Bll_Usuario();
+        Bll_Funcionario bllFunc = new Bll_Funcionario();
+        Cls_Usuario usuario = new Cls_Usuario();
         Cls_Funcionario func = new Cls_Funcionario();
 
 
@@ -28,7 +30,8 @@ namespace VetSysControl.FORMULARIOS.Configuracao {
         private void FrmAlterarSenha_Load(object sender, EventArgs e) {
             ClearComp();
 
-            bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
+            bllUsuario._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
+            bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
 
             loadUsuario();
         }
@@ -44,15 +47,20 @@ namespace VetSysControl.FORMULARIOS.Configuracao {
 
         private void loadUsuario() {
             try {
-                
+                func = bllFunc.GetFuncionario(usuario.IdUsuario);
+
+                Txt_CPF.Text = func.GetCPF();
+                Txt_Nome.Text = func.GetNome();
+                Txt_Login.Text = usuario.Login;
+
             }
             catch (Exception ex) { 
 
             }
         }
 
-        //private void SetUsuario(Cls_Funcionario funcionario) {
-        //    func = funcionario;
-        //}
+        public void SetUsuario(Cls_Usuario us) {
+            usuario = us;
+        }
     }
 }

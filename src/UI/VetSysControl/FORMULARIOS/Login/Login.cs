@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,8 +16,9 @@ using VetSysControl.Formularios;
 namespace VetSysControl.FORMULARIOS.Login {
     public partial class Login : Form {
 
-        public List<Cls_Usuario> lst_Login = new List<Cls_Usuario>();
+        public int id { get; set; }
         public bool loginfail = false;
+        public List<Cls_Usuario> lst_Login = new List<Cls_Usuario>();
         ConfigSettings configSettings = new ConfigSettings();
 
         public Login() {
@@ -56,6 +58,7 @@ namespace VetSysControl.FORMULARIOS.Login {
                         loginfail = true;
                         this.Hide();
                         MDI mdi = new MDI();
+                        mdi.usuario = us;
                         mdi.ShowDialog();
                         this.Close();
                     }

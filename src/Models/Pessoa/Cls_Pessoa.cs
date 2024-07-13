@@ -6,7 +6,7 @@
         protected int IdUsuario { get; set; }
         protected string Nome { get; set; }
         protected string CPF { get; set; }
-        protected DateOnly DtNascimento { get; set; }
+        protected DateTime DtNascimento { get; set; }
         protected string Endereco { get; set; }
 
         public Cls_Pessoa()
@@ -15,7 +15,7 @@
             IdUsuario = 0;
             Nome = string.Empty;
             CPF = string.Empty;
-            DtNascimento = new DateOnly();
+            DtNascimento = DateTime.MinValue;
             Endereco = string.Empty;
         }
 
@@ -59,12 +59,12 @@
             this.CPF = cpf;
         }
 
-        public DateOnly GetDtNascimento()
+        public DateTime GetDtNascimento()
         {
             return this.DtNascimento;
         }
 
-        public void SetDtNascimento(DateOnly data)
+        public void SetDtNascimento(DateTime data)
         {
             this.DtNascimento = data;
         }

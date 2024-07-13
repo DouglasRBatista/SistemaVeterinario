@@ -20,7 +20,8 @@ namespace VetSysControl
             }
                 
             ApplicationConfiguration.Initialize();
-            Application.Run(new Formularios.MDI());
+            //Application.Run(new Formularios.MDI());
+            Application.Run(new FORMULARIOS.Login.Login());
         }
     }
 }
