@@ -24,7 +24,7 @@ namespace BLL.Clinica
                     using (SqlCommand sqlCommand = new SqlCommand())
                     {
                         sqlCommand.CommandText =
-                            "SELECT TOP (1000) [IdVacina]" +
+                            "SELECT [IdVacina]" +
                                 ",[CodVacina] \r\n      " +
                                 ",[Nome] \r\n      " +
                                 ",[Descricao] \r\n      " +
@@ -143,7 +143,7 @@ namespace BLL.Clinica
             }
         }
 
-        public void DeletetVacina(Cls_Vacina vacina)
+        public void DeleteVacina(Cls_Vacina vacina)
         {
             try
             {
@@ -157,7 +157,7 @@ namespace BLL.Clinica
                     using (SqlCommand sqlCommand = new SqlCommand())
                     {
                         sqlCommand.CommandText =
-                            "DELETE FROM [Vacina] (\r\n      " +
+                            "DELETE FROM [Vacina] \r\n      " +
                             "WHERE [IdVacina] = @id AND [CodVacina] = @cod\r\n      ";
 
                         sqlCommand.Parameters.AddWithValue("@id", vacina.IdVacina);

@@ -29,6 +29,7 @@ namespace BLL.Pessoa {
                         connection.Open();
                         sqlCommand.CommandText =
                             "SELECT [IdFuncionario] \r\n      " +
+                                  ",[IdPessoa] \r\n      " +
                                   ",[Funcionario].[IdUsuario] \r\n      " +
                                   ",[Nome] \r\n      " +
                                   ",[CPF] \r\n      " +
@@ -45,7 +46,7 @@ namespace BLL.Pessoa {
                                   ",[Inativo] \r\n      " +
                             "FROM [Funcionario] \r\n      " +
                             "INNER JOIN [Pessoa] ON [Funcionario].[IdUsuario] = [Pessoa].[IdUsuario] \r\n  " +
-                            "WHERE [IdUsuario] = @id";
+                            "WHERE [Funcionario].[IdUsuario] = @id";
                         sqlCommand.Parameters.AddWithValue("@id", id);
 
 
@@ -55,6 +56,7 @@ namespace BLL.Pessoa {
                             while (reader.Read()) {
 
                                 func.SetIdUsuario(Convert.ToInt32(reader["IdUsuario"]));
+                                func.SetIdPessoa(Convert.ToInt32(reader["IdPessoa"]));
                                 func.SetNome(Convert.ToString(reader["Nome"]));
                                 func.SetCPF(Convert.ToString(reader["CPF"]));
                                 func.SetDtNascimento(Convert.ToDateTime(reader["DtNascimento"]));
@@ -64,6 +66,7 @@ namespace BLL.Pessoa {
                                 func.SetFlgSalario(Convert.ToBoolean(reader["FlgSalario"]));
                                 func.SetSalario(Convert.ToDecimal(reader["Salario"]));
                                 func.SetFlgComissao(Convert.ToBoolean(reader["FlgComissao"]));
+                                func.SetComissao(Convert.ToDecimal(reader["Comissao"]));
                                 func.SetFlgTerceirizado(Convert.ToBoolean(reader["FlgTerceirizado"]));
                                 func.SetIdEmpresa(Convert.ToInt32(reader["IdEmpresa"]));
                                 func.SetFlgInativo(Convert.ToBoolean(reader["Inativo"]));

@@ -93,6 +93,7 @@ namespace DAL.DALCONN
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
+
                     if (transaction != null)
                     {
                         command.Transaction = transaction;

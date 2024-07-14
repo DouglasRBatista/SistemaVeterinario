@@ -21,7 +21,7 @@ namespace VetSysControl.FORMULARIOS.Configuracao {
         Bll_Funcionario bllFunc = new Bll_Funcionario();
         Cls_Usuario usuario = new Cls_Usuario();
         Cls_Funcionario func = new Cls_Funcionario();
-
+        bool checkOK = false;
 
         public FrmAlterarSenha() {
             InitializeComponent();
@@ -34,6 +34,20 @@ namespace VetSysControl.FORMULARIOS.Configuracao {
             bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
 
             loadUsuario();
+        }
+
+        private void BtnConfirmar_Click(object sender, EventArgs e) {
+            
+            checkOK = CheckComp();
+
+            if (checkOK) {
+                UpdateSenha();
+                MessageBox.Show("Senha Alterada!", "Update Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+        }
+
+        private void Btn_Sair_Click(object sender, EventArgs e) {
+            Close();
         }
 
         private void ClearComp() {
@@ -54,13 +68,51 @@ namespace VetSysControl.FORMULARIOS.Configuracao {
                 Txt_Login.Text = usuario.Login;
 
             }
-            catch (Exception ex) { 
+            catch (Exception ex) {
 
+            }
+        }
+
+        private bool CheckComp() {
+            try {
+                if (String.IsNullOrEmpty(Txt_Senha.Text) || String.IsNullOrEmpty(Txt_Senha2.Text) ||
+                    String.IsNullOrWhiteSpace(Txt_Senha.Text) || String.IsNullOrWhiteSpace(Txt_Senha2.Text)) {
+
+                    MessageBox.Show("Campos em Branco", "Update error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                else {
+
+                    if (Txt_Senha.Text != Txt_Senha2.Text) {
+
+                        MessageBox.Show("Senhas diferentes", "Update error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    else {
+                        usuario.SetSenha(Txt_Senha.Text);
+                        return true;
+                    }
+                }
+
+
+            }
+            catch (Exception ex) {
+                return false;
+            }
+        }
+        private void UpdateSenha() {
+            try {
+
+                bllUsuario.UpdateUsuario(usuario);
+
+            }
+            catch (Exception ex) {
             }
         }
 
         public void SetUsuario(Cls_Usuario us) {
             usuario = us;
         }
+
     }
 }

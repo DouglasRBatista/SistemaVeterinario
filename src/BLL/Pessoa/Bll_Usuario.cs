@@ -62,6 +62,40 @@ namespace BLL.Pessoa {
             }
         }
 
+        public void UpdateUsuario(Cls_Usuario usuario) {
+
+            try {
+
+                //DB Interaction.
+                using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                    using (SqlCommand sqlCommand = new SqlCommand()) {
+
+                        SqlConnection connection = new SqlConnection(_SqlConnectionString);
+                        sqlCommand.Connection = connection;
+                        connection.Open();
+
+                        sqlCommand.CommandText =
+                            "UPDATE [Usuario] SET \r\n        " + 
+                                  "  [Login] = @login \r\n      " +
+                                  ", [Senha] = @senha \r\n      " +
+                                  ", [Ativo] = @ativo \r\n      " +
+                            "WHERE [IdUsuario] = @id";
+                        sqlCommand.Parameters.AddWithValue("@login", usuario.Login);
+                        sqlCommand.Parameters.AddWithValue("@senha", usuario.GetSenha());
+                        sqlCommand.Parameters.AddWithValue("@ativo", usuario.Ativo);
+                        sqlCommand.Parameters.AddWithValue("@id", usuario.IdUsuario);
+
+                        sqlCommand.ExecuteNonQuery();
+
+                        connection.Close();
+                    }
+
+                }
+
+            }
+            catch (Exception ex) {
+            }
+        }
         public List<Cls_Usuario> GetUsuarios() {
 
             List<Cls_Usuario> lst_usuarios = new List<Cls_Usuario>();

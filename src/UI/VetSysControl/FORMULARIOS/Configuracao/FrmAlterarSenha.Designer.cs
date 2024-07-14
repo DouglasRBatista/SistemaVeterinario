@@ -53,6 +53,7 @@
             Txt_Nome.Location = new Point(79, 57);
             Txt_Nome.MaxLength = 60;
             Txt_Nome.Name = "Txt_Nome";
+            Txt_Nome.ReadOnly = true;
             Txt_Nome.Size = new Size(329, 23);
             Txt_Nome.TabIndex = 79;
             // 
@@ -70,6 +71,7 @@
             Txt_CPF.Location = new Point(79, 29);
             Txt_CPF.MaxLength = 14;
             Txt_CPF.Name = "Txt_CPF";
+            Txt_CPF.ReadOnly = true;
             Txt_CPF.Size = new Size(131, 23);
             Txt_CPF.TabIndex = 77;
             // 
@@ -81,6 +83,7 @@
             Btn_Sair.TabIndex = 81;
             Btn_Sair.Text = "Sair";
             Btn_Sair.UseVisualStyleBackColor = true;
+            Btn_Sair.Click += Btn_Sair_Click;
             // 
             // BtnConfirmar
             // 
@@ -90,6 +93,7 @@
             BtnConfirmar.TabIndex = 82;
             BtnConfirmar.Text = "Confirmar";
             BtnConfirmar.UseVisualStyleBackColor = true;
+            BtnConfirmar.Click += BtnConfirmar_Click;
             // 
             // GrpBox_Login
             // 
@@ -156,6 +160,7 @@
             Txt_Login.Location = new Point(89, 48);
             Txt_Login.MaxLength = 15;
             Txt_Login.Name = "Txt_Login";
+            Txt_Login.ReadOnly = true;
             Txt_Login.Size = new Size(213, 23);
             Txt_Login.TabIndex = 79;
             // 

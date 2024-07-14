@@ -38,7 +38,6 @@ namespace VetSysControl.Formularios
             Bll_Usuario bllFunc = new Bll_Usuario();
             bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
             FrmAlterarSenha frmAlterarSenha = new FrmAlterarSenha();
-            frmAlterarSenha.SetUsuario(usuario);
         }
 
         public void DrawMdi()
@@ -107,6 +106,12 @@ namespace VetSysControl.Formularios
                     FrmConsultaPet Form10 = new FrmConsultaPet();
                     Childform = Form10;
                     Childform.Text = "Animais / Pets";
+                    break;
+                case "FrmAlterarSenha":
+                    FrmAlterarSenha Form11 = new FrmAlterarSenha();
+                    Form11.SetUsuario(usuario);
+                    Childform = Form11;
+                    Childform.Text = "Alterar Senha";
                     break;
                 default:
                     Form Form = new Form();
@@ -226,7 +231,7 @@ namespace VetSysControl.Formularios
 
         private void BtnAgendamentos_Click(object sender, EventArgs e)
         {
-            LoadNewForm("");
+            LoadNewForm("FrmAlterarSenha");
         }
 
         private void BtnExames_Click(object sender, EventArgs e)
