@@ -70,7 +70,7 @@
             Lbl_OBS = new Label();
             Lbl_DescFarmLab = new Label();
             Txt_OBS = new TextBox();
-            textBox1 = new TextBox();
+            Txt_Desc = new TextBox();
             ChkBox_Terceirizada = new CheckBox();
             Lbl_Filial = new Label();
             CmbBox_Filial = new ComboBox();
@@ -92,6 +92,7 @@
             Btn_Sair.TabIndex = 63;
             Btn_Sair.Text = "Sair";
             Btn_Sair.UseVisualStyleBackColor = true;
+            Btn_Sair.Click += Btn_Sair_Click;
             // 
             // Btn_Salvar
             // 
@@ -101,6 +102,7 @@
             Btn_Salvar.TabIndex = 62;
             Btn_Salvar.Text = "Salvar";
             Btn_Salvar.UseVisualStyleBackColor = true;
+            Btn_Salvar.Click += Btn_Salvar_Click;
             // 
             // Btn_Editar
             // 
@@ -110,6 +112,7 @@
             Btn_Editar.TabIndex = 61;
             Btn_Editar.Text = "Editar";
             Btn_Editar.UseVisualStyleBackColor = true;
+            Btn_Editar.Click += Btn_Editar_Click;
             // 
             // Btn_Excluir
             // 
@@ -119,6 +122,7 @@
             Btn_Excluir.TabIndex = 60;
             Btn_Excluir.Text = "Excluir";
             Btn_Excluir.UseVisualStyleBackColor = true;
+            Btn_Excluir.Click += Btn_Excluir_Click;
             // 
             // Lbl_CadastroAtend
             // 
@@ -137,6 +141,7 @@
             Btn_BuscarEmpresa.TabIndex = 69;
             Btn_BuscarEmpresa.Text = "Buscar";
             Btn_BuscarEmpresa.UseVisualStyleBackColor = true;
+            Btn_BuscarEmpresa.Click += Btn_BuscarEmpresa_Click;
             // 
             // Txt_RazaoSoc
             // 
@@ -482,7 +487,7 @@
             GrpBox_FarmLab.Controls.Add(Lbl_OBS);
             GrpBox_FarmLab.Controls.Add(Lbl_DescFarmLab);
             GrpBox_FarmLab.Controls.Add(Txt_OBS);
-            GrpBox_FarmLab.Controls.Add(textBox1);
+            GrpBox_FarmLab.Controls.Add(Txt_Desc);
             GrpBox_FarmLab.Controls.Add(ChkBox_Terceirizada);
             GrpBox_FarmLab.Controls.Add(Lbl_Filial);
             GrpBox_FarmLab.Controls.Add(CmbBox_Filial);
@@ -520,13 +525,13 @@
             Txt_OBS.Size = new Size(188, 77);
             Txt_OBS.TabIndex = 99;
             // 
-            // textBox1
+            // Txt_Desc
             // 
-            textBox1.Location = new Point(6, 131);
-            textBox1.MaxLength = 20;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(188, 23);
-            textBox1.TabIndex = 82;
+            Txt_Desc.Location = new Point(6, 131);
+            Txt_Desc.MaxLength = 20;
+            Txt_Desc.Name = "Txt_Desc";
+            Txt_Desc.Size = new Size(188, 23);
+            Txt_Desc.TabIndex = 82;
             // 
             // ChkBox_Terceirizada
             // 
@@ -689,7 +694,7 @@
         private Label Lbl_OBS;
         private Label Lbl_DescFarmLab;
         private TextBox Txt_OBS;
-        private TextBox textBox1;
+        private TextBox Txt_Desc;
         private CheckBox ChkBox_Terceirizada;
         private Label Lbl_Filial;
         private ComboBox CmbBox_Filial;

@@ -24,5 +24,9 @@ namespace VetSysControl.FORMULARIOS.Consulta {
             Txt_Email.Text = string.Empty;
             MskTxt_Telefone.Text = string.Empty;
         }
+
+        private void Btn_Sair_Click(object sender, EventArgs e) {
+            Close();
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace BLL.Clinica
                                 vacina.Tipo = (string)reader["Tipo"];
                                 vacina.Fabricante = "Teste";//(string)reader["Fabricante"];
                                 vacina.Lote = (string)reader["Lote"];
-                                vacina.Validade = (DateOnly)reader["Validade"];
+                                vacina.Validade = (DateTime)reader["Validade"];
                                 vacina.DoseUnica = (bool)reader["DoseUnica"];
                                 vacina.QtdDose = (int)reader["QtdDose"];
                                 vacina.Periodicidade = (int)reader["Periodicidade"];

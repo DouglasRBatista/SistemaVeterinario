@@ -14,7 +14,7 @@ namespace Models.Animal
         private string Nome;
         private int IdEspecie;
         private int IdRaca;
-        private DateOnly DataNasc;
+        private DateTime DataNasc;
         private int IdCliente;
         private char Sexo;
         private List<string> Cor;
@@ -29,7 +29,7 @@ namespace Models.Animal
             Nome = string.Empty;
             IdEspecie = 0;
             IdRaca = 0;
-            DataNasc = DateOnly.MinValue;
+            DataNasc = DateTime.MinValue;
             IdCliente = 0;
             Sexo = char.MinValue;
             Cor = GetCor();

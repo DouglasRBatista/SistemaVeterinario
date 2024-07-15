@@ -12,6 +12,7 @@ using BLL.Pessoa;
 using Models.Pessoa;
 using VetSysControl.Configuracao;
 using VetSysControl.Formularios;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VetSysControl.FORMULARIOS.Login {
     public partial class Login : Form {
@@ -30,6 +31,7 @@ namespace VetSysControl.FORMULARIOS.Login {
                 Bll_Usuario bll = new Bll_Usuario();
                 bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
                 lst_Login = bll.GetUsuarios();
+                Txt_Login.Select();
             }
             catch (Exception ex) {
             }
@@ -54,18 +56,25 @@ namespace VetSysControl.FORMULARIOS.Login {
             try {
                 foreach (Cls_Usuario us in lst_Login) {
 
-                    if (Txt_Login.Text == us.Login && Txt_Senha.Text == us.GetSenha() && us.Ativo == true) {
-                        loginfail = true;
-                        this.Hide();
-                        MDI mdi = new MDI();
-                        mdi.usuario = us;
-                        mdi.ShowDialog();
-                        this.Close();
+                    if (Txt_Login.Text == us.Login && Txt_Senha.Text == us.GetSenha()) {
+
+                        if (us.Ativo) { 
+                            loginfail = true;
+                            this.Hide();
+                            MDI mdi = new MDI();
+                            mdi.usuario = us;
+                            mdi.ShowDialog();
+                            this.Close();
+                        }
+                        else {
+                            MessageBox.Show("Usuário Inativo! \r\n Contate o ADM.", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 if (!loginfail) {
                     MessageBox.Show("Login e Senha incorretos!", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
             catch {
 

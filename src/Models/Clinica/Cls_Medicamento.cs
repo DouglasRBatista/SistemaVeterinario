@@ -16,7 +16,7 @@ namespace Models.Clinica
         public string Tipo { get; set; }
         public int Quantidade { get; set; }
         public string Lote { get; set; }
-        public DateOnly Validade { get; set; }
+        public DateTime Validade { get; set; }
         public List<Cls_MedicamentoFornecedor> Valor { get; set; }
         public string Fabricante { get; set; }
         public List<Cls_FarmaciaLaboratorio> Fornecedor { get; set; }
@@ -29,7 +29,7 @@ namespace Models.Clinica
             Tipo = string.Empty;
             Quantidade = 0;
             Lote = string.Empty;
-            Validade = DateOnly.MinValue;
+            Validade = DateTime.MinValue;
             Valor = GetValor();
             Fabricante = string.Empty;
             Fornecedor = GetFornecedor();

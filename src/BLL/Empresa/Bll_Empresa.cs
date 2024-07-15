@@ -70,8 +70,8 @@ namespace BLL.Empresa
             }
             return empresa;
         }
-        public Cls_Empresa GetEmpresas() {
-            Cls_Empresa empresa = new Cls_Empresa();
+        public DataTable GetEmpresas() {
+            DataTable empresa = new DataTable();
 
             if (_SqlConnectionString == string.Empty)
                 return null;
@@ -87,11 +87,13 @@ namespace BLL.Empresa
                               ",[CNPJ]\r\n      " +
                               ",[Telefone]\r\n      " +
                               ",[Unidade]\r\n      " +
-                              ",[Logo]\r\n  " +
                         "FROM [Empresa]\r\n ";
 
-                    conn.ExecuteQuery(sqlCommand.CommandText);
+                    conn.OpenConnection();
 
+                    empresa = conn.ExecuteQuery(sqlCommand.CommandText);
+
+                    conn.CloseConnection();
                 }
 
             }

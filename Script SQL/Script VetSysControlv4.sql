@@ -293,9 +293,11 @@ CREATE TABLE Vacina(
 	Nome NVARCHAR(30),
 	Descricao NVARCHAR(MAX),
 	Tipo NVARCHAR(30),
+	Fabricante NVARCHAR(30),
 	Lote NVARCHAR(10),
 	Validade DATE,
 	DoseUnica BIT,
+	MlDose INT,
 	QtdDose INT,
 	Periodicidade INT,
 	UnidTempo NVARCHAR(3)

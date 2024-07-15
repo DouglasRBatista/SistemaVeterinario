@@ -14,7 +14,7 @@ namespace Models.Clinica
         public string Tipo { get; set; }
         public string Fabricante { get; set; }
         public string Lote { get; set; }
-        public DateOnly Validade { get; set; }
+        public DateTime Validade { get; set; }
         public bool DoseUnica { get; set; }
         public int QtdDose { get; set; }
         public int Periodicidade { get; set; }

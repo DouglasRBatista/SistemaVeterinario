@@ -11,8 +11,8 @@ namespace Models.Clinica
         private int IdPet;
         private int IdVacina;
         private string Lote;
-        private DateOnly DataVacina;
-        private DateOnly DataRenovacao;
+        private DateTime DataVacina;
+        private DateTime DataRenovacao;
         private int IdVeterinario;
         private int NumDose;
 
@@ -21,8 +21,8 @@ namespace Models.Clinica
             IdPet = 0;
             IdVacina = 0;
             Lote = string.Empty;
-            DataVacina = DateOnly.MinValue;
-            DataRenovacao = DateOnly.MinValue;
+            DataVacina = DateTime.MinValue;
+            DataRenovacao = DateTime.MinValue;
             IdVeterinario = 0;
             NumDose = 0;
         }
@@ -57,19 +57,19 @@ namespace Models.Clinica
             Lote = lote;
         }
 
-        public DateOnly GetDataVacina() {
+        public DateTime GetDataVacina() {
             return DataVacina;
         }
 
-        public void SetDataAtendimento(DateOnly dataVac) {
+        public void SetDataAtendimento(DateTime dataVac) {
             DataVacina = dataVac;
         }
 
-        public DateOnly GetDataRenovacao() {
+        public DateTime GetDataRenovacao() {
             return DataRenovacao;
         }
 
-        public void SetDataRenovacao(DateOnly dataRenov) {
+        public void SetDataRenovacao(DateTime dataRenov) {
             DataRenovacao = dataRenov;
         }
 

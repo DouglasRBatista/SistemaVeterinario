@@ -31,13 +31,10 @@ namespace VetSysControl.Formularios
             InitializeComponent();
             //DrawMdi();
 
-            Bll_Empresa bll = new Bll_Empresa();
-            bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
-            bll.GetEmpresa(1);
+            //Bll_Empresa bll = new Bll_Empresa();
+            //bll._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
+            //bll.GetEmpresa(1);
 
-            Bll_Usuario bllFunc = new Bll_Usuario();
-            bllFunc._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
-            FrmAlterarSenha frmAlterarSenha = new FrmAlterarSenha();
         }
 
         public void DrawMdi()
@@ -92,8 +89,8 @@ namespace VetSysControl.Formularios
                     Childform = Form7;
                     Childform.Text = "Vacinas";
                     break;
-                case "FrmConsultaCliente":
-                    FrmConsultaCli Form8 = new FrmConsultaCli();
+                case "FrmConsultaEmp":
+                    FrmConsultaEmp Form8 = new FrmConsultaEmp();
                     Childform = Form8;
                     Childform.Text = "Clientes";
                     break;
@@ -107,9 +104,9 @@ namespace VetSysControl.Formularios
                     Childform = Form10;
                     Childform.Text = "Animais / Pets";
                     break;
-                case "FrmAlterarSenha":
-                    FrmAlterarSenha Form11 = new FrmAlterarSenha();
-                    Form11.SetUsuario(usuario);
+                case "FrmEmpresa":
+                    FrmEmpresa Form11 = new FrmEmpresa();
+                    //Form11.SetUsuario(usuario);
                     Childform = Form11;
                     Childform.Text = "Alterar Senha";
                     break;
@@ -212,7 +209,7 @@ namespace VetSysControl.Formularios
         // Eventos de click
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            LoadNewForm("FrmConsultaCliente");
+            LoadNewForm("FrmConsultaEmp");
         }
         private void BtnFuncionarios_Click(object sender, EventArgs e)
         {
@@ -231,7 +228,7 @@ namespace VetSysControl.Formularios
 
         private void BtnAgendamentos_Click(object sender, EventArgs e)
         {
-            LoadNewForm("FrmAlterarSenha");
+            LoadNewForm("FrmEmpresa");
         }
 
         private void BtnExames_Click(object sender, EventArgs e)

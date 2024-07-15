@@ -22,6 +22,9 @@
     <Compile Update="Formularios\Cadastro\FrmMedicamentoFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FORMULARIOS\Consulta\FrmConsultaEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\Consulta\FrmConsultaFun.cs">
       <SubType>Form</SubType>
     </Compile>

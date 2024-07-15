@@ -47,6 +47,7 @@
             Btn_Sair.TabIndex = 60;
             Btn_Sair.Text = "Sair";
             Btn_Sair.UseVisualStyleBackColor = true;
+            Btn_Sair.Click += Btn_Sair_Click;
             // 
             // GrpBox_ConsultaPet
             // 
