@@ -21,7 +21,7 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
         ConfigSettings configSettings = new ConfigSettings();
         Cls_Empresa emp = new Cls_Empresa();
         Bll_Empresa bllEmpresa = new Bll_Empresa();
-        public int Id { get; set; }
+        public int idEmpresa { get; set; }
 
         public FrmEmpresa() {
             InitializeComponent();
@@ -48,8 +48,8 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
         }
 
         private void Btn_BuscarEmpresa_Click(object sender, EventArgs e) {
-            FrmConsultaEmp frmEmp = new FrmConsultaEmp();
-            frmEmp.Show();
+            FrmConsultaEmp frmConsEmp = new FrmConsultaEmp();
+            frmConsEmp.Show();
         }
         private void ClearComp() {
 
@@ -95,7 +95,7 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
             try {
                 bllEmpresa._SqlConnectionString = configSettings.GetAppSettingsConfig("ConnectionString");
 
-                emp = bllEmpresa.GetEmpresa(Id);
+                emp = bllEmpresa.GetEmpresa(idEmpresa);
 
                 Txt_CodEmpresa.Text = emp.GetCodEmpresa();
                 Txt_RazaoSoc.Text = emp.GetRazaoSocial();
@@ -212,21 +212,21 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
 
                 default:
 
-                    Btn_Salvar.Enabled = false;
+                    Btn_Salvar.Enabled = true;
                     Btn_Editar.Enabled = false;
                     Btn_Excluir.Enabled = false;
 
                     //Empresa
-                    Btn_BuscarEmpresa.Enabled = false;
-                    Txt_CodEmpresa.Enabled = false;
-                    Txt_RazaoSoc.Enabled = false;
-                    Txt_Endereco.Enabled = false;
-                    MskBox_CNPJ.Enabled = false;
-                    MskBox_Telefone.Enabled = false;
-                    CmbBox_Unidade.Enabled = false;
+                    Btn_BuscarEmpresa.Enabled = true;
+                    Txt_CodEmpresa.Enabled = true;
+                    Txt_RazaoSoc.Enabled = true;
+                    Txt_Endereco.Enabled = true;
+                    MskBox_CNPJ.Enabled = true;
+                    MskBox_Telefone.Enabled = true;
+                    CmbBox_Unidade.Enabled = true;
 
                     //Filial
-                    ChkBox_Filial.Enabled = false;
+                    ChkBox_Filial.Enabled = true;
                     ChkBox_DayCare.Enabled = false;
                     MskBox_DayCare.Enabled = false;
                     ChkBox_UnidHosp.Enabled = false;
@@ -238,7 +238,7 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
                     MskBox_FaturamentoFilial.Enabled = false;
 
                     //Contratante
-                    ChkBox_Contr.Enabled = false;
+                    ChkBox_Contr.Enabled = true;
                     ChkBox_UnidIntegr.Enabled = false;
                     Dtp_InicioContr.Enabled = false;
                     Dtp_FimContr.Enabled = false;
@@ -248,7 +248,7 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
                     MskBox_CustosContr.Enabled = false;
 
                     //Farmacia - Laboratorio
-                    ChkBox_FarmLab.Enabled = false;
+                    ChkBox_FarmLab.Enabled = true;
                     ChkBox_Terceirizada.Enabled = false;
                     ChkBox_Integr.Enabled = false;
                     CmbBox_Filial.Enabled = false;
@@ -259,5 +259,8 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
 
         }
 
+        public void IdEmpresa(int id) {
+            idEmpresa = id;
+        }
     }
 }

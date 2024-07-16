@@ -65,7 +65,7 @@ namespace BLL.Empresa
                 }
 
             }
-            catch(Exception e) {
+            catch(Exception ex) {
 
             }
             return empresa;
@@ -88,6 +88,29 @@ namespace BLL.Empresa
                               ",[Telefone]\r\n      " +
                               ",[Unidade]\r\n      " +
                         "FROM [Empresa]\r\n ";
+
+                    conn.OpenConnection();
+
+                    empresa = conn.ExecuteQuery(sqlCommand.CommandText);
+
+                    conn.CloseConnection();
+                }
+
+            }
+
+            return empresa;
+        }
+
+        public DataTable SearchEmpresas(string query) {
+            DataTable empresa = new DataTable();
+
+            if (_SqlConnectionString == string.Empty)
+                return null;
+
+            //DB Interaction.
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+                    sqlCommand.CommandText = query;
 
                     conn.OpenConnection();
 

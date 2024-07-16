@@ -15,7 +15,7 @@ namespace VetSysControl.Formularios
         ConfigSettings configSettings = new ConfigSettings();
         public Cls_Usuario usuario { get; set; }
         static Cls_Funcionario func = new Cls_Funcionario();
-
+        /*
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == Config.WM_WAKEUP_WINDOW)
@@ -25,7 +25,7 @@ namespace VetSysControl.Formularios
             }
             base.WndProc(ref m);
         }
-
+        */
         public MDI()
         {
             InitializeComponent();

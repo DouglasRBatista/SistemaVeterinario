@@ -29,7 +29,7 @@
             ChkBox_Contr = new CheckBox();
             ChkBox_Filial = new CheckBox();
             MskBox_CNPJ = new MaskedTextBox();
-            MskTxt_Telefone = new MaskedTextBox();
+            MskBox_Telefone = new MaskedTextBox();
             Lbl_CNPJ = new Label();
             Lbl_RazaoSocial = new Label();
             Txt_RazaoSocial = new TextBox();
@@ -58,7 +58,7 @@
             GrpBox_ConsultaPet.Controls.Add(ChkBox_Contr);
             GrpBox_ConsultaPet.Controls.Add(ChkBox_Filial);
             GrpBox_ConsultaPet.Controls.Add(MskBox_CNPJ);
-            GrpBox_ConsultaPet.Controls.Add(MskTxt_Telefone);
+            GrpBox_ConsultaPet.Controls.Add(MskBox_Telefone);
             GrpBox_ConsultaPet.Controls.Add(Lbl_CNPJ);
             GrpBox_ConsultaPet.Controls.Add(Lbl_RazaoSocial);
             GrpBox_ConsultaPet.Controls.Add(Txt_RazaoSocial);
@@ -111,12 +111,12 @@
             MskBox_CNPJ.Size = new Size(230, 23);
             MskBox_CNPJ.TabIndex = 94;
             // 
-            // MskTxt_Telefone
+            // MskBox_Telefone
             // 
-            MskTxt_Telefone.Location = new Point(879, 16);
-            MskTxt_Telefone.Name = "MskTxt_Telefone";
-            MskTxt_Telefone.Size = new Size(164, 23);
-            MskTxt_Telefone.TabIndex = 93;
+            MskBox_Telefone.Location = new Point(879, 16);
+            MskBox_Telefone.Name = "MskBox_Telefone";
+            MskBox_Telefone.Size = new Size(164, 23);
+            MskBox_Telefone.TabIndex = 93;
             // 
             // Lbl_CNPJ
             // 
@@ -178,6 +178,7 @@
             Btn_Buscar.TabIndex = 72;
             Btn_Buscar.Text = "Buscar";
             Btn_Buscar.UseVisualStyleBackColor = true;
+            Btn_Buscar.Click += Btn_Buscar_Click;
             // 
             // DtGridView_Empresa
             // 
@@ -199,6 +200,7 @@
             Controls.Add(GrpBox_ConsultaPet);
             Controls.Add(Btn_Sair);
             Name = "FrmConsultaEmp";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ConsultaCliente";
             Load += FrmConsultaCli_Load;
             GrpBox_ConsultaPet.ResumeLayout(false);
@@ -217,7 +219,7 @@
         private CheckBox ChkBox_Contr;
         private CheckBox ChkBox_Filial;
         private MaskedTextBox MskBox_CNPJ;
-        private MaskedTextBox MskTxt_Telefone;
+        private MaskedTextBox MskBox_Telefone;
         private Label Lbl_CNPJ;
         private Label Lbl_RazaoSocial;
         private TextBox Txt_RazaoSocial;
