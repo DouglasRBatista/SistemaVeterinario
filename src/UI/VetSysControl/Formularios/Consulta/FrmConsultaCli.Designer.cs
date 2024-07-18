@@ -125,6 +125,7 @@
             Btn_Buscar.TabIndex = 72;
             Btn_Buscar.Text = "Buscar";
             Btn_Buscar.UseVisualStyleBackColor = true;
+            Btn_Buscar.Click += Btn_Buscar_Click;
             // 
             // Lbl_CPF
             // 

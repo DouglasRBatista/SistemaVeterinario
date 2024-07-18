@@ -9,6 +9,7 @@
         protected string CNPJ { get; set; }
         protected string Telefone { get; set; }
         protected string Unidade { get; set; }
+        protected string Tipo { get; set; }
         protected string Logo { get; set; }
 
         public Cls_Empresa() 
@@ -20,6 +21,7 @@
             CNPJ = string.Empty;
             Telefone = string.Empty;
             Unidade = string.Empty;
+            Tipo = string.Empty;
             Logo = string.Empty;
         }
 
@@ -91,6 +93,14 @@
         public void SetUnidade(string unidade)
         {
             this.Unidade = unidade;
+        }
+
+        public string GetTipo() {
+            return this.Tipo;
+        }
+
+        public void SetTipo(string tipo) {
+            this.Tipo = tipo;
         }
 
         public string GetLogo()

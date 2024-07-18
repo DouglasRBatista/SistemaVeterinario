@@ -72,7 +72,8 @@ CREATE TABLE Empresa(
 	CNPJ NVARCHAR(14),
 	Telefone NVARCHAR(15),
 	Unidade NVARCHAR(20),
-	Logo NVARCHAR(150)
+	Logo NVARCHAR(150),
+	Tipo NVARCHAR(22)
 );
 GO
 

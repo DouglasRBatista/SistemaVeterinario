@@ -1,6 +1,7 @@
 ﻿using BLL.Empresa;
 using Models.Empresa;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,8 +24,8 @@ namespace VetSysControl.FORMULARIOS.Consulta {
 
         List<Cls_Empresa> lst_Empresas = new List<Cls_Empresa>();
         Cls_Empresa empresa = new Cls_Empresa();
-        string query;
-        string cnpj;
+        string query = String.Empty;
+        string cnpj = String.Empty;
         int Id;
         bool where = false;
         List<string> queryWHERE = new List<string>();
@@ -78,25 +79,38 @@ namespace VetSysControl.FORMULARIOS.Consulta {
             query = "SELECT * FROM [Empresa] ";
 
             if (!String.IsNullOrEmpty(Txt_Codigo.Text) || !String.IsNullOrWhiteSpace(Txt_Codigo.Text)) {
-                queryWHERE.Add(" [CodEmpresa] = \"" + Txt_Codigo.Text + "\" ");
+                queryWHERE.Add(" [CodEmpresa] = '" + Txt_Codigo.Text + "' ");
                 where = true;
             }
 
             if (!String.IsNullOrEmpty(Txt_RazaoSocial.Text) || !String.IsNullOrWhiteSpace(Txt_RazaoSocial.Text)) {
-                queryWHERE.Add(" [RazaoSocial] \"= " + Txt_RazaoSocial.Text + "\" ");
+                queryWHERE.Add(" [RazaoSocial] = '" + Txt_RazaoSocial.Text + "' ");
                 where = true;
             }
 
             if (!String.IsNullOrEmpty(MskBox_CNPJ.Text) || !String.IsNullOrWhiteSpace(MskBox_CNPJ.Text)) {
-                cnpj = RemoveCNPKMask(MskBox_CNPJ.Text);
+                cnpj = RemoveCNPJMask(MskBox_CNPJ.Text);
                 if (!String.IsNullOrEmpty(cnpj) || !String.IsNullOrWhiteSpace(cnpj)) {
-                    queryWHERE.Add(" [CNPJ] = \"" + MskBox_CNPJ.Text + "\" ");
+                    queryWHERE.Add(" [CNPJ] = '" + MskBox_CNPJ.Text + "' ");
                     where = true;
                 }
             }
 
             if (!String.IsNullOrEmpty(MskBox_Telefone.Text) || !String.IsNullOrWhiteSpace(MskBox_Telefone.Text)) {
-                queryWHERE.Add(" [Telefone] = \"" + MskBox_Telefone.Text + "\" ");
+                queryWHERE.Add(" [Telefone] = '" + MskBox_Telefone.Text + "' ");
+                where = true;
+            }
+
+            if (ChkBox_Filial.Checked) {
+                queryWHERE.Add(" [Tipo] = '" + ChkBox_Filial.Text + "' ");
+                where = true;
+            }
+            if (ChkBox_Contr.Checked) {
+                queryWHERE.Add(" [Tipo] = '" + ChkBox_Contr.Text + "' ");
+                where = true;
+            }
+            if (ChkBox_FarmLab.Checked) {
+                queryWHERE.Add(" [Tipo] = '" + ChkBox_FarmLab.Text + "' ");
                 where = true;
             }
 
@@ -111,7 +125,7 @@ namespace VetSysControl.FORMULARIOS.Consulta {
             }
         }
 
-        private string RemoveCNPKMask(string cnpj) {
+        private string RemoveCNPJMask(string cnpj) {
             const string regex = "[^0-9]";
             return Regex.Replace(cnpj, regex, "");
         }
