@@ -59,7 +59,7 @@ namespace VetSysControl.FORMULARIOS.Consulta {
             query = string.Empty;
             queryWHERE.Clear();
 
-            query = "SELECT * FROM [Cliente] ";
+            query = "SELECT * FROM [Cliente] \r\n INNER JOIN [Pessoa] ON [Cliente].[IdUsuario] = [Pessoa].[IdUsuario] \r\n";
 
             if (!String.IsNullOrEmpty(Txt_CPF.Text) || !String.IsNullOrWhiteSpace(Txt_CPF.Text)) {
                 queryWHERE.Add(" [CPF] = '" + Txt_CPF.Text + "' ");

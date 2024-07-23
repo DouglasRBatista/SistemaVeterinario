@@ -148,7 +148,9 @@
             // 
             DtGridView_Cliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DtGridView_Cliente.Location = new Point(12, 90);
+            DtGridView_Cliente.MultiSelect = false;
             DtGridView_Cliente.Name = "DtGridView_Cliente";
+            DtGridView_Cliente.ReadOnly = true;
             DtGridView_Cliente.Size = new Size(1068, 427);
             DtGridView_Cliente.TabIndex = 62;
             // 

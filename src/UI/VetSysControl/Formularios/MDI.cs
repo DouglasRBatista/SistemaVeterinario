@@ -92,7 +92,7 @@ namespace VetSysControl.Formularios
                 case "FrmConsultaEmp":
                     FrmConsultaEmp Form8 = new FrmConsultaEmp();
                     Childform = Form8;
-                    Childform.Text = "Clientes";
+                    Childform.Text = "Consulta Empresas";
                     break;
                 case "FrmConsultaFun":
                     FrmConsultaFun Form9 = new FrmConsultaFun();
@@ -109,6 +109,12 @@ namespace VetSysControl.Formularios
                     //Form11.SetUsuario(usuario);
                     Childform = Form11;
                     Childform.Text = "Alterar Senha";
+                    break;
+                case "FrmConsultaCli":
+                    FrmConsultaCli Form12 = new FrmConsultaCli();
+                    //Form11.SetUsuario(usuario);
+                    Childform = Form12;
+                    Childform.Text = "Consulta Clientes";
                     break;
                 default:
                     Form Form = new Form();
@@ -209,7 +215,7 @@ namespace VetSysControl.Formularios
         // Eventos de click
         private void BtnClientes_Click(object sender, EventArgs e)
         {
-            LoadNewForm("FrmConsultaEmp");
+            LoadNewForm("FrmConsultaCli");
         }
         private void BtnFuncionarios_Click(object sender, EventArgs e)
         {
@@ -228,12 +234,12 @@ namespace VetSysControl.Formularios
 
         private void BtnAgendamentos_Click(object sender, EventArgs e)
         {
-            LoadNewForm("FrmEmpresa");
+            LoadNewForm("FrmConsultaEmp");
         }
 
         private void BtnExames_Click(object sender, EventArgs e)
         {
-            LoadNewForm("");
+            LoadNewForm("FrmEmpresa");
         }
 
         private void BtnEspecieRaca_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Text;
 using DAL.DALCONN;
 using Models.Pessoa;
 using System.Data.SqlClient;
+using System.Data;
 
 
 namespace BLL.Pessoa {
@@ -72,7 +73,7 @@ namespace BLL.Pessoa {
             }
         }
 
-        public List<Cls_Cliente> GetClientes() {
+        public List<Cls_Cliente> GetListClientes() {
 
             List<Cls_Cliente> lst_clientes = new List<Cls_Cliente>();
             try {
@@ -128,6 +129,65 @@ namespace BLL.Pessoa {
                 return null;
             }
         }
-            
+
+
+        public DataTable GetClientes() {
+            DataTable cliente = new DataTable();
+
+            if (_SqlConnectionString == string.Empty)
+                return null;
+
+            //DB Interaction.
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+                    sqlCommand.CommandText =
+                        "SELECT [IdPessoa] \r\n      " +
+                                  ",[IdCliente] \r\n      " +
+                                  ",[Cliente].[IdUsuario] \r\n      " +
+                                  ",[Nome] \r\n      " +
+                                  ",[CPF] \r\n      " +
+                                  ",[DtNascimento] \r\n      " +
+                                  ",[Endereco] \r\n      " +
+                                  ",[Telefone] \r\n      " +
+                                  ",[Email] \r\n      " +
+                            "FROM [Cliente] \r\n      " +
+                            "INNER JOIN [Pessoa] ON [Cliente].[IdUsuario] = [Pessoa].[IdUsuario] \r\n  ";
+
+                    conn.OpenConnection();
+
+                    cliente = conn.ExecuteQuery(sqlCommand.CommandText);
+
+                    conn.CloseConnection();
+                }
+
+            }
+
+            return cliente;
+        }
+
+
+        public DataTable SearchClientes(string query) {
+            DataTable empresa = new DataTable();
+
+            if (_SqlConnectionString == string.Empty)
+                return null;
+
+            //DB Interaction.
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+                    sqlCommand.CommandText = query;
+
+                    conn.OpenConnection();
+
+                    empresa = conn.ExecuteQuery(sqlCommand.CommandText);
+
+                    conn.CloseConnection();
+                }
+
+            }
+
+            return empresa;
+        }
+
     }
 }

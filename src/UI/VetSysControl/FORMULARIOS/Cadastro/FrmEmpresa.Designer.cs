@@ -247,6 +247,7 @@
             // 
             // PicBox_Logo
             // 
+            PicBox_Logo.BorderStyle = BorderStyle.FixedSingle;
             PicBox_Logo.Location = new Point(739, 42);
             PicBox_Logo.Name = "PicBox_Logo";
             PicBox_Logo.Size = new Size(330, 190);
@@ -394,6 +395,7 @@
             Btn_AddServico.TabIndex = 82;
             Btn_AddServico.Text = "+";
             Btn_AddServico.UseVisualStyleBackColor = true;
+            Btn_AddServico.Click += Btn_AddServico_Click;
             // 
             // Btn_DelServico
             // 
@@ -403,6 +405,7 @@
             Btn_DelServico.TabIndex = 83;
             Btn_DelServico.Text = "-";
             Btn_DelServico.UseVisualStyleBackColor = true;
+            Btn_DelServico.Click += Btn_DelServico_Click;
             // 
             // ChkBox_UnidIntegr
             // 
@@ -579,6 +582,7 @@
             ChkBox_Filial.TabIndex = 83;
             ChkBox_Filial.Text = "Filial";
             ChkBox_Filial.UseVisualStyleBackColor = true;
+            ChkBox_Filial.CheckedChanged += ChkBox_Filial_CheckedChanged;
             // 
             // ChkBox_Contr
             // 
@@ -589,6 +593,7 @@
             ChkBox_Contr.TabIndex = 84;
             ChkBox_Contr.Text = "Contratante";
             ChkBox_Contr.UseVisualStyleBackColor = true;
+            ChkBox_Contr.CheckedChanged += ChkBox_Contr_CheckedChanged;
             // 
             // ChkBox_FarmLab
             // 
@@ -599,6 +604,7 @@
             ChkBox_FarmLab.TabIndex = 85;
             ChkBox_FarmLab.Text = "Farmácia - Laboratório";
             ChkBox_FarmLab.UseVisualStyleBackColor = true;
+            ChkBox_FarmLab.CheckedChanged += ChkBox_FarmLab_CheckedChanged;
             // 
             // FrmEmpresa
             // 
