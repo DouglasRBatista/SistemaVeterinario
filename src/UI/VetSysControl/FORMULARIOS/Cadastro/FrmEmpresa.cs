@@ -29,6 +29,7 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
         List<Cls_Servico> lstServ = new List<Cls_Servico>();
 
         Bll_Empresa bllEmpresa = new Bll_Empresa();
+        bool update = false;
         public int idEmpresa { get; set; }
 
         public FrmEmpresa() {
@@ -45,26 +46,54 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
         private void Btn_Salvar_Click(object sender, EventArgs e) {
             if (ValidateComp() == false) {
                 SetEmpresa();
-                bllEmpresa.SetEmpresa(emp);
-                emp = bllEmpresa.GetEmpresa(emp);
-                if (emp.GetTipo() != "") {
-                    if (emp.GetTipo() == "Filial") {
-                        //bllEmpresa.SetFilial(emp);
-                    }else if(emp.GetTipo() == "Contratante") {
-                        //bllEmpresa.SetContratante(emp);
+                if (update == false) { 
+                    bllEmpresa.SetEmpresa(emp);
+                    emp = bllEmpresa.GetEmpresa(emp);
+                    if (emp.GetTipo() != "") {
+                        if (emp.GetTipo() == "Filial") {
+                            filial.SetIdEmpresa(emp.GetIdEmpresa());
+                            bllEmpresa.SetFilial(filial);
+                        }else if(emp.GetTipo() == "Contratante") {
+                            contratante.SetIdEmpresa(emp.GetIdEmpresa());
+                            bllEmpresa.SetContratante(contratante);
+                        }
+                        else if (emp.GetTipo() == "Farmácia - Laboratório") {
+                            farmLab.SetIdEmpresa(emp.GetIdEmpresa());
+                            bllEmpresa.SetFarmLab(farmLab);
+                        }
                     }
-                    else if (emp.GetTipo() == "Farmácia - Laboratório") {
-                        //bllEmpresa.SetFarmLab(emp);
+                }
+                else {
+                    bllEmpresa.UpdateEmpresa(emp);
+                    emp = bllEmpresa.GetEmpresa(emp);
+                    if (emp.GetTipo() != "") {
+                        if (emp.GetTipo() == "Filial") {
+                            filial.SetIdEmpresa(emp.GetIdEmpresa());
+                            bllEmpresa.UpdateFilial(filial);
+                        }
+                        else if (emp.GetTipo() == "Contratante") {
+                            contratante.SetIdEmpresa(emp.GetIdEmpresa());
+                            bllEmpresa.UpdateContratante(contratante);
+                        }
+                        else if (emp.GetTipo() == "Farmácia - Laboratório") {
+                            farmLab.SetIdEmpresa(emp.GetIdEmpresa());
+                            bllEmpresa.UpdateFarmLab(farmLab);
+                        }
                     }
                 }
                 CRUD("LOAD");
             }
         }
         private void Btn_Editar_Click(object sender, EventArgs e) {
+            update = true;
             CRUD("UPDATE");
         }
         private void Btn_Excluir_Click(object sender, EventArgs e) {
-            CRUD("DELETE");
+            DialogResult dialogResult = MessageBox.Show("Deseja excluir?", "Exclusão", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes) {
+                bllEmpresa.DelEmpresa(emp);
+                CRUD("DELETE");
+            }
         }
         private void Btn_Sair_Click(object sender, EventArgs e) {
             Close();
@@ -144,6 +173,37 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
                 Txt_RazaoSoc.Text = emp.GetRazaoSocial();
                 Txt_RazaoSoc.Text = emp.GetRazaoSocial();
 
+                if (emp.GetTipo() != "") {
+                    if (emp.GetTipo() == "Filial") {
+                        ChkBox_Filial.Checked = true;
+                        ChkBox_DayCare.Checked = filial.FlgDayCare;
+                        MskBox_DayCare.Text = Convert.ToString(filial.CsvDayCare);
+                        ChkBox_UnidHosp.Checked = filial.FlgUnidadeHospitalar;
+                        MskBox_UnidHosp.Text = Convert.ToString(filial.CsvHospital);
+                        ChkBox_ProntoAtend.Checked = filial.FlgProntoAtendimento;
+                        MskBox_ProntoAtend.Text = Convert.ToString(filial.CsvProntoAtendimento);
+                        ChkBox_Farmacia.Checked = filial.FlgFarmacia;
+                        MskBox_CustosFilial.Text = Convert.ToString(filial.GetCusto());
+                        //MskBox_FaturamentoFilial.Text = "";
+                    }
+                    else if (emp.GetTipo() == "Contratante") {
+                        ChkBox_Contr.Checked = true;
+                        ChkBox_UnidIntegr.Checked = contratante.UnidadeIntegrada;
+                        Dtp_InicioContr.Value = contratante.InicioContrato;
+                        Dtp_FimContr.Value = contratante.FimContrato;
+                        LstBox_Servicos.DataSource = bllEmpresa.GetServicoContratante(contratante);
+                        MskBox_CustosContr.Text = "";
+
+                    }
+                    else if (emp.GetTipo() == "Farmácia - Laboratório") {
+                        ChkBox_FarmLab.Checked = true;
+                        ChkBox_Terceirizada.Checked = farmLab.FlgTerceirizada;
+                        ChkBox_Integr.Checked = farmLab.FlgIntegrada;
+                        //CmbBox_Filial.Text = farmLab.GetIdFilial();
+                        Txt_Desc.Text = farmLab.DescFarmLab;
+                        Txt_OBS.Text = farmLab.ObsFarmLab;
+                    }
+                }
             }
             catch (Exception ex) {
 
@@ -389,7 +449,6 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
                     filial.FlgProntoAtendimento = ChkBox_ProntoAtend.Checked;
                     filial.CsvProntoAtendimento = Convert.ToDecimal(MskBox_ProntoAtend.Text);
                     filial.FlgFarmacia= ChkBox_Farmacia.Checked;
-                    //filial.Custos;
 
                 }
                 else if (ChkBox_Contr.Checked) {

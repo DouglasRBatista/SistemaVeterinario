@@ -102,6 +102,7 @@ GO
 CREATE TABLE FarmaciaLaboratorio(
 	IdFarmaciaLab INT PRIMARY KEY,
 	FlgIntegrada BIT,
+	FlgTerceirizada BIT,
 	IdFilial INT,
 	FlgFornecedor BIT, -- Se TRUE = A farmácia produz seus medicamentos / Se FALSE = importam de outro local
 	DescFarmLab NVARCHAR(50),

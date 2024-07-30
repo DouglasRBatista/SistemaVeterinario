@@ -56,8 +56,8 @@
 
         private decimal CSV()
         {
-            // Criar Função
-            return 0;
+            
+            return (CsvDayCare + CsvHospital + CsvProntoAtendimento);
         }
     }
 }
