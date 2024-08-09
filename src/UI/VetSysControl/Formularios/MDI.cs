@@ -9,8 +9,7 @@ using Models.Pessoa;
 
 namespace VetSysControl.Formularios
 {
-    public partial class MDI : Form
-    {
+    public partial class MDI : Form {
         ConfigSystemDrawing configSystemDrawing = new ConfigSystemDrawing();
         ConfigSettings configSettings = new ConfigSettings();
         public Cls_Usuario usuario { get; set; }
@@ -26,8 +25,7 @@ namespace VetSysControl.Formularios
             base.WndProc(ref m);
         }
         */
-        public MDI()
-        {
+        public MDI() {
             InitializeComponent();
             //DrawMdi();
 
@@ -37,83 +35,94 @@ namespace VetSysControl.Formularios
 
         }
 
-        public void DrawMdi()
-        {
+        public void DrawMdi() {
             BtnAtendimentos.Invalidate();
             BtnAgendamentos.Invalidate();
             BtnClientes.Invalidate();
             BtnExames.Invalidate();
         }
 
-        public void LoadNewForm(string froms) 
-        {
+        public void LoadNewForm(string froms) {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
             var Childform = new Form();
 
-            switch (froms)
-            {
+            switch (froms) {
                 case "FrmAtendimento":
-                    FrmAtendimento Form1 = new FrmAtendimento();
-                    Childform = Form1;
+                    FrmAtendimento frmAtend = new FrmAtendimento();
+                    Childform = frmAtend;
                     Childform.Text = "Atendimentos";
                     break;
                 case "FrmEspecieRaca":
-                    FrmEspecieRaca Form2 = new FrmEspecieRaca();
-                    Childform = Form2;
+                    FrmEspecieRaca frmEspRac = new FrmEspecieRaca();
+                    Childform = frmEspRac;
                     Childform.Text = "Raças";
                     break;
                 case "FrmMedicamento":
-                    FrmMedicamento Form3 = new FrmMedicamento();
-                    Childform = Form3;
+                    FrmMedicamento frmMed = new FrmMedicamento();
+                    Childform = frmMed;
                     Childform.Text = "Medicamento";
                     break;
                 case "FrmMedicamentoFornecedor":
-                    FrmMedicamentoFornecedor Form4 = new FrmMedicamentoFornecedor();
-                    Childform = Form4;
+                    FrmMedicamentoFornecedor frmMedForn = new FrmMedicamentoFornecedor();
+                    Childform = frmMedForn;
                     Childform.Text = "Fornecedores";
                     break;
                 case "FrmPet":
-                    FrmPet Form5 = new FrmPet();
-                    Childform = Form5;
+                    FrmPet frPet = new FrmPet();
+                    Childform = frPet;
                     Childform.Text = "Animais / Pets";
                     break;
                 case "FrmServico":
-                    FrmServico Form6 = new FrmServico();
-                    Childform = Form6;
+                    FrmServico frmServ = new FrmServico();
+                    Childform = frmServ;
                     Childform.Text = "Serviços";
                     break;
                 case "FrmVacina":
-                    FrmVacina Form7 = new FrmVacina();
-                    Childform = Form7;
+                    FrmVacina frmVac = new FrmVacina();
+                    Childform = frmVac;
                     Childform.Text = "Vacinas";
                     break;
                 case "FrmConsultaEmp":
-                    FrmConsultaEmp Form8 = new FrmConsultaEmp();
-                    Childform = Form8;
+                    FrmConsultaEmp frmConsultaEmp = new FrmConsultaEmp();
+                    Childform = frmConsultaEmp;
                     Childform.Text = "Consulta Empresas";
                     break;
                 case "FrmConsultaFun":
-                    FrmConsultaFun Form9 = new FrmConsultaFun();
-                    Childform = Form9;
+                    FrmConsultaFun frmConsultaFun = new FrmConsultaFun();
+                    Childform = frmConsultaFun;
                     Childform.Text = "Funcionarios";
                     break;
                 case "FrmConsultaPet":
-                    FrmConsultaPet Form10 = new FrmConsultaPet();
-                    Childform = Form10;
-                    Childform.Text = "Animais / Pets";
+                    FrmConsultaPet frmConsultaPet = new FrmConsultaPet();
+                    Childform = frmConsultaPet;
+                    Childform.Text = "Consulta Pets";
                     break;
                 case "FrmEmpresa":
-                    FrmEmpresa Form11 = new FrmEmpresa();
+                    FrmEmpresa frmEmp = new FrmEmpresa();
                     //Form11.SetUsuario(usuario);
-                    Childform = Form11;
-                    Childform.Text = "Alterar Senha";
+                    Childform = frmEmp;
+                    Childform.Text = "Empresas";
                     break;
                 case "FrmConsultaCli":
-                    FrmConsultaCli Form12 = new FrmConsultaCli();
-                    //Form11.SetUsuario(usuario);
-                    Childform = Form12;
+                    FrmConsultaCli frmConsultaCli = new FrmConsultaCli();
+                    Childform = frmConsultaCli;
+                    Childform.Text = "Consulta Clientes";
+                    break;
+                case "FrmAlterarSenha":
+                    FrmAlterarSenha frmAltSenha = new FrmAlterarSenha();
+                    Childform = frmAltSenha;
+                    Childform.Text = "Alterar Senha";
+                    break;
+                case "FrmFuncionario":
+                    FrmFuncionario frmFunc = new FrmFuncionario();
+                    Childform = frmFunc;
+                    Childform.Text = "Consulta Clientes";
+                    break;
+                case "FrmBD":
+                    FrmConsultaFun Form15 = new FrmConsultaFun();
+                    Childform = Form15;
                     Childform.Text = "Consulta Clientes";
                     break;
                 default:
@@ -135,137 +144,139 @@ namespace VetSysControl.Formularios
         }
 
         #region Eventos Acao
-        private void OpenFile(object sender, EventArgs e)
-        {
+        private void OpenFile(object sender, EventArgs e) {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             openFileDialog.Filter = "Arquivos de texto (*.txt)|*.txt|Todos os arquivos (*.*)|*.*";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK) {
                 string FileName = openFileDialog.FileName;
             }
         }
 
-        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e) {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             saveFileDialog.Filter = "Arquivos de texto (*.txt)|*.txt|Todos os arquivos (*.*)|*.*";
-            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK) {
                 string FileName = saveFileDialog.FileName;
             }
         }
 
-        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e) {
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e) {
         }
 
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e) {
         }
 
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e) {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e) {
             toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e) {
             statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e) {
             LayoutMdi(MdiLayout.Cascade);
         }
 
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e) {
             LayoutMdi(MdiLayout.TileVertical);
         }
 
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e) {
             LayoutMdi(MdiLayout.TileHorizontal);
         }
 
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e) {
             LayoutMdi(MdiLayout.ArrangeIcons);
         }
 
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
-            {
+        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e) {
+            foreach (Form childForm in MdiChildren) {
                 childForm.Close();
             }
         }
 
         // Eventos de click
-        private void BtnClientes_Click(object sender, EventArgs e)
-        {
+
+        //Cliente
+        private void TsmiCadCli_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmCliente");
+        }
+        private void TsmiConsultaCli_Click(object sender, EventArgs e) {
             LoadNewForm("FrmConsultaCli");
         }
-        private void BtnFuncionarios_Click(object sender, EventArgs e)
-        {
-            LoadNewForm("FrmConsultaFun");
-        }
 
-        private void BtnPets_Click(object sender, EventArgs e)
-        {
+        //Pet
+        private void TsmiCadPet_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmPet");
+        }
+        private void TsmiCadEspecieRaca_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmEspecieRaca");
+        }
+        private void TsmiConsultaPet_Click(object sender, EventArgs e) {
             LoadNewForm("FrmConsultaPet");
         }
 
-        private void BtnAtendimentos_Click(object sender, EventArgs e)
-        {
-            LoadNewForm("FrmAtendimento");
+        //Funcionario
+        private void TsmiCadFunc_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmFuncionario");
+        }
+        private void TsmiConsultaFunc_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmConsultaFunc");
         }
 
-        private void BtnAgendamentos_Click(object sender, EventArgs e)
-        {
-            LoadNewForm("FrmConsultaEmp");
-        }
-
-        private void BtnExames_Click(object sender, EventArgs e)
-        {
+        //Empresa
+        private void TsmiCadEmpresa_Click(object sender, EventArgs e) {
             LoadNewForm("FrmEmpresa");
         }
-
-        private void BtnEspecieRaca_Click(object sender, EventArgs e)
-        {
-            LoadNewForm("FrmEspecieRaca");
+        private void TsmiConsultaEmp_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmConsultaEmp");
         }
-
-        private void BtnMedicamento_Click(object sender, EventArgs e)
-        {
-            LoadNewForm("FrmMedicamento");
-        }
-
-        private void BtnFornecedor_Click(object sender, EventArgs e)
-        {
+        private void TsmiCadFornecedor_Click(object sender, EventArgs e) {
             LoadNewForm("FrmMedicamentoFornecedor");
         }
 
-        private void BtnServico_Click(object sender, EventArgs e)
-        {
+        //Atendimento
+        private void BtnAtendimentos_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmAtendimento");
+        }
+        private void BtnAgendamentos_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmConsultaEmp");
+        }
+        private void BtnExames_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmEmpresa");
+        }
+
+
+        //Medicamento
+        private void TsmiCadMed_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmMedicamento");
+        }
+        private void TsmiCadVac_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmVacina");
+        }
+        private void TsmiCadServ_Click(object sender, EventArgs e) {
             LoadNewForm("FrmServico");
         }
 
-        private void BtnVacinas_Click(object sender, EventArgs e)
-        {
-            LoadNewForm("FrmVacina");
+
+        //Configurações
+        private void TsmiAlterarSenha_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmAlterarSenha");
         }
+        private void TsmiBD_Click(object sender, EventArgs e) {
+            LoadNewForm("FrmBD");
+        }
+
 
         #endregion Eventos Acao
 

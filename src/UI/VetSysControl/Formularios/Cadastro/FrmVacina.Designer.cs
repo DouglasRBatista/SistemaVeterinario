@@ -59,6 +59,7 @@
             Btn_Excluir.TabIndex = 0;
             Btn_Excluir.Text = "Excluir";
             Btn_Excluir.UseVisualStyleBackColor = true;
+            Btn_Excluir.Click += Btn_Excluir_Click;
             // 
             // Lbl_CadastroVac
             // 
@@ -221,6 +222,7 @@
             Btn_Editar.TabIndex = 22;
             Btn_Editar.Text = "Editar";
             Btn_Editar.UseVisualStyleBackColor = true;
+            Btn_Editar.Click += Btn_Editar_Click;
             // 
             // Btn_Salvar
             // 
@@ -230,6 +232,7 @@
             Btn_Salvar.TabIndex = 23;
             Btn_Salvar.Text = "Salvar";
             Btn_Salvar.UseVisualStyleBackColor = true;
+            Btn_Salvar.Click += Btn_Salvar_Click;
             // 
             // Btn_Sair
             // 
@@ -239,6 +242,7 @@
             Btn_Sair.TabIndex = 24;
             Btn_Sair.Text = "Sair";
             Btn_Sair.UseVisualStyleBackColor = true;
+            Btn_Sair.Click += Btn_Sair_Click;
             // 
             // Lbl_Periodicidade
             // 

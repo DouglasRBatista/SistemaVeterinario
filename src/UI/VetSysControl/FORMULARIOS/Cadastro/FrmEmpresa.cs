@@ -83,6 +83,9 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
                 }
                 CRUD("LOAD");
             }
+            else {
+                MessageBox.Show("Campos em branco", "Erro", MessageBoxButtons.OK);
+            }
         }
         private void Btn_Editar_Click(object sender, EventArgs e) {
             update = true;
@@ -92,6 +95,18 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
             DialogResult dialogResult = MessageBox.Show("Deseja excluir?", "Exclusão", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes) {
                 bllEmpresa.DelEmpresa(emp);
+                if (emp.GetTipo() != "") {
+                    if (emp.GetTipo() == "Filial") {
+                        bllEmpresa.DelFilial(filial);
+                    }
+                    else if (emp.GetTipo() == "Contratante") {
+                        bllEmpresa.DelContratante(contratante);
+                    }
+                    else if (emp.GetTipo() == "Farmácia - Laboratório") {
+                        bllEmpresa.DelFarmLab(farmLab);
+                    }
+                }
+                ClearComp();
                 CRUD("DELETE");
             }
         }
@@ -449,6 +464,7 @@ namespace VetSysControl.FORMULARIOS.Cadastro {
                     filial.FlgProntoAtendimento = ChkBox_ProntoAtend.Checked;
                     filial.CsvProntoAtendimento = Convert.ToDecimal(MskBox_ProntoAtend.Text);
                     filial.FlgFarmacia= ChkBox_Farmacia.Checked;
+                    filial.SetCusto(filial.CSV());
 
                 }
                 else if (ChkBox_Contr.Checked) {

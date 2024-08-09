@@ -40,7 +40,7 @@
             FlgProntoAtendimento = false;
             CsvProntoAtendimento = 0;
             FlgFarmacia = false;
-            Custo = CSV();
+            Custo = 0;
         }
 
         public decimal GetFaturamento()
@@ -53,8 +53,11 @@
         {
             return this.Custo;
         }
+        public void SetCusto(decimal custo) {
+            this.Custo = custo;
+        }
 
-        private decimal CSV()
+        public decimal CSV()
         {
             
             return (CsvDayCare + CsvHospital + CsvProntoAtendimento);

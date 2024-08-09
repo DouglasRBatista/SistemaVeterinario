@@ -70,22 +70,37 @@
             toolStripSeparator8 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             toolStrip = new ToolStrip();
-            BtnClientes = new ToolStripButton();
-            BtnFuncionarios = new ToolStripButton();
-            BtnPets = new ToolStripButton();
+            BtnClientes = new ToolStripDropDownButton();
+            TsmiCadCli = new ToolStripMenuItem();
+            TsmiConsultaCli = new ToolStripMenuItem();
+            BtnPets = new ToolStripDropDownButton();
+            TsmiCadPet = new ToolStripMenuItem();
+            TsmiCadEspecieRaca = new ToolStripMenuItem();
+            BtnEmpresa = new ToolStripDropDownButton();
+            TsmiCadEmpresa = new ToolStripMenuItem();
+            TsmiConsultaEmp = new ToolStripMenuItem();
+            TsmiCadFornecedor = new ToolStripMenuItem();
+            BtnFuncionarios = new ToolStripDropDownButton();
+            TsmiCadFunc = new ToolStripMenuItem();
+            TsmiConsultaFunc = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             BtnAtendimentos = new ToolStripButton();
             BtnAgendamentos = new ToolStripButton();
             BtnExames = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
-            BtnEspecieRaca = new ToolStripButton();
-            BtnMedicamento = new ToolStripButton();
-            BtnFornecedor = new ToolStripButton();
-            BtnServico = new ToolStripButton();
-            BtnVacinas = new ToolStripButton();
+            BtnMedicamento = new ToolStripDropDownButton();
+            TsmiCadMed = new ToolStripMenuItem();
+            TsmiCadVac = new ToolStripMenuItem();
+            BtnServico = new ToolStripDropDownButton();
+            TsmiCadServ = new ToolStripMenuItem();
+            BtnOutros = new ToolStripDropDownButton();
+            BtnConfig = new ToolStripDropDownButton();
+            TsmiAlterarSenha = new ToolStripMenuItem();
+            TsmiBD = new ToolStripMenuItem();
             statusStrip = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
+            TsmiConsultaPet = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             toolStrip.SuspendLayout();
             statusStrip.SuspendLayout();
@@ -397,7 +412,7 @@
             // 
             toolStrip.Dock = DockStyle.Left;
             toolStrip.ImageScalingSize = new Size(20, 20);
-            toolStrip.Items.AddRange(new ToolStripItem[] { BtnClientes, BtnFuncionarios, BtnPets, toolStripSeparator1, BtnAtendimentos, BtnAgendamentos, BtnExames, toolStripSeparator2, BtnEspecieRaca, BtnMedicamento, BtnFornecedor, BtnServico, BtnVacinas });
+            toolStrip.Items.AddRange(new ToolStripItem[] { BtnClientes, BtnPets, BtnEmpresa, BtnFuncionarios, toolStripSeparator1, BtnAtendimentos, BtnAgendamentos, BtnExames, toolStripSeparator2, BtnMedicamento, BtnServico, BtnOutros, BtnConfig });
             toolStrip.Location = new Point(0, 0);
             toolStrip.Name = "toolStrip";
             toolStrip.Size = new Size(201, 595);
@@ -407,41 +422,116 @@
             // BtnClientes
             // 
             BtnClientes.AutoSize = false;
+            BtnClientes.DropDownItems.AddRange(new ToolStripItem[] { TsmiCadCli, TsmiConsultaCli });
             BtnClientes.Image = (Image)resources.GetObject("BtnClientes.Image");
             BtnClientes.ImageAlign = ContentAlignment.MiddleLeft;
             BtnClientes.ImageTransparentColor = Color.Black;
             BtnClientes.Name = "BtnClientes";
-            BtnClientes.Size = new Size(198, 48);
+            BtnClientes.Size = new Size(198, 40);
             BtnClientes.Text = "Clientes";
             BtnClientes.TextAlign = ContentAlignment.MiddleLeft;
-            BtnClientes.Click += BtnClientes_Click;
             BtnClientes.Paint += BtnClientes_Paint;
             // 
-            // BtnFuncionarios
+            // TsmiCadCli
             // 
-            BtnFuncionarios.AutoSize = false;
-            BtnFuncionarios.Image = (Image)resources.GetObject("BtnFuncionarios.Image");
-            BtnFuncionarios.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFuncionarios.ImageTransparentColor = Color.Black;
-            BtnFuncionarios.Name = "BtnFuncionarios";
-            BtnFuncionarios.Size = new Size(200, 48);
-            BtnFuncionarios.Text = "Funcionarios";
-            BtnFuncionarios.TextAlign = ContentAlignment.MiddleLeft;
-            BtnFuncionarios.Click += BtnFuncionarios_Click;
-            BtnFuncionarios.Paint += BtnFuncionarios_Paint;
+            TsmiCadCli.Name = "TsmiCadCli";
+            TsmiCadCli.Size = new Size(180, 22);
+            TsmiCadCli.Text = "Cadastro Cliente";
+            TsmiCadCli.Click += TsmiCadCli_Click;
+            // 
+            // TsmiConsultaCli
+            // 
+            TsmiConsultaCli.Name = "TsmiConsultaCli";
+            TsmiConsultaCli.Size = new Size(180, 22);
+            TsmiConsultaCli.Text = "Consulta Cliente";
+            TsmiConsultaCli.Click += TsmiConsultaCli_Click;
             // 
             // BtnPets
             // 
             BtnPets.AutoSize = false;
+            BtnPets.DropDownItems.AddRange(new ToolStripItem[] { TsmiCadPet, TsmiCadEspecieRaca, TsmiConsultaPet });
             BtnPets.Image = (Image)resources.GetObject("BtnPets.Image");
             BtnPets.ImageAlign = ContentAlignment.MiddleLeft;
             BtnPets.ImageTransparentColor = Color.Black;
             BtnPets.Name = "BtnPets";
-            BtnPets.Size = new Size(200, 48);
+            BtnPets.Size = new Size(200, 40);
             BtnPets.Text = "Animais / Pets";
             BtnPets.TextAlign = ContentAlignment.MiddleLeft;
-            BtnPets.Click += BtnPets_Click;
             BtnPets.Paint += BtnPets_Paint;
+            // 
+            // TsmiCadPet
+            // 
+            TsmiCadPet.Name = "TsmiCadPet";
+            TsmiCadPet.Size = new Size(193, 22);
+            TsmiCadPet.Text = "Cadastro Pet";
+            TsmiCadPet.Click += TsmiCadPet_Click;
+            // 
+            // TsmiCadEspecieRaca
+            // 
+            TsmiCadEspecieRaca.Name = "TsmiCadEspecieRaca";
+            TsmiCadEspecieRaca.Size = new Size(193, 22);
+            TsmiCadEspecieRaca.Text = "Cadastro Espécie/Raça";
+            TsmiCadEspecieRaca.Click += TsmiCadEspecieRaca_Click;
+            // 
+            // BtnEmpresa
+            // 
+            BtnEmpresa.AutoSize = false;
+            BtnEmpresa.DropDownItems.AddRange(new ToolStripItem[] { TsmiCadEmpresa, TsmiConsultaEmp, TsmiCadFornecedor });
+            BtnEmpresa.Image = (Image)resources.GetObject("BtnEmpresa.Image");
+            BtnEmpresa.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnEmpresa.ImageTransparentColor = Color.Black;
+            BtnEmpresa.Name = "BtnEmpresa";
+            BtnEmpresa.Size = new Size(200, 40);
+            BtnEmpresa.Text = "Empresa";
+            BtnEmpresa.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // TsmiCadEmpresa
+            // 
+            TsmiCadEmpresa.Name = "TsmiCadEmpresa";
+            TsmiCadEmpresa.Size = new Size(184, 22);
+            TsmiCadEmpresa.Text = "Cadastro Empresa";
+            TsmiCadEmpresa.Click += TsmiCadEmpresa_Click;
+            // 
+            // TsmiConsultaEmp
+            // 
+            TsmiConsultaEmp.Name = "TsmiConsultaEmp";
+            TsmiConsultaEmp.Size = new Size(184, 22);
+            TsmiConsultaEmp.Text = "Consulta Empresa";
+            TsmiConsultaEmp.Click += TsmiConsultaEmp_Click;
+            // 
+            // TsmiCadFornecedor
+            // 
+            TsmiCadFornecedor.Name = "TsmiCadFornecedor";
+            TsmiCadFornecedor.Size = new Size(184, 22);
+            TsmiCadFornecedor.Text = "Cadastro Fornecedor";
+            TsmiCadFornecedor.Click += TsmiCadFornecedor_Click;
+            // 
+            // BtnFuncionarios
+            // 
+            BtnFuncionarios.AutoSize = false;
+            BtnFuncionarios.DropDownItems.AddRange(new ToolStripItem[] { TsmiCadFunc, TsmiConsultaFunc });
+            BtnFuncionarios.Image = (Image)resources.GetObject("BtnFuncionarios.Image");
+            BtnFuncionarios.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnFuncionarios.ImageTransparentColor = Color.Black;
+            BtnFuncionarios.Name = "BtnFuncionarios";
+            BtnFuncionarios.Size = new Size(200, 40);
+            BtnFuncionarios.Text = "Funcionarios";
+            BtnFuncionarios.TextAlign = ContentAlignment.MiddleLeft;
+            BtnFuncionarios.Paint += BtnFuncionarios_Paint;
+            // 
+            // TsmiCadFunc
+            // 
+            TsmiCadFunc.Name = "TsmiCadFunc";
+            TsmiCadFunc.Size = new Size(187, 22);
+            TsmiCadFunc.Text = "Cadastro Funcionário";
+            TsmiCadFunc.Click += TsmiCadFunc_Click;
+            // 
+            // TsmiConsultaFunc
+            // 
+            TsmiConsultaFunc.Name = "TsmiConsultaFunc";
+            TsmiConsultaFunc.Size = new Size(187, 22);
+            TsmiConsultaFunc.Text = "Consulta Funcionário";
+            TsmiConsultaFunc.Click += TsmiConsultaFunc_Click;
             // 
             // toolStripSeparator1
             // 
@@ -455,7 +545,7 @@
             BtnAtendimentos.ImageAlign = ContentAlignment.MiddleLeft;
             BtnAtendimentos.ImageTransparentColor = Color.Black;
             BtnAtendimentos.Name = "BtnAtendimentos";
-            BtnAtendimentos.Size = new Size(200, 48);
+            BtnAtendimentos.Size = new Size(200, 40);
             BtnAtendimentos.Text = "Atendimentos";
             BtnAtendimentos.TextAlign = ContentAlignment.MiddleLeft;
             BtnAtendimentos.Click += BtnAtendimentos_Click;
@@ -468,7 +558,7 @@
             BtnAgendamentos.ImageAlign = ContentAlignment.MiddleLeft;
             BtnAgendamentos.ImageTransparentColor = Color.Black;
             BtnAgendamentos.Name = "BtnAgendamentos";
-            BtnAgendamentos.Size = new Size(200, 48);
+            BtnAgendamentos.Size = new Size(200, 40);
             BtnAgendamentos.Text = "Agendamentos";
             BtnAgendamentos.TextAlign = ContentAlignment.MiddleLeft;
             BtnAgendamentos.TextDirection = ToolStripTextDirection.Horizontal;
@@ -482,7 +572,7 @@
             BtnExames.ImageAlign = ContentAlignment.MiddleLeft;
             BtnExames.ImageTransparentColor = Color.Black;
             BtnExames.Name = "BtnExames";
-            BtnExames.Size = new Size(200, 48);
+            BtnExames.Size = new Size(200, 40);
             BtnExames.Text = "Exames";
             BtnExames.TextAlign = ContentAlignment.MiddleLeft;
             BtnExames.Click += BtnExames_Click;
@@ -493,70 +583,90 @@
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(198, 6);
             // 
-            // BtnEspecieRaca
-            // 
-            BtnEspecieRaca.AutoSize = false;
-            BtnEspecieRaca.Image = (Image)resources.GetObject("BtnEspecieRaca.Image");
-            BtnEspecieRaca.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnEspecieRaca.ImageTransparentColor = Color.Black;
-            BtnEspecieRaca.Name = "BtnEspecieRaca";
-            BtnEspecieRaca.Size = new Size(200, 48);
-            BtnEspecieRaca.Text = "Raças";
-            BtnEspecieRaca.TextAlign = ContentAlignment.MiddleLeft;
-            BtnEspecieRaca.Click += BtnEspecieRaca_Click;
-            BtnEspecieRaca.Paint += BtnEspecieRaca_Paint;
-            // 
             // BtnMedicamento
             // 
             BtnMedicamento.AutoSize = false;
+            BtnMedicamento.DropDownItems.AddRange(new ToolStripItem[] { TsmiCadMed, TsmiCadVac });
             BtnMedicamento.Image = (Image)resources.GetObject("BtnMedicamento.Image");
             BtnMedicamento.ImageAlign = ContentAlignment.MiddleLeft;
             BtnMedicamento.ImageTransparentColor = Color.Black;
             BtnMedicamento.Name = "BtnMedicamento";
-            BtnMedicamento.Size = new Size(200, 48);
+            BtnMedicamento.Size = new Size(200, 40);
             BtnMedicamento.Text = "Medicamentos";
             BtnMedicamento.TextAlign = ContentAlignment.MiddleLeft;
-            BtnMedicamento.Click += BtnMedicamento_Click;
             BtnMedicamento.Paint += BtnMedicamento_Paint;
             // 
-            // BtnFornecedor
+            // TsmiCadMed
             // 
-            BtnFornecedor.AutoSize = false;
-            BtnFornecedor.Image = (Image)resources.GetObject("BtnFornecedor.Image");
-            BtnFornecedor.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnFornecedor.ImageTransparentColor = Color.Black;
-            BtnFornecedor.Name = "BtnFornecedor";
-            BtnFornecedor.Size = new Size(200, 48);
-            BtnFornecedor.Text = "Fornecedores";
-            BtnFornecedor.TextAlign = ContentAlignment.MiddleLeft;
-            BtnFornecedor.Click += BtnFornecedor_Click;
-            BtnFornecedor.Paint += BtnFornecedor_Paint;
+            TsmiCadMed.Name = "TsmiCadMed";
+            TsmiCadMed.Size = new Size(198, 22);
+            TsmiCadMed.Text = "Cadastro Medicamento";
+            TsmiCadMed.Click += TsmiCadMed_Click;
+            // 
+            // TsmiCadVac
+            // 
+            TsmiCadVac.Name = "TsmiCadVac";
+            TsmiCadVac.Size = new Size(198, 22);
+            TsmiCadVac.Text = "Cadastro Vacina";
+            TsmiCadVac.Click += TsmiCadVac_Click;
             // 
             // BtnServico
             // 
             BtnServico.AutoSize = false;
+            BtnServico.DropDownItems.AddRange(new ToolStripItem[] { TsmiCadServ });
             BtnServico.Image = (Image)resources.GetObject("BtnServico.Image");
             BtnServico.ImageAlign = ContentAlignment.MiddleLeft;
             BtnServico.ImageTransparentColor = Color.Black;
             BtnServico.Name = "BtnServico";
-            BtnServico.Size = new Size(200, 48);
+            BtnServico.Size = new Size(200, 40);
             BtnServico.Text = "Serviços";
             BtnServico.TextAlign = ContentAlignment.MiddleLeft;
-            BtnServico.Click += BtnServico_Click;
             BtnServico.Paint += BtnServico_Paint;
             // 
-            // BtnVacinas
+            // TsmiCadServ
             // 
-            BtnVacinas.AutoSize = false;
-            BtnVacinas.Image = (Image)resources.GetObject("BtnVacinas.Image");
-            BtnVacinas.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnVacinas.ImageTransparentColor = Color.Black;
-            BtnVacinas.Name = "BtnVacinas";
-            BtnVacinas.Size = new Size(200, 48);
-            BtnVacinas.Text = "Vacinas";
-            BtnVacinas.TextAlign = ContentAlignment.MiddleLeft;
-            BtnVacinas.Click += BtnVacinas_Click;
-            BtnVacinas.Paint += BtnVacinas_Paint;
+            TsmiCadServ.Name = "TsmiCadServ";
+            TsmiCadServ.Size = new Size(162, 22);
+            TsmiCadServ.Text = "Cadastro Serviço";
+            TsmiCadServ.Click += TsmiCadServ_Click;
+            // 
+            // BtnOutros
+            // 
+            BtnOutros.AutoSize = false;
+            BtnOutros.Image = (Image)resources.GetObject("BtnOutros.Image");
+            BtnOutros.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnOutros.ImageTransparentColor = Color.Black;
+            BtnOutros.Name = "BtnOutros";
+            BtnOutros.Size = new Size(200, 40);
+            BtnOutros.Text = "Outros";
+            BtnOutros.TextAlign = ContentAlignment.MiddleLeft;
+            BtnOutros.Paint += BtnVacinas_Paint;
+            // 
+            // BtnConfig
+            // 
+            BtnConfig.AutoSize = false;
+            BtnConfig.DropDownItems.AddRange(new ToolStripItem[] { TsmiAlterarSenha, TsmiBD });
+            BtnConfig.Image = (Image)resources.GetObject("BtnConfig.Image");
+            BtnConfig.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnConfig.ImageTransparentColor = Color.Black;
+            BtnConfig.Name = "BtnConfig";
+            BtnConfig.Size = new Size(200, 40);
+            BtnConfig.Text = "Configurações";
+            BtnConfig.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // TsmiAlterarSenha
+            // 
+            TsmiAlterarSenha.Name = "TsmiAlterarSenha";
+            TsmiAlterarSenha.Size = new Size(159, 22);
+            TsmiAlterarSenha.Text = "Alterar Senha";
+            TsmiAlterarSenha.Click += TsmiAlterarSenha_Click;
+            // 
+            // TsmiBD
+            // 
+            TsmiBD.Name = "TsmiBD";
+            TsmiBD.Size = new Size(159, 22);
+            TsmiBD.Text = "Banco de Dados";
+            TsmiBD.Click += TsmiBD_Click;
             // 
             // statusStrip
             // 
@@ -574,6 +684,13 @@
             toolStripStatusLabel.Name = "toolStripStatusLabel";
             toolStripStatusLabel.Size = new Size(39, 17);
             toolStripStatusLabel.Text = "Status";
+            // 
+            // TsmiConsultaPet
+            // 
+            TsmiConsultaPet.Name = "TsmiConsultaPet";
+            TsmiConsultaPet.Size = new Size(193, 22);
+            TsmiConsultaPet.Text = "Consulta Pet";
+            TsmiConsultaPet.Click += TsmiConsultaPet_Click;
             // 
             // MDI
             // 
@@ -646,18 +763,33 @@
         private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
-        public ToolStripButton BtnClientes;
         public ToolStripButton BtnAtendimentos;
         public ToolStripButton BtnAgendamentos;
         public ToolStripButton BtnExames;
         private ToolStripSeparator toolStripSeparator2;
-        public ToolStripButton BtnEspecieRaca;
-        public ToolStripButton BtnMedicamento;
-        public ToolStripButton BtnFornecedor;
-        public ToolStripButton BtnPets;
-        public ToolStripButton BtnServico;
-        public ToolStripButton BtnFuncionarios;
-        public ToolStripButton BtnVacinas;
+        public ToolStripDropDownButton BtnPets;
+        private ToolStripMenuItem TsmiCadPet;
+        private ToolStripMenuItem TsmiCadEspecieRaca;
+        public ToolStripDropDownButton BtnClientes;
+        private ToolStripMenuItem TsmiCadCli;
+        public ToolStripDropDownButton BtnFuncionarios;
+        private ToolStripMenuItem TsmiCadFunc;
+        private ToolStripMenuItem TsmiConsultaCli;
+        private ToolStripMenuItem TsmiConsultaFunc;
+        public ToolStripDropDownButton BtnMedicamento;
+        private ToolStripMenuItem TsmiCadMed;
+        public ToolStripDropDownButton BtnEmpresa;
+        private ToolStripMenuItem TsmiCadEmpresa;
+        private ToolStripMenuItem TsmiConsultaEmp;
+        public ToolStripDropDownButton BtnServico;
+        private ToolStripMenuItem TsmiCadServ;
+        private ToolStripMenuItem TsmiCadFornecedor;
+        private ToolStripMenuItem TsmiCadVac;
+        public ToolStripDropDownButton BtnOutros;
+        public ToolStripDropDownButton BtnConfig;
+        private ToolStripMenuItem TsmiAlterarSenha;
+        private ToolStripMenuItem TsmiBD;
+        private ToolStripMenuItem TsmiConsultaPet;
     }
 }
 

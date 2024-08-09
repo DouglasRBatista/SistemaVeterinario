@@ -130,7 +130,7 @@ namespace BLL.Empresa
                     sqlCommand.CommandText =
                             "INSERT INTO [Filial] (\r\n      " +
                                   " [IdFilial]\r\n      " +
-                                  " [DayCare]\r\n      " +
+                                  ",[DayCare]\r\n      " +
                                   ",[CsvDayCare]\r\n      " +
                                   ",[UnidadeHospitalar]\r\n      " +
                                   ",[CsvUnidadeHospitalar]\r\n      " +
@@ -140,7 +140,7 @@ namespace BLL.Empresa
                                   ",[Custos])\r\n      " +
                             "VALUES(\r\n      " +
                                   "  @id\r\n      " +
-                                  "  @daycare\r\n      " +
+                                  ", @daycare\r\n      " +
                                   ", @csvdaycare\r\n      " +
                                   ", @unidadehosp\r\n      " +
                                   ", @csvunidadehosp\r\n      " +
@@ -181,7 +181,7 @@ namespace BLL.Empresa
                     connection.Open();
                     sqlCommand.CommandText =
                             "UPDATE [Filial] SET \r\n      " +
-                                  ",[DayCare] = @daycare \r\n      " +
+                                  " [DayCare] = @daycare \r\n      " +
                                   ",[CsvDayCare] = @csvdaycare \r\n      " +
                                   ",[UnidadeHospitalar] = @unidadehosp \r\n      " +
                                   ",[CsvUnidadeHospitalar] = @csvunidadehosp \r\n      " +
@@ -224,13 +224,13 @@ namespace BLL.Empresa
                     sqlCommand.CommandText =
                             "INSERT INTO [Contratante] (\r\n      " +
                                   " [IdContratante]\r\n      " +
-                                  " [InicioContrato]\r\n      " +
+                                  ",[InicioContrato]\r\n      " +
                                   ",[FimContrato]\r\n      " +
                                   ",[CsvFinal]\r\n      " +
                                   ",[UnidadeIntegrada])\r\n      " +
                             "VALUES(\r\n      " +
                                   "  @id\r\n      " +
-                                  "  @iniciocontr\r\n      " +
+                                  ", @iniciocontr\r\n      " +
                                   ", @fimcontr\r\n      " +
                                   ", @csvfinal\r\n      " +
                                   ", @unidintegral)\r\n      ";
@@ -263,7 +263,7 @@ namespace BLL.Empresa
                     connection.Open();
                     sqlCommand.CommandText =
                             "UPDATE [Contratante] SET \r\n      " +
-                                  ",[InicioContrato] = @iniciocontr \r\n      " +
+                                  " [InicioContrato] = @iniciocontr \r\n      " +
                                   ",[FimContrato] = @fimcontr \r\n      " +
                                   ",[CsvFinal] = @csvfinal \r\n      " +
                                   ",[UnidadeIntegrada] = @unidintegral \r\n      " +
@@ -298,16 +298,16 @@ namespace BLL.Empresa
                     sqlCommand.CommandText =
                             "INSERT INTO [FarmaciaLaboratorio] (\r\n      " +
                                   " [IdFarmaciaLab]\r\n      " +
-                                  " [FlgIntegrada]\r\n      " +
-                                  " [FlgTerceirizada]\r\n      " +
+                                  ",[FlgIntegrada]\r\n      " +
+                                  ",[FlgTerceirizada]\r\n      " +
                                   ",[IdFilial]\r\n      " +
                                   ",[FlgFornecedor]\r\n      " +
                                   ",[DescFarmLab]\r\n      " +
                                   ",[ObsFarmLab])\r\n      " +
                             "VALUES(\r\n      " +
                                   "  @id\r\n      " +
-                                  "  @flgintegr\r\n      " +
-                                  "  @flgterc\r\n      " +
+                                  ", @flgintegr\r\n      " +
+                                  ", @flgterc\r\n      " +
                                   ", @idfilial\r\n      " +
                                   ", @flgforn\r\n      " +
                                   ", @desc\r\n      " +
@@ -343,7 +343,7 @@ namespace BLL.Empresa
                     connection.Open();
                     sqlCommand.CommandText =
                             "UPDATE [FarmaciaLaboratorio] SET \r\n      " +
-                                  ",[FlgIntegrada] = @flgintegr \r\n      " +
+                                  " [FlgIntegrada] = @flgintegr \r\n      " +
                                   ",[FlgTerceirizada] = @flgterc \r\n      " +
                                   ",[IdFilial] = @idfilial \r\n      " +
                                   ",[FlgFornecedor] = @flgforn \r\n      " +
@@ -449,6 +449,7 @@ namespace BLL.Empresa
                                   ",[CNPJ] \r\n      " +
                                   ",[Telefone] \r\n      " +
                                   ",[Unidade] \r\n      " +
+                                  ",[Tipo] \r\n      " +
                                   ",[Logo] \r\n  " +
                             "FROM [Empresa] \r\n  " +
                             "WHERE [CodEmpresa] = @codigo AND [RazaoSocial] = @razaosocial AND [CNPJ] = @cnpj";
@@ -468,6 +469,7 @@ namespace BLL.Empresa
                                 empresa.SetCNPJ(Convert.ToString(reader["CNPJ"]));
                                 empresa.SetTelefone(Convert.ToString(reader["Telefone"]));
                                 empresa.SetUnidade(Convert.ToString(reader["Unidade"]));
+                                empresa.SetTipo(Convert.ToString(reader["Tipo"]));
                                 empresa.SetLogo(Convert.ToString(reader["Logo"]));
                             }
                         }
@@ -554,6 +556,81 @@ namespace BLL.Empresa
                             "WHERE [IdEmpresa] = @id";
 
                     sqlCommand.Parameters.AddWithValue("@id", emp.GetIdEmpresa());
+
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public void DelFilial(Cls_Filial filial) {
+
+            if (_SqlConnectionString == string.Empty)
+                throw new ArgumentNullException();
+
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+
+                    SqlConnection connection = new SqlConnection(_SqlConnectionString);
+                    sqlCommand.Connection = connection;
+                    connection.Open();
+                    sqlCommand.CommandText =
+                            "DELETE FROM [Filial] \r\n      " +
+                            "WHERE [IdFilial] = @id";
+
+                    sqlCommand.Parameters.AddWithValue("@id", filial.GetIdEmpresa());
+
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public void DelContratante(Cls_Contratante contr) {
+
+            if (_SqlConnectionString == string.Empty)
+                throw new ArgumentNullException();
+
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+
+                    SqlConnection connection = new SqlConnection(_SqlConnectionString);
+                    sqlCommand.Connection = connection;
+                    connection.Open();
+                    sqlCommand.CommandText =
+                            "DELETE FROM [Contratante] \r\n      " +
+                            "WHERE [IdContratante] = @id";
+
+                    sqlCommand.Parameters.AddWithValue("@id", contr.GetIdEmpresa());
+
+                    SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                    connection.Close();
+                }
+
+            }
+        }
+
+        public void DelFarmLab(Cls_FarmaciaLaboratorio farmLab) {
+
+            if (_SqlConnectionString == string.Empty)
+                throw new ArgumentNullException();
+
+            using (DALCONN conn = new DALCONN(_SqlConnectionString)) {
+                using (SqlCommand sqlCommand = new SqlCommand()) {
+
+                    SqlConnection connection = new SqlConnection(_SqlConnectionString);
+                    sqlCommand.Connection = connection;
+                    connection.Open();
+                    sqlCommand.CommandText =
+                            "DELETE FROM [FarmaciaLaboratorio] \r\n      " +
+                            "WHERE [IdFarmaciaLab] = @id";
+
+                    sqlCommand.Parameters.AddWithValue("@id", farmLab.GetIdEmpresa());
 
                     SqlDataReader reader = sqlCommand.ExecuteReader();
 
